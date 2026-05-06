@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 const services = [
   {
@@ -89,9 +90,8 @@ function ServiceCard({
       {/* Bottom content */}
       <div className="relative z-10 flex flex-col gap-4">
         <motion.h3
-          className="font-black leading-none uppercase"
+          className="font-medium leading-none uppercase"
           style={{
-            fontFamily: "'Anton', 'Bebas Neue', Impact, sans-serif",
             fontSize: "clamp(2rem, 3.5vw, 3.2rem)",
             color: "#fff",
             whiteSpace: "pre-line",
@@ -103,7 +103,7 @@ function ServiceCard({
         </motion.h3>
 
         <motion.p
-          className="text-sm leading-relaxed"
+          className="text-lg leading-relaxed font-medium"
           style={{ color: "rgba(255,255,255,0.5)", maxWidth: "28ch" }}
           variants={{ hover: { color: "rgba(0,0,0,0.65)" } }}
           transition={{ duration: 0.3 }}
@@ -124,22 +124,31 @@ export default function WeBuildSec() {
       <div className="relative z-10">
         {/* ── Heading ── */}
         <div ref={headingRef} className="mb-16 md:mb-20">
-          <motion.p
-            className="text-xs font-mono tracking-[0.3em] uppercase mb-4"
-            style={{ color: "#ba2c27" }}
+          <motion.div
+            className="flex items-center gap-3 mb-4"
             initial={{ opacity: 0, y: 12 }}
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
           >
-            What we actually do
-          </motion.p>
+            <Image
+              src="/Img/point_icon.svg"
+              alt="Point Icon"
+              width={24}
+              height={24}
+            />
+            <p
+              className="text-lg font-mono tracking-[0.3em] uppercase mb-0"
+              style={{ color: "#ba2c27" }}
+            >
+              What we actually do
+            </p>
+          </motion.div>
 
           {/* "We build growth systems" — all on one line */}
           <div className="overflow-hidden">
             <motion.h2
-              className="font-black uppercase leading-none tracking-tighter"
+              className="font-medium uppercase leading-none tracking-tighter"
               style={{
-                fontFamily: "'Anton', 'Bebas Neue', Impact, sans-serif",
                 fontSize: "clamp(2.8rem, 8vw, 8rem)",
                 color: "#fff",
               }}

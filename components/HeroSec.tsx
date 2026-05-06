@@ -38,9 +38,9 @@ export default function HeroSimple() {
         style={{ y: textY }}
         className="absolute bottom-32 left-10 md:left-20 z-30 text-white max-w-3xl"
       >
-        <h1 className="text-5xl md:text-7xl leading-tight font-bold">
+        <h1 className="text-5xl md:text-7xl leading-tight font-medium">
           Identity with Soul. <br />
-          <span className="text-orange-200">Strategy with Teeth.</span>
+          <span className="text-(--highlight)">Strategy with Teeth.</span>
         </h1>
       </motion.div>
 

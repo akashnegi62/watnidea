@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 const SERVICES = [
   {
@@ -77,10 +78,10 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       >
         {/* Top Content */}
         <div>
-          <h2 className="text-white text-6xl md:text-8xl font-bold tracking-tighter leading-none">
+          <h2 className="text-white text-6xl md:text-8xl font-medium tracking-tighter leading-none">
             {service.title}
           </h2>
-          <h3 className="text-white/30 text-5xl md:text-7xl font-bold tracking-tighter leading-none mt-2">
+          <h3 className="text-white/30 text-5xl md:text-7xl font-medium tracking-tighter leading-none mt-2">
             ({service.subTitle})
           </h3>
         </div>
@@ -122,10 +123,13 @@ export default function ServiceSec() {
     <section className="bg-[#edf1f3] px-6 pt-32 min-h-screen">
       {/* Services Header */}
       <div className="px-6">
-        <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] mb-8 text-lg">
-          Our Core Services
-        </p>
-        <h1 className="text-5xl md:text-[5.5rem] font-bold text-[#121417] tracking-tight leading-none">
+        <div className="flex items-center gap-3 mb-8">
+          <Image src="/Img/point_icon.svg" alt="Point Icon" width={24} height={24} />
+          <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] text-lg mb-0">
+            Our Core Services
+          </p>
+        </div>
+        <h1 className="text-5xl md:text-[5.5rem] font-medium text-[#121417] tracking-tight leading-none">
           We are an <span className="text-(--highlight)">unusual</span> digital
           agency focusing on transforming your vision into a captivating digital
           experience.
