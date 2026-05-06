@@ -65,13 +65,18 @@ export default function WhyChooseUs() {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative bg-black min-h-screen py-32 pl-6 md:pl-30 pr-6 overflow-hidden"
+      className="relative bg-black min-h-screen py-32 px-16 overflow-hidden"
     >
       {/* HEADER */}
       <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between pr-10">
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <Image src="/Img/point_icon.svg" alt="Point Icon" width={24} height={24} />
+            <Image
+              src="/Img/point_icon.svg"
+              alt="Point Icon"
+              width={24}
+              height={24}
+            />
             <p className="text-white/40 uppercase tracking-[0.3em] text-lg font-medium mb-0">
               Why choose us
             </p>
