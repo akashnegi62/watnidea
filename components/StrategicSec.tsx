@@ -82,7 +82,8 @@ export default function WhyChooseUs() {
             </p>
           </div>
           <h2 className="text-white text-5xl md:text-8xl font-medium tracking-tighter leading-none">
-            Strategic Growth <br /> Systems
+            Strategic <span className="text-(--highlight)">Growth</span> <br />{" "}
+            Systems
           </h2>
         </div>
         <button className="mt-8 md:mt-0 group flex items-center gap-2 text-white border border-white/20 px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-xs tracking-widest">
@@ -110,7 +111,7 @@ export default function WhyChooseUs() {
                   initial={{ y: "100%" }}
                   animate={hoveredIndex === idx ? { y: 0 } : { y: "100%" }}
                   transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
-                  className="text-(--highlight) text-lg md:text-xl font-medium max-w-2xl"
+                  className="text-white text-lg md:text-2xl font-light max-w-2xl"
                 >
                   {item.tagline}
                 </motion.p>
