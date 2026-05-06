@@ -120,13 +120,8 @@ export default function WeBuildSec() {
   const headingInView = useInView(headingRef, { once: true });
 
   return (
-    <section
-      className="relative w-full bg-black overflow-hidden"
-      style={{
-        padding: "clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 5rem)",
-      }}
-    >
-      <div className="relative z-10 max-w-7xl mx-auto">
+    <section className="relative w-full bg-black overflow-hidden px-16 py-32">
+      <div className="relative z-10">
         {/* ── Heading ── */}
         <div ref={headingRef} className="mb-16 md:mb-20">
           <motion.p

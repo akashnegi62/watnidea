@@ -119,11 +119,11 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 
 export default function ServiceSec() {
   return (
-    <section className="bg-[#edf1f3] pl-6 pr-6 py-32 min-h-screen">
+    <section className="bg-[#edf1f3] px-6 pt-32 min-h-screen">
       {/* Services Header */}
-      <div className="mb-24">
-        <p className="text-gray-400 font-semibold uppercase tracking-[0.2em] mb-8 text-sm">
-          Services
+      <div className="px-6">
+        <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] mb-8 text-lg">
+          Our Core Services
         </p>
         <h1 className="text-5xl md:text-[5.5rem] font-bold text-[#121417] tracking-tight leading-none">
           We are an <span className="text-(--highlight)">unusual</span> digital
