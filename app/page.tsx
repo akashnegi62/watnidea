@@ -21,7 +21,7 @@ function page() {
       <StrategicSec />
       <IdentitySec />
       <BannerSec />
-       <FAQSec/>
+      <FAQSec />
     </>
   );
 }
