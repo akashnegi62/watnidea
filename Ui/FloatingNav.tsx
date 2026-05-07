@@ -1,8 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { MessageCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,163 +15,177 @@ const NAV_LINKS = [
   { id: "home", label: "Home", href: "/" },
   { id: "studio", label: "Studio", href: "/studio" },
   { id: "work", label: "Work", href: "/work" },
-  { id: "contact", label: "Contact", href: "/contact" },
+  { id: "services", label: "Services", href: "/services" },
 ];
 
 export default function FloatingNav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isContactHovered, setIsContactHovered] = useState(false);
 
-  const springFast = { type: "spring", stiffness: 400, damping: 30 };
-  const springHeavy = { type: "spring", stiffness: 200, damping: 25 };
+  // 1. LOGO SCROLL LOGIC
+  const { scrollY } = useScroll();
+  // Logo moves up and fades out as you scroll down
+  const logoY = useTransform(scrollY, [0, 100], [0, -120]);
+  const logoOpacity = useTransform(scrollY, [0, 80], [1, 0]);
+
+  const springFast = { type: "spring" as const, stiffness: 400, damping: 28 };
+  const springHeavy = { type: "spring" as const, stiffness: 220, damping: 24 };
 
   return (
     <>
-      {/* 1. TOP BAR WRAPPER (Z-150) */}
-      <nav className="fixed top-0 left-0 w-full z-[150] p-6 flex justify-between items-center pointer-events-none">
-        {/* LOGO AREA */}
-        <motion.div className="pointer-events-auto">
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 w-full z-150 p-8 flex justify-between items-center pointer-events-none">
+        {/* LOGO */}
+        <motion.div
+          style={{ y: logoY, opacity: logoOpacity }}
+          className="pointer-events-auto ml-12"
+        >
           <Link href="/">
             <Image
-              src="/logo.svg" // Replace with your actual logo path
+              src="/Img/watnidea-logo.png"
               alt="Logo"
-              width={40}
-              height={40}
+              width={160}
+              height={160}
               className="object-contain"
             />
           </Link>
         </motion.div>
 
-        {/* BUTTONS AREA */}
-        <div className="flex items-center gap-3 pointer-events-auto">
-          {/* CONTACT BUTTON (Icon Slides Left to Right on Hover) */}
+        {/* ACTION BUTTONS AREA */}
+        <div className="flex items-center gap-4 pointer-events-auto">
+          {/* CONTACT US BUTTON */}
           <motion.button
             onMouseEnter={() => setIsContactHovered(true)}
             onMouseLeave={() => setIsContactHovered(false)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 bg-[#DDE4E6] text-black rounded-full px-6 py-3 shadow-sm border border-black/5"
+            className="flex items-center gap-4 bg-[#DDE4E6] text-black rounded-full px-8 h-16 shadow-sm border border-black/5 overflow-hidden"
           >
-            <span className="text-[11px] font-bold tracking-widest uppercase">
-              Contact Us
-            </span>
-            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center overflow-hidden relative">
+            {/* Text Cycle: Exit Top, Enter Bottom */}
+            <div className="relative h-full w-[90px] flex items-center">
               <AnimatePresence mode="popLayout" initial={false}>
-                {isContactHovered ? (
-                  <motion.div
-                    key="icon-hover"
-                    initial={{ x: 20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -20, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <MessageCircle size={14} />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="icon-default"
-                    initial={{ x: 20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -20, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <MessageCircle size={14} />
-                  </motion.div>
-                )}
+                <motion.span
+                  key={isContactHovered ? "contact-hover" : "contact-default"}
+                  initial={{ y: "100%", opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: "-100%", opacity: 0 }}
+                  transition={springFast}
+                  className="absolute left-0 text-[12px] font-bold tracking-widest uppercase whitespace-nowrap"
+                >
+                  Contact Us
+                </motion.span>
+              </AnimatePresence>
+            </div>
+
+            {/* Message Icon Cycle: Exit Left, Enter Right */}
+            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 overflow-hidden relative">
+              <AnimatePresence mode="popLayout" initial={false}>
+                <motion.div
+                  key={isContactHovered ? "msg-hover" : "msg-default"}
+                  initial={{ x: -25, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: 25, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "circOut" }}
+                >
+                  <MessageCircle size={18} />
+                </motion.div>
               </AnimatePresence>
             </div>
           </motion.button>
 
-          {/* MENU TOGGLE (Dots Rotate on Hover) */}
+          {/* MENU TOGGLE BUTTON */}
           <motion.button
             onClick={() => setMenuOpen(!menuOpen)}
-            whileHover="hover"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative flex items-center gap-3 bg-black text-white rounded-full px-6 py-3 shadow-lg min-w-[140px] h-[52px] overflow-hidden"
+            className="relative flex items-center gap-4 bg-black text-white rounded-full px-8 h-16 shadow-lg min-w-[180px] overflow-hidden"
           >
-            <div className="relative h-full w-full flex items-center">
+            {/* Text Cycle: Exit Top, Enter Bottom */}
+            <div className="relative h-full w-[80px] flex items-center">
               <AnimatePresence mode="popLayout" initial={false}>
-                {menuOpen ? (
-                  <motion.span
-                    key="close"
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    exit={{ y: "-100%" }}
-                    transition={springFast}
-                    className="absolute left-0 text-[11px] font-bold tracking-widest uppercase"
-                  >
-                    Close
-                  </motion.span>
-                ) : (
-                  <motion.span
-                    key="menu"
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    exit={{ y: "-100%" }}
-                    transition={springFast}
-                    className="absolute left-0 text-[11px] font-bold tracking-widest uppercase"
-                  >
-                    Menu
-                  </motion.span>
-                )}
+                <motion.span
+                  key={menuOpen ? "close" : "menu"}
+                  initial={{ y: "100%", opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: "-100%", opacity: 0 }}
+                  transition={springFast}
+                  className="absolute left-0 text-[12px] font-bold tracking-widest uppercase"
+                >
+                  {menuOpen ? "Close" : "Menu"}
+                </motion.span>
               </AnimatePresence>
             </div>
 
-            {/* ROTATING DOTS */}
+            {/* Dots: Rotate 180 on Hover/Click */}
             <motion.div
+              animate={{ rotate: menuOpen ? 180 : 0 }}
               variants={{ hover: { rotate: 180 } }}
               transition={springFast}
-              className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center gap-[3px] shrink-0"
+              className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center gap-[4px] shrink-0"
             >
-              <div className="w-1.5 h-1.5 bg-white rounded-full" />
-              <div className="w-1.5 h-1.5 bg-white rounded-full" />
+              <div className="w-2 h-2 bg-white rounded-full" />
+              <div className="w-2 h-2 bg-white rounded-full" />
             </motion.div>
           </motion.button>
         </div>
       </nav>
 
-      {/* 2. NAVIGATION PANEL (Z-140, Below Buttons, Gap from Right) */}
+      {/* 2. NAVIGATION PANEL (Z-140) */}
       <AnimatePresence>
         {menuOpen && (
           <>
+            {/* Soft Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMenuOpen(false)}
-              className="fixed inset-0 z-[130] bg-black/5 backdrop-blur-md"
+              className="fixed inset-0 z-130 bg-black/5 backdrop-blur-md"
             />
 
+            {/* Side Panel: Aligned with Buttons */}
             <motion.div
               initial={{ x: 20, y: -20, opacity: 0, scale: 0.95 }}
               animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
               exit={{ x: 20, y: -20, opacity: 0, scale: 0.95 }}
               transition={springHeavy}
-              className="fixed top-[80px] right-6 z-[140] w-full max-w-[400px] min-h-[400px] bg-[#E8EAEB] rounded-[2.5rem] shadow-2xl flex flex-col p-8"
+              className="fixed top-[110px] right-8 z-140 w-full max-w-[420px] bg-[#E8EAEB] rounded-[3rem] shadow-2xl flex flex-col p-10 overflow-hidden"
             >
-              <div className="flex flex-col gap-1 mt-4">
+              <div className="flex flex-col gap-2 mt-4">
                 {NAV_LINKS.map((link) => (
-                  <motion.div key={link.id} className="group">
+                  <motion.div
+                    key={link.id}
+                    whileHover="hover"
+                    initial="initial"
+                    className="group"
+                  >
                     <Link
                       href={link.href}
-                      className="flex items-center justify-between py-4 rounded-2xl group-hover:px-4 group-hover:bg-white transition-all duration-300"
+                      onClick={() => setMenuOpen(false)}
+                      className="flex items-center py-4 rounded-3xl group-hover:bg-white group-hover:px-6 transition-all duration-300"
                     >
-                      <span className="text-5xl font-bold tracking-tighter text-[#1A1A1A] opacity-40 group-hover:opacity-100 transition-opacity">
-                        {link.label}
-                      </span>
+                      <div className="flex items-center gap-4">
+                        {/* Bullet Arrow (Hover only) */}
+                        <motion.div
+                          variants={{
+                            initial: { opacity: 0, x: -15, width: 0 },
+                            hover: { opacity: 1, x: 0, width: "auto" },
+                          }}
+                          transition={springFast}
+                          className="overflow-hidden flex items-center shrink-0"
+                        >
+                          <ArrowRight
+                            size={28}
+                            className="text-black mr-2"
+                            strokeWidth={3}
+                          />
+                        </motion.div>
 
-                      {/* ARROW SHOWS ON HOVER */}
-                      <motion.div
-                        initial={{ opacity: 0, x: -10 }}
-                        whileHover={{ opacity: 1, x: 0 }}
-                        className="opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300"
-                      >
-                        <ArrowRight
-                          size={32}
-                          className="text-black"
-                          strokeWidth={3}
-                        />
-                      </motion.div>
+                        {/* Color: Grey Black on Hover ONLY */}
+                        <span className="text-5xl font-bold tracking-tighter text-black/40 group-hover:text-black transition-colors duration-300">
+                          {link.label}
+                        </span>
+                      </div>
                     </Link>
                   </motion.div>
                 ))}
