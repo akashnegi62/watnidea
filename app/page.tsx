@@ -1,5 +1,6 @@
 import React from "react";
-import Loader from "@/components/Loader";
+// import Loader from "@/components/Loader";
+import FloatingNav from "@/Ui/FloatingNav";
 import HeroPage from "@/components/HeroSec";
 import AboutSec from "@/components/AboutSec";
 import SectionSec from "@/components/ServiceSec";
@@ -9,7 +10,8 @@ import StrategicSec from "@/components/StrategicSec";
 function page() {
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
+      <FloatingNav />
       <HeroPage />
       <AboutSec />
       <SectionSec />

@@ -11,6 +11,7 @@ const services = [
     description:
       "We define your brand identity, positioning, and digital HQ with a premium system that builds trust and clarity.",
     accent: "#ba2c27",
+    icon: "/Img/build_icon1.svg",
   },
   {
     tag: "02 — Content",
@@ -18,6 +19,7 @@ const services = [
     description:
       "We create engaging content systems and storytelling that keep your brand visible, active, and consistently talked about.",
     accent: "#ba2c27",
+    icon: "/Img/build_icon2.svg",
   },
   {
     tag: "03 — Revenue",
@@ -25,6 +27,7 @@ const services = [
     description:
       "We turn attention into revenue using ads, funnels, and AI-driven systems built for scalable business growth.",
     accent: "#ba2c27",
+    icon: "/Img/build_icon3.svg",
   },
 ];
 
@@ -41,7 +44,7 @@ function ServiceCard({
   return (
     <motion.div
       ref={ref}
-      className="relative flex flex-col justify-between"
+      className="relative flex flex-col justify-between rounded-2xl"
       style={{
         aspectRatio: "1 / 1",
         background: "#0f0f0f",
@@ -77,18 +80,20 @@ function ServiceCard({
         transition={{ duration: 0.4 }}
       />
 
-      {/* Tag */}
-      <motion.span
-        className="relative z-10 text-xs font-mono tracking-widest uppercase"
-        style={{ color: "rgba(255,255,255,0.35)" }}
-        variants={{ hover: { color: "rgba(0,0,0,0.45)" } }}
-        transition={{ duration: 0.3 }}
+      {/* Icon in circle instead of Tag */}
+      <motion.div
+        className="relative z-10 w-25 h-25 rounded-full flex items-center justify-center"
+        style={{ background: service.accent }}
+        variants={{
+          hover: { scale: 1.1 },
+        }}
+        transition={{ duration: 0.4 }}
       >
-        {service.tag}
-      </motion.span>
+        <Image src={service.icon} alt="Service Icon" width={50} height={50} />
+      </motion.div>
 
       {/* Bottom content */}
-      <div className="relative z-10 flex flex-col gap-4">
+      <div className="relative z-10 flex flex-col gap-5">
         <motion.h3
           className="font-medium leading-none uppercase"
           style={{
@@ -105,7 +110,7 @@ function ServiceCard({
         <motion.p
           className="text-lg leading-relaxed font-medium"
           style={{ color: "rgba(255,255,255,0.5)", maxWidth: "28ch" }}
-          variants={{ hover: { color: "rgba(0,0,0,0.65)" } }}
+          variants={{ hover: { color: "#000" } }}
           transition={{ duration: 0.3 }}
         >
           {service.description}
@@ -173,7 +178,7 @@ export default function WeBuildSec() {
           >
             <motion.a
               href="#contact"
-              className="inline-flex items-center gap-2 font-semibold text-sm tracking-wide uppercase px-6 py-3"
+              className="inline-flex items-center gap-2 font-semibold text-sm tracking-wide uppercase px-6 py-3 rounded-full"
               style={{
                 background: "#ba2c27",
                 color: "#000",
@@ -189,7 +194,7 @@ export default function WeBuildSec() {
 
             <motion.a
               href="#work"
-              className="inline-flex items-center gap-2 font-semibold text-sm tracking-wide uppercase px-6 py-3"
+              className="inline-flex items-center gap-2 font-semibold text-sm tracking-wide uppercase px-6 py-3 rounded-full"
               style={{
                 background: "transparent",
                 color: "#fff",

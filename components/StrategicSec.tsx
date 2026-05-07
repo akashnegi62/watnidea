@@ -15,32 +15,28 @@ const CHOOSE_DATA = [
     title: "Aesthetic-First Utility",
     tagline:
       "We build premium visuals that elevate perception and justify higher value.",
-    image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80",
+    image: "/Img/strategy1.webp",
   },
   {
     id: "02",
     title: "Cognitive Design",
     tagline:
       "We use psychology-driven design to make your brand memorable and impactful.",
-    image:
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&q=80",
+    image: "/Img/strategy2.webp",
   },
   {
     id: "03",
     title: "Human-Centric Tech",
     tagline:
       "We combine AI tools with human insight to create meaningful brand experiences.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80",
+    image: "/Img/strategy3.webp",
   },
   {
     id: "04",
     title: "Future-Proof Systems",
     tagline:
       "We build scalable identities and systems designed to perform long-term.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80",
+    image: "/Img/strategy4.webp",
   },
 ];
 
