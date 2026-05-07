@@ -69,47 +69,48 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
   return (
     <div
       className="sticky top-0 h-screen flex items-center justify-start"
-      style={{ paddingTop: `${index * 40}px` }}
+      style={{ paddingTop: `calc(${index} * min(4vh, 40px))` }}
     >
       <motion.div
         ref={cardRef}
         style={{ scale }}
-        className="bg-black w-full h-[60vh] rounded-[3rem] p-12 md:p-16 flex flex-col justify-between shadow-2xl border border-white/5"
+        className="bg-black w-full h-auto min-h-[60vh] rounded-4xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col justify-between shadow-2xl border border-white/5 gap-10 xl:gap-0"
       >
         {/* Top Content */}
         <div>
-          <h2 className="text-white text-6xl md:text-8xl font-medium tracking-tighter leading-none">
+          {/* Responsive Text Sizes */}
+          <h2 className="text-white text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-medium tracking-tighter leading-none">
             {service.title}
           </h2>
-          <h3 className="text-white/30 text-5xl md:text-7xl font-medium tracking-tighter leading-none mt-2">
+          <h3 className="text-white/30 text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-medium tracking-tighter leading-none mt-2 md:mt-4">
             ({service.subTitle})
           </h3>
         </div>
 
         {/* Bottom Content */}
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-8 md:gap-10">
           <div className="flex flex-wrap gap-2">
             {service.tags.map((tag: string) => (
               <span
                 key={tag}
-                className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-xs uppercase tracking-widest"
+                className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-[10px] md:text-xs uppercase tracking-widest"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <div className="flex items-start gap-4 max-w-xl">
-              <Sparkles className="text-white mt-1 shrink-0 w-6 h-6 opacity-40" />
-              <p className="text-white/70 text-xl leading-relaxed">
+          <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 xl:gap-8">
+            <div className="flex items-start gap-3 md:gap-4 max-w-xl">
+              <Sparkles className="text-white mt-1 shrink-0 w-5 h-5 md:w-6 md:h-6 opacity-40" />
+              <p className="text-white/70 text-base md:text-lg lg:text-xl leading-relaxed">
                 {service.description}
               </p>
             </div>
 
-            <button className="group flex items-center gap-2 text-white font-medium text-lg border-b border-white/20 pb-1 hover:border-white transition-all">
+            <button className="group flex items-center gap-2 text-white font-medium text-base md:text-lg border-b border-white/20 pb-1 hover:border-white transition-all self-start xl:self-auto">
               read more
-              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
           </div>
         </div>
@@ -120,16 +121,22 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 
 export default function ServiceSec() {
   return (
-    <section className="bg-[#edf1f3] px-6 pt-32 min-h-screen">
+    <section className="bg-[#edf1f3] px-4 sm:px-6 pt-24 md:pt-32 min-h-screen">
       {/* Services Header */}
-      <div className="px-6">
-        <div className="flex items-center gap-3 mb-8">
-          <Image src="/Img/point_icon.svg" alt="Point Icon" width={24} height={24} />
-          <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] text-lg mb-0">
+      <div className="px-2 sm:px-6">
+        <div className="flex items-center gap-3 mb-6 md:mb-8">
+          <Image
+            src="/Img/point_icon.svg"
+            alt="Point Icon"
+            width={24}
+            height={24}
+            className="w-5 h-5 md:w-6 md:h-6"
+          />
+          <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] text-sm md:text-lg mb-0">
             Our Core Services
           </p>
         </div>
-        <h1 className="text-5xl md:text-[5.5rem] font-medium text-[#121417] tracking-tight leading-none">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-medium text-[#121417] tracking-tight leading-tight lg:leading-none">
           We are an <span className="text-(--highlight)">unusual</span> digital
           agency focusing on transforming your vision into a captivating digital
           experience.
@@ -137,14 +144,14 @@ export default function ServiceSec() {
       </div>
 
       {/* Stacking Cards */}
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-12 md:mt-0">
         {SERVICES.map((service, index) => (
           <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
 
       {/* Extra space at the bottom */}
-      <div className="h-[30vh]" />
+      <div className="h-[20vh] md:h-[30vh]" />
     </section>
   );
 }
