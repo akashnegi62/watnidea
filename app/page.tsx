@@ -6,6 +6,8 @@ import SectionSec from "@/components/ServiceSec";
 import WebuildSec from "@/components/WebuildSec";
 import StrategicSec from "@/components/StrategicSec";
 import IdentitySec from "@/components/IdentitySec";
+import BannerSec from "@/components/BannerSec";
+import FAQSec from "@/components/FAQSec";
 
 function page() {
   return (
@@ -18,6 +20,8 @@ function page() {
       <WebuildSec />
       <StrategicSec />
       <IdentitySec />
+      <BannerSec />
+       <FAQSec/>
     </>
   );
 }
