@@ -64,7 +64,7 @@ export default function FloatingNav() {
             onMouseLeave={() => setIsContactHovered(false)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-4 bg-[#DDE4E6] text-black rounded-full px-8 h-16 shadow-sm border border-black/5 overflow-hidden"
+            className="flex items-center gap-4 bg-[#DDE4E6] text-black rounded-full px-8 h-16 shadow-sm border-2 border-white overflow-hidden"
           >
             <div className="relative h-full w-[90px] flex items-center">
               <AnimatePresence mode="popLayout" initial={false}>
@@ -101,7 +101,7 @@ export default function FloatingNav() {
             onClick={() => setMenuOpen(!menuOpen)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group relative flex items-center gap-4 bg-black text-white rounded-full px-8 h-16 shadow-lg min-w-[180px] overflow-hidden"
+            className="group relative flex items-center gap-4 bg-black text-white border-2 border-white rounded-full px-8 h-16 shadow-lg min-w-[180px] overflow-hidden"
           >
             <div className="relative h-full w-[80px] flex items-center">
               <AnimatePresence mode="popLayout" initial={false}>
