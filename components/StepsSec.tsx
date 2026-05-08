@@ -78,7 +78,7 @@ const ImageBlock = ({
 
 // 3. Main StepSec Component
 export default function StepSec() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <section
@@ -146,6 +146,7 @@ export default function StepSec() {
                   >
                     {/* Title Button */}
                     <button
+                      type="button"
                       onClick={() => setActiveIndex(index)}
                       className={`text-left text-2xl md:text-4xl font-medium transition-all duration-500 flex items-center justify-between ${
                         isActive ? "text-black" : "text-gray-300"
