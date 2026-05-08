@@ -69,10 +69,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
           {/* Column 1: Brand Description (Span 5) */}
           <div className="lg:col-span-5 space-y-6">
-            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-(--highlight)">
+            <p className="text-[12px] font-black uppercase tracking-[0.3em] text-(--highlight)">
               Agency Overview
             </p>
-            <p className="text-white/50 text-sm leading-relaxed max-w-md">
+            <p className="text-white text-lg leading-relaxed max-w-md">
               As a leading creative and digital marketing agency, watNidea
               provides end-to-end solutions for modern brands. Our expertise
               spans brand strategy and rebranding to technical website
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links (Span 3) */}
           <div className="lg:col-span-3 flex flex-col gap-4">
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/30">
+            <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-(--highlight)">
               Quick Links
             </p>
             {QUICK_LINKS.map((link) => (
@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* Column 3: Services (Span 4) */}
           <div className="lg:col-span-4 flex flex-col gap-4">
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/30">
+            <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-(--highlight)">
               Services
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
@@ -121,7 +121,7 @@ export default function Footer() {
           {/* Contact Details */}
           <div className="space-y-1">
             <p className="text-sm font-bold tracking-widest">+91 8354811162</p>
-            <p className="text-sm font-bold tracking-widest text-white/50">
+            <p className="text-sm font-bold tracking-widest text-white">
               info@watnidea.com
             </p>
           </div>
@@ -141,8 +141,8 @@ export default function Footer() {
           </div>
 
           {/* Copyright & Legal */}
-          <div className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/20 text-left md:text-right">
-            <p className="mb-2">© 2026 WatNidea. All rights reserved.</p>
+          <div className="text-sm font-bold uppercase tracking-[0.25em] text-white text-left md:text-right">
+            <p className="mb-2">© 2026 <span className="text-(--highlight)">WatNidea.</span> All rights reserved.</p>
             <div className="flex gap-4 md:justify-end">
               {LEGAL.map((l) => (
                 <Link
