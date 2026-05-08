@@ -30,7 +30,7 @@ function page() {
       <ResultSec />
       <FAQSec />
       <BookBannerSec />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
