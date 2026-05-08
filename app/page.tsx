@@ -29,8 +29,8 @@ function page() {
       <StepsSec />
       <ResultSec />
       <FAQSec />
-      {/*<BookBannerSec />
-      <Footer /> */}
+      <BookBannerSec />
+      {/* <Footer /> */}
     </>
   );
 }
