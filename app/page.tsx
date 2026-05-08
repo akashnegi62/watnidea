@@ -16,7 +16,8 @@ import Footer from "@/Ui/Footer";
 function page() {
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
+      <PricingSec />
       <FloatingNav />
       <HeroPage />
       <AboutSec />
@@ -25,7 +26,7 @@ function page() {
       <StrategicSec />
       <IdentitySec />
       <BannerSec />
-      <PricingSec />
+      
       <StepsSec />
       <ResultSec />
       <FAQSec />
