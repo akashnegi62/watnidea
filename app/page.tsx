@@ -26,8 +26,8 @@ function page() {
       <IdentitySec />
       <BannerSec />
       <PricingSec />
-      {/* <StepsSec />
-      <ResultSec />
+      <StepsSec />
+      {/*<ResultSec />
       <FAQSec />
       <BookBannerSec />
       <Footer /> */}
