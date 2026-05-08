@@ -135,12 +135,17 @@ export default function WeBuildSec() {
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
           >
-            <Image
-              src="/Img/point_icon.svg"
-              alt="Point Icon"
-              width={24}
-              height={24}
-            />
+            <motion.div
+              animate={{ rotate: [0, 180, 360] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            >
+              <Image
+                src="/Img/point_icon.svg"
+                alt="Point Icon"
+                width={24}
+                height={24}
+              />
+            </motion.div>
             <p
               className="text-lg font-mono tracking-[0.3em] uppercase mb-0"
               style={{ color: "#ba2c27" }}

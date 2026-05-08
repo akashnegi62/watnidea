@@ -12,23 +12,19 @@ import {
 const STATS = [
   {
     value: "235+",
-    label: "Projects Delivered",
-    desc: "Brand identities, digital ecosystems, and campaigns built end-to-end.",
+    desc: "With over 530 successful SEO projects completed.",
   },
   {
     value: "25k+",
-    label: "Audience Reached",
-    desc: "Collective reach across all client brand launches and campaigns.",
+    desc: "With over 530 successful SEO projects completed.",
   },
   {
     value: "97%",
-    label: "Client Retention",
-    desc: "Clients who return aren't just satisfied — they're believers.",
+    desc: "With over 530 successful SEO projects completed.",
   },
   {
     value: "1.1k+",
-    label: "Assets Created",
-    desc: "From motion graphics to full identity systems, built to endure.",
+    desc: "With over 530 successful SEO projects completed.",
   },
 ];
 
@@ -91,10 +87,7 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
       />
 
       <div>
-        <p className="text-white font-semibold text-sm tracking-wide mb-1">
-          {stat.label}
-        </p>
-        <p className="text-white/40 text-sm leading-relaxed">{stat.desc}</p>
+        <p className="text-white text-sm leading-relaxed">{stat.desc}</p>
       </div>
     </motion.div>
   );
@@ -135,7 +128,7 @@ export default function BannerSec() {
             className="absolute inset-[-8%] w-[116%] h-[116%]"
           >
             <Image
-              src="/Img/strategy1.webp"
+              src="/Img/identity1.webp"
               alt="Team collaborating"
               fill
               className="object-cover object-center"
@@ -190,13 +183,6 @@ export default function BannerSec() {
                 </svg>
               </div>
             </div>
-          </div>
-
-          {/* bottom-left label */}
-          <div className="absolute bottom-8 left-8 z-10">
-            <p className="text-white/40 text-xs uppercase tracking-[0.2em] font-semibold">
-              Our track record
-            </p>
           </div>
         </div>
 

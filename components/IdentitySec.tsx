@@ -5,10 +5,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 const IMAGES = [
-  "/Img/strategy1.webp",
-  "/Img/strategy2.webp",
-  "/Img/strategy3.webp",
-  "/Img/strategy4.webp",
+  "/Img/identity1.webp",
+  "/Img/identity2.webp",
+  "/Img/identity3.webp",
+  "/Img/identity4.webp",
 ];
 
 const CARD_FINAL_WIDTH = "23.5%";
@@ -45,12 +45,17 @@ export default function CoreServices() {
         {/* ── HEADER ── */}
         <div className="px-6 md:px-16">
           <div className="flex items-center gap-3 mb-8">
-            <Image
-              src="/Img/point_icon.svg"
-              alt="Point Icon"
-              width={24}
-              height={24}
-            />
+            <motion.div
+              animate={{ rotate: [0, 180, 360] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            >
+              <Image
+                src="/Img/point_icon.svg"
+                alt="Point Icon"
+                width={24}
+                height={24}
+              />
+            </motion.div>
             <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] text-lg mb-0">
               What We Do Best
             </p>
@@ -166,14 +171,15 @@ export default function CoreServices() {
         {/* ── DESCRIPTION + BUTTON ── */}
         <div className="px-6 md:px-16 flex flex-col md:flex-row items-end justify-between gap-10">
           <div className="max-w-3xl">
-            <p className="text-[#121417]/80 text-xl md:text-2xl leading-tight font-medium">
-              <span className="text-black font-bold">watNidea</span> combines
+            <p className="text-black text-xl md:text-2xl leading-tight font-medium">
+              <span className="text-black font-black">watNidea</span> combines
               branding, creative execution, and growth systems into one unified
-              engine. We don&apos;t operate like a traditional agency—we design
+              engine. We don’t operate like a traditional agency—we design
               identities, build digital ecosystems, and scale them with
-              precision.
+              precision. From strategy to content, websites to campaigns—every
+              element is connected, intentional, and built to perform.
             </p>
-            <p className="text-[#121417]/60 text-lg mt-4 max-w-2xl leading-snug">
+            <p className="text-black/90 text-lg mt-4 max-w-2xl leading-snug">
               Whether you need clarity, visibility, or scale, we ensure your
               brand doesn&apos;t just exist— it dominates.
             </p>

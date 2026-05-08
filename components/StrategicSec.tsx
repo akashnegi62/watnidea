@@ -67,12 +67,17 @@ export default function WhyChooseUs() {
       <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between pr-10">
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <Image
-              src="/Img/point_icon.svg"
-              alt="Point Icon"
-              width={24}
-              height={24}
-            />
+            <motion.div
+              animate={{ rotate: [0, 180, 360] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            >
+              <Image
+                src="/Img/point_icon.svg"
+                alt="Point Icon"
+                width={24}
+                height={24}
+              />
+            </motion.div>
             <p className="text-white/40 uppercase tracking-[0.3em] text-lg font-medium mb-0">
               Why choose us
             </p>

@@ -137,12 +137,17 @@ export default function FAQSec() {
           {/* Section Headers */}
           <div className="mb-12 flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <Image
-                src="/Img/point_icon.svg"
-                alt="Point Icon"
-                width={20}
-                height={20}
-              />
+              <motion.div
+                animate={{ rotate: [0, 180, 360] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+              >
+                <Image
+                  src="/Img/point_icon.svg"
+                  alt="Point Icon"
+                  width={20}
+                  height={20}
+                />
+              </motion.div>
               <span className="text-[--highlight] font-bold tracking-[0.2em] uppercase text-lg">
                 faqs
               </span>

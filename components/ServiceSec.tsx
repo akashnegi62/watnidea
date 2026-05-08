@@ -125,13 +125,18 @@ export default function ServiceSec() {
       {/* Services Header */}
       <div className="px-2 sm:px-6">
         <div className="flex items-center gap-3 mb-6 md:mb-8">
-          <Image
-            src="/Img/point_icon.svg"
-            alt="Point Icon"
-            width={24}
-            height={24}
-            className="w-5 h-5 md:w-6 md:h-6"
-          />
+          <motion.div
+            animate={{ rotate: [0, 180, 360] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          >
+            <Image
+              src="/Img/point_icon.svg"
+              alt="Point Icon"
+              width={24}
+              height={24}
+              className="w-5 h-5 md:w-6 md:h-6"
+            />
+          </motion.div>
           <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] text-sm md:text-lg mb-0">
             Our Core Services
           </p>
