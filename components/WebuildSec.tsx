@@ -44,13 +44,11 @@ function ServiceCard({
   return (
     <motion.div
       ref={ref}
-      className="relative flex flex-col justify-between rounded-2xl"
+      // Mobile: Auto height to prevent text overflow | Tablet/Desktop: Square aspect ratio
+      className="relative flex flex-col justify-between rounded-2xl overflow-hidden p-8 md:p-10 lg:aspect-square"
       style={{
-        aspectRatio: "1 / 1",
         background: "#0f0f0f",
         border: "1px solid rgba(255,255,255,0.08)",
-        padding: "clamp(1.5rem, 3vw, 2.5rem)",
-        overflow: "hidden",
       }}
       initial={{ opacity: 0, y: 48 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -70,34 +68,30 @@ function ServiceCard({
         transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
       />
 
-      {/* Corner dot accent */}
+      {/* Icon Circle - Adjusted size for mobile/tablet */}
       <motion.div
-        className="absolute top-6 right-6 w-2 h-2 rounded-full z-10"
-        style={{ background: service.accent }}
-        variants={{
-          hover: { scale: 5, opacity: 0 },
-        }}
-        transition={{ duration: 0.4 }}
-      />
-
-      {/* Icon in circle instead of Tag */}
-      <motion.div
-        className="relative z-10 w-25 h-25 rounded-full flex items-center justify-center"
+        className="relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-12 lg:mb-0"
         style={{ background: service.accent }}
         variants={{
           hover: { scale: 1.1 },
         }}
         transition={{ duration: 0.4 }}
       >
-        <Image src={service.icon} alt="Service Icon" width={50} height={50} />
+        <Image
+          src={service.icon}
+          alt="Service Icon"
+          width={40}
+          height={40}
+          className="w-8 h-8 md:w-10 md:h-10"
+        />
       </motion.div>
 
       {/* Bottom content */}
-      <div className="relative z-10 flex flex-col gap-5">
+      <div className="relative z-10 flex flex-col gap-4 md:gap-5">
         <motion.h3
-          className="font-medium leading-none uppercase"
+          className="font-medium leading-[1.1] uppercase"
           style={{
-            fontSize: "clamp(2rem, 3.5vw, 3.2rem)",
+            fontSize: "clamp(1.8rem, 4vw, 3rem)",
             color: "#fff",
             whiteSpace: "pre-line",
           }}
@@ -108,8 +102,8 @@ function ServiceCard({
         </motion.h3>
 
         <motion.p
-          className="text-lg leading-relaxed font-medium"
-          style={{ color: "rgba(255,255,255,0.5)", maxWidth: "28ch" }}
+          className="text-base md:text-lg leading-relaxed font-medium"
+          style={{ color: "rgba(255,255,255,0.5)", maxWidth: "30ch" }}
           variants={{ hover: { color: "#000" } }}
           transition={{ duration: 0.3 }}
         >
@@ -125,12 +119,12 @@ export default function WeBuildSec() {
   const headingInView = useInView(headingRef, { once: true });
 
   return (
-    <section className="relative w-full bg-black overflow-hidden px-16 py-32">
-      <div className="relative z-10">
+    <section className="relative w-full bg-black overflow-hidden px-6 py-20 md:px-12 md:py-28 lg:px-16 lg:py-32">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         {/* ── Heading ── */}
-        <div ref={headingRef} className="mb-16 md:mb-20">
+        <div ref={headingRef} className="mb-12 md:mb-16 lg:mb-20">
           <motion.div
-            className="flex items-center gap-3 mb-4"
+            className="flex items-center gap-3 mb-6"
             initial={{ opacity: 0, y: 12 }}
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
@@ -138,28 +132,29 @@ export default function WeBuildSec() {
             <motion.div
               animate={{ rotate: [0, 180, 360] }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+              className="shrink-0"
             >
               <Image
                 src="/Img/point_icon.svg"
                 alt="Point Icon"
-                width={24}
-                height={24}
+                width={20}
+                height={20}
+                className="md:w-6 md:h-6"
               />
             </motion.div>
             <p
-              className="text-lg font-mono tracking-[0.3em] uppercase mb-0"
+              className="text-sm md:text-base lg:text-lg font-mono tracking-[0.2em] md:tracking-[0.3em] uppercase"
               style={{ color: "#ba2c27" }}
             >
               What we actually do
             </p>
           </motion.div>
 
-          {/* "We build growth systems" — all on one line */}
           <div className="overflow-hidden">
             <motion.h2
-              className="font-medium uppercase leading-none tracking-tighter"
+              className="font-medium uppercase leading-[0.95] tracking-tighter"
               style={{
-                fontSize: "clamp(2.8rem, 8vw, 8rem)",
+                fontSize: "clamp(2.5rem, 8vw, 8.5rem)",
                 color: "#fff",
               }}
               initial={{ y: "100%" }}
@@ -170,56 +165,49 @@ export default function WeBuildSec() {
                 delay: 0.1,
               }}
             >
-              We <span style={{ color: "#ba2c27" }}>build</span> growth systems
+              We <span style={{ color: "#ba2c27" }}>build</span>{" "}
+              <br className="block md:hidden" /> growth systems
             </motion.h2>
+
+            <motion.p
+              className="text-sm md:text-lg lg:text-xl leading-relaxed font-medium mt-6 text-white/80"
+              initial={{ opacity: 0 }}
+              animate={headingInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.4 }}
+            >
+              Let’s build something powerful together.{" "}
+              <button className="underline decoration-[#ba2c27] underline-offset-4 hover:text-[#ba2c27] transition-colors">
+                Get Free Quote
+              </button>
+            </motion.p>
           </div>
 
-          {/* CTA buttons inline with heading area */}
+          {/* CTA buttons */}
           <motion.div
-            className="flex flex-wrap items-center gap-3 mt-8"
+            className="flex flex-wrap items-center gap-4 mt-10"
             initial={{ opacity: 0, y: 16 }}
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.35 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
             <motion.a
               href="#contact"
-              className="inline-flex items-center gap-2 font-semibold text-sm tracking-wide uppercase px-6 py-3 rounded-full"
+              className="inline-flex items-center gap-2 font-bold text-xs md:text-sm tracking-widest uppercase px-8 py-4 rounded-full"
               style={{
                 background: "#ba2c27",
                 color: "#000",
-                letterSpacing: "0.08em",
               }}
-              whileHover={{ scale: 1.03, background: "#ffff" }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ type: "spring", stiffness: 400 }}
+              whileHover={{ scale: 1.05, backgroundColor: "#fff" }}
+              whileTap={{ scale: 0.95 }}
             >
               Contact us
-              <span className="text-base">↗</span>
-            </motion.a>
-
-            <motion.a
-              href="#work"
-              className="inline-flex items-center gap-2 font-semibold text-sm tracking-wide uppercase px-6 py-3 rounded-full"
-              style={{
-                background: "transparent",
-                color: "#fff",
-                border: "1px solid rgba(255,255,255,0.2)",
-                letterSpacing: "0.08em",
-              }}
-              whileHover={{
-                borderColor: "rgba(255,255,255,0.6)",
-                background: "rgba(255,255,255,0.05)",
-              }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.2 }}
-            >
-              See our work
+              <span className="text-lg">↗</span>
             </motion.a>
           </motion.div>
         </div>
 
         {/* ── Cards grid ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+        {/* 1 col on mobile, 2 cols on tablet, 3 cols on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-4">
           {services.map((s, i) => (
             <ServiceCard key={s.tag} service={s} index={i} />
           ))}

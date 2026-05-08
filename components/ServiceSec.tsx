@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Sparkles, ArrowUpRight } from "lucide-react";
+import {ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 const SERVICES = [
@@ -10,49 +10,42 @@ const SERVICES = [
     subTitle: "Branding",
     description:
       "We define your brand soul, positioning, and visual DNA to create a powerful identity that stands out with purpose and clarity.",
-    tags: ["Brand Soul", "Positioning", "Visual DNA", "Identity"],
   },
   {
     title: "The Digital HQ",
     subTitle: "Web Development",
     description:
       "High-speed, conversion-focused websites that act as your 24/7 sales engine and digital headquarters.",
-    tags: ["High-Speed", "Conversion", "Sales Engine", "HQ"],
   },
   {
     title: "The Hype Engine",
     subTitle: "SMM",
     description:
       "We engineer conversations, trends, and communities that turn your audience into a loyal brand tribe.",
-    tags: ["Conversations", "Trends", "Community", "Brand Tribe"],
   },
   {
     title: "Kinetic Studio",
     subTitle: "Video",
     description:
       "Cinematic brand films, reels, and visual storytelling designed to capture instant attention and engagement.",
-    tags: ["Brand Films", "Reels", "Storytelling", "Engagement"],
   },
   {
     title: "Growth Alchemy",
     subTitle: "Performance",
     description:
       "Paid ads and funnel systems engineered to turn every rupee into predictable, scalable revenue.",
-    tags: ["Paid Ads", "Funnels", "Scalable", "Revenue"],
   },
   {
     title: "Synthetic Cinema",
     subTitle: "AI Ads",
     description:
       "AI-powered cinematic ads that scale your brand storytelling at the speed of imagination.",
-    tags: ["AI-Powered", "Cinematic", "Scaling", "Storytelling"],
   },
   {
     title: "The Echo System",
     subTitle: "Omnichannel",
     description:
       "SEO, AEO, and content systems that make your brand visible everywhere your audience exists.",
-    tags: ["SEO", "AEO", "Content Systems", "Visibility"],
   },
 ];
 
@@ -74,7 +67,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       <motion.div
         ref={cardRef}
         style={{ scale }}
-        className="bg-black w-full h-auto min-h-[60vh] rounded-4xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col justify-between shadow-2xl border border-white/5 gap-10 xl:gap-0"
+        className="bg-black w-full h-auto min-h-[50vh] rounded-4xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col justify-center shadow-2xl border border-white/5 gap-10 md:gap-20"
       >
         {/* Top Content */}
         <div>
@@ -89,27 +82,15 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 
         {/* Bottom Content */}
         <div className="flex flex-col gap-8 md:gap-10">
-          <div className="flex flex-wrap gap-2">
-            {service.tags.map((tag: string) => (
-              <span
-                key={tag}
-                className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-[10px] md:text-xs uppercase tracking-widest"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
           <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 xl:gap-8">
             <div className="flex items-start gap-3 md:gap-4 max-w-xl">
-              <Sparkles className="text-white mt-1 shrink-0 w-5 h-5 md:w-6 md:h-6 opacity-40" />
               <p className="text-white/70 text-base md:text-lg lg:text-xl leading-relaxed">
                 {service.description}
               </p>
             </div>
 
             <button className="group flex items-center gap-2 text-white font-medium text-base md:text-lg border-b border-white/20 pb-1 hover:border-white transition-all self-start xl:self-auto">
-              read more
+              Read more
               <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
           </div>
