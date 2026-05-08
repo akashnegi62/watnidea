@@ -7,7 +7,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { MessageCircle, ArrowRight, ArrowUpRight } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,7 +28,6 @@ export default function FloatingNav() {
   const [isContactHovered, setIsContactHovered] = useState(false);
   const [servicesHovered, setServicesHovered] = useState(false);
 
-  // 1. LOGO SCROLL LOGIC
   const { scrollY } = useScroll();
   const logoY = useTransform(scrollY, [0, 100], [0, -120]);
   const logoOpacity = useTransform(scrollY, [0, 80], [1, 0]);
@@ -39,32 +38,32 @@ export default function FloatingNav() {
   return (
     <>
       {/* 1. TOP BAR WRAPPER */}
-      <nav className="fixed top-0 left-0 w-full z-150 p-8 flex justify-between items-center pointer-events-none">
-        {/* LOGO - Not fixed, exits on scroll */}
+      <nav className="fixed top-0 left-0 w-full z-150 p-4 md:p-8 flex justify-between items-center pointer-events-none">
+        {/* LOGO */}
         <motion.div
           style={{ y: logoY, opacity: logoOpacity }}
-          className="pointer-events-auto ml-4 md:ml-12"
+          className="pointer-events-auto ml-2 md:ml-12"
         >
           <Link href="/">
             <Image
               src="/Img/watnidea-logo.png"
               alt="Logo"
-              width={160}
-              height={160}
-              className="object-contain"
+              width={140}
+              height={140}
+              className="object-contain w-28 md:w-40"
             />
           </Link>
         </motion.div>
 
         {/* ACTION BUTTONS AREA */}
         <div className="flex items-center gap-4 pointer-events-auto">
-          {/* CONTACT US BUTTON */}
+          {/* CONTACT US BUTTON - Hidden on Mobile */}
           <motion.button
             onMouseEnter={() => setIsContactHovered(true)}
             onMouseLeave={() => setIsContactHovered(false)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-4 bg-[#DDE4E6] text-black rounded-full px-8 h-16 shadow-sm border-2 border-white overflow-hidden"
+            className="hidden md:flex items-center gap-4 bg-[#DDE4E6] text-black rounded-full px-8 h-16 shadow-sm border-2 border-white overflow-hidden"
           >
             <div className="relative h-full w-[90px] flex items-center">
               <AnimatePresence mode="popLayout" initial={false}>
@@ -101,9 +100,9 @@ export default function FloatingNav() {
             onClick={() => setMenuOpen(!menuOpen)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group relative flex items-center gap-4 bg-black text-white border-2 border-white rounded-full px-8 h-16 shadow-lg min-w-[180px] overflow-hidden"
+            className="group relative flex items-center gap-4 bg-black text-white border-2 border-white rounded-full px-6 md:px-8 h-14 md:h-16 shadow-lg min-w-[140px] md:min-w-[180px] overflow-hidden"
           >
-            <div className="relative h-full w-[80px] flex items-center">
+            <div className="relative h-full w-[60px] md:w-[80px] flex items-center">
               <AnimatePresence mode="popLayout" initial={false}>
                 <motion.span
                   key={menuOpen ? "close" : "menu"}
@@ -111,7 +110,7 @@ export default function FloatingNav() {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: "-100%", opacity: 0 }}
                   transition={springFast}
-                  className="absolute left-0 text-[11px] font-bold tracking-widest uppercase"
+                  className="absolute left-0 text-[10px] md:text-[11px] font-bold tracking-widest uppercase"
                 >
                   {menuOpen ? "Close" : "Menu"}
                 </motion.span>
@@ -120,12 +119,11 @@ export default function FloatingNav() {
 
             <motion.div
               animate={{ rotate: menuOpen ? 180 : 0 }}
-              whileHover={{ rotate: 180 }}
               transition={springFast}
-              className="group-hover:bg-red-400 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center gap-[4px] shrink-0"
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 flex items-center justify-center gap-[4px] shrink-0"
             >
-              <div className="w-2 h-2 bg-white rounded-full" />
-              <div className="w-2 h-2 bg-white rounded-full" />
+              <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full" />
+              <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full" />
             </motion.div>
           </motion.button>
         </div>
@@ -140,7 +138,7 @@ export default function FloatingNav() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMenuOpen(false)}
-              className="fixed inset-0 z-130 bg-black/5 backdrop-blur-md"
+              className="fixed inset-0 z-130 bg-black/10 backdrop-blur-md"
             />
 
             <motion.div
@@ -148,9 +146,9 @@ export default function FloatingNav() {
               animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
               exit={{ x: 20, y: -20, opacity: 0, scale: 0.95 }}
               transition={springHeavy}
-              className="fixed top-[110px] right-10 z-140 w-full max-w-[420px] bg-[#E8EAEB] rounded-[3rem] shadow-2xl flex flex-col p-10 overflow-hidden"
+              className="fixed top-[90px] md:top-[110px] right-4 md:right-10 z-140 w-[calc(100%-2rem)] md:max-w-[420px] bg-[#E8EAEB] rounded-[2.5rem] md:rounded-[3rem] shadow-2xl flex flex-col p-6 md:p-10 overflow-hidden"
             >
-              <div className="flex flex-col gap-2 mt-4">
+              <div className="flex flex-col gap-1 md:gap-2 mt-2">
                 {NAV_LINKS.map((link) => (
                   <div
                     key={link.id}
@@ -168,16 +166,16 @@ export default function FloatingNav() {
                       <Link
                         href={link.href}
                         onClick={() => !link.hasSub && setMenuOpen(false)}
-                        className="flex items-center py-4 rounded-3xl group-hover:bg-white group-hover:px-6 transition-all duration-300"
+                        className="flex items-center py-3 md:py-4 rounded-3xl group-hover:bg-white md:group-hover:px-6 transition-all duration-300"
                       >
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-3 md:gap-4">
                           <motion.div
                             variants={{
                               initial: { opacity: 0, x: -15, width: 0 },
                               hover: { opacity: 1, x: 0, width: "auto" },
                             }}
                             transition={springFast}
-                            className="overflow-hidden flex items-center shrink-0"
+                            className="overflow-hidden hidden md:flex items-center shrink-0"
                           >
                             <ArrowRight
                               size={28}
@@ -186,14 +184,14 @@ export default function FloatingNav() {
                             />
                           </motion.div>
 
-                          <span className="text-5xl font-bold tracking-tighter text-black/40 group-hover:text-black transition-colors duration-300">
+                          <span className="text-4xl md:text-5xl font-bold tracking-tighter text-black/40 group-hover:text-black transition-colors duration-300">
                             {link.label}
                           </span>
                         </div>
                       </Link>
                     </motion.div>
 
-                    {/* SUB-SERVICES REVEAL */}
+                    {/* SUB-SERVICES */}
                     {link.hasSub && (
                       <AnimatePresence>
                         {servicesHovered && (
@@ -201,31 +199,36 @@ export default function FloatingNav() {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="pl-14 mt-2 flex flex-col gap-4 overflow-hidden"
+                            className="pl-4 md:pl-14 mt-2 flex flex-col gap-3 md:gap-4 overflow-hidden"
                           >
                             {SUB_SERVICES.map((sub) => (
                               <Link
                                 key={sub.label}
                                 href={sub.href}
                                 onClick={() => setMenuOpen(false)}
-                                className="text-black/40 hover:text-black hover:translate-x-2 text-xl font-semibold transition-all duration-300"
+                                className="text-black/40 hover:text-black hover:translate-x-2 text-lg md:text-xl font-semibold transition-all duration-300"
                               >
                                 {sub.label}
                               </Link>
                             ))}
-                            <Link
-                              href="/services"
-                              onClick={() => setMenuOpen(false)}
-                              className="flex items-center gap-2 text-black/40 hover:text-black font-bold pt-2 hover:translate-x-2 transition-all duration-300"
-                            >
-                              More Services <ArrowUpRight size={18} />
-                            </Link>
                           </motion.div>
                         )}
                       </AnimatePresence>
                     )}
                   </div>
                 ))}
+
+                {/* MOBILE ONLY CONTACT US TAB */}
+                <div className="md:hidden mt-4 pt-4 border-t border-black/5">
+                  <Link
+                    href="/contact"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center justify-between bg-black text-white rounded-2xl px-6 py-4"
+                  >
+                    <span className="text-xl font-bold">Contact Us</span>
+                    <MessageCircle size={20} />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </>
