@@ -8,11 +8,15 @@ import StrategicSec from "@/components/StrategicSec";
 import IdentitySec from "@/components/IdentitySec";
 import BannerSec from "@/components/BannerSec";
 import FAQSec from "@/components/FAQSec";
+import PricingSec from "@/components/PricingSec";
+import ResultSec from "@/components/ResultSec";
 
 function page() {
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
+      <ResultSec />
+      <PricingSec />
       <FloatingNav />
       <HeroPage />
       <AboutSec />
