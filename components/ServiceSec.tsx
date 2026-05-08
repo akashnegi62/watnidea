@@ -61,17 +61,15 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 
   return (
     <div
-      className="sticky top-0 h-screen flex items-center justify-start"
-      style={{ paddingTop: `calc(${index} * min(4vh, 40px))` }}
+      className="sticky top-0 min-h-[70vh] lg:min-h-[80vh] flex items-start justify-start pt-12 md:pt-20 lg:pt-24"
+      style={{ marginTop: `calc(${index} * min(2vh, 20px))` }}
     >
       <motion.div
         ref={cardRef}
         style={{ scale }}
         className="bg-black w-full h-auto min-h-[50vh] rounded-4xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col justify-center shadow-2xl border border-white/5 gap-10 md:gap-20"
       >
-        {/* Top Content */}
         <div>
-          {/* Responsive Text Sizes */}
           <h2 className="text-white text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-medium tracking-tighter leading-none">
             {service.title}
           </h2>
@@ -80,7 +78,6 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
           </h3>
         </div>
 
-        {/* Bottom Content */}
         <div className="flex flex-col gap-8 md:gap-10">
           <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 xl:gap-8">
             <div className="flex items-start gap-3 md:gap-4 max-w-xl">
@@ -102,10 +99,9 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 
 export default function ServiceSec() {
   return (
-    <section className="bg-[#edf1f3] px-4 sm:px-6 pt-24 md:pt-32 min-h-screen">
-      {/* Services Header */}
+    <section className="bg-[#edf1f3] px-4 sm:px-6 pt-20 md:pt-28 min-h-screen">
       <div className="px-2 sm:px-6">
-        <div className="flex items-center gap-3 mb-6 md:mb-8">
+        <div className="flex items-center gap-3 mb-4 md:mb-6">
           <motion.div
             animate={{ rotate: [0, 180, 360] }}
             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
@@ -118,24 +114,20 @@ export default function ServiceSec() {
               className="w-5 h-5 md:w-6 md:h-6"
             />
           </motion.div>
-          <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] text-sm md:text-lg mb-0">
+          <p className="text-[#ba2c27] font-semibold uppercase tracking-[0.2em] text-sm md:text-lg mb-0">
             Services
           </p>
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-medium text-[#121417] tracking-tight leading-tight lg:leading-none">
-          Our <span className="text-(--highlight)">Core</span> Services
+          Our <span className="text-[#ba2c27]">Core</span> Services
         </h1>
       </div>
 
-      {/* Stacking Cards */}
-      <div className="flex flex-col mt-12 md:mt-0">
+      <div className="flex flex-col justify-start mt-6 md:mt-8">
         {SERVICES.map((service, index) => (
           <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
-
-      {/* Extra space at the bottom */}
-      <div className="h-[20vh] md:h-[30vh]" />
     </section>
   );
 }
