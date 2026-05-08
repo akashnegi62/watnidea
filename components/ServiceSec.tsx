@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import {ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 const SERVICES = [
@@ -119,13 +119,11 @@ export default function ServiceSec() {
             />
           </motion.div>
           <p className="text-(--highlight) font-semibold uppercase tracking-[0.2em] text-sm md:text-lg mb-0">
-            Our Core Services
+            Services
           </p>
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-medium text-[#121417] tracking-tight leading-tight lg:leading-none">
-          We are an <span className="text-(--highlight)">unusual</span> digital
-          agency focusing on transforming your vision into a captivating digital
-          experience.
+          Our <span className="text-(--highlight)">Core</span> Services
         </h1>
       </div>
 

@@ -247,7 +247,7 @@ export default function ResultSec() {
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#121417]
                            leading-[1.04] tracking-tight"
               >
-                Real <span className="text-(--highlight) italic">results</span>{" "}
+                Real <span className="text-(--highlight)">results</span>{" "}
                 from real
                 <br />
                 brands

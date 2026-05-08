@@ -227,15 +227,18 @@ export default function PricingSec() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <StarIcon />
-                <span className="text-(--highlight) text-xs md:text-lg font-bold uppercase tracking-[0.3em]">
+                <span className="text-(--highlight) text-xs md:text-lg font-medium uppercase tracking-[0.3em]">
                   Pricing
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-medium text-white leading-[1.1] tracking-tight">
-                Strategic <span className="text-(--highlight)">Packages</span>
+                Strategic Content Packages &{" "}
+                <span className="text-(--highlight)">
+                  Premium Pixel Standard
+                </span>
               </h2>
             </div>
-            <p className="text-white/40 text-sm max-w-xs leading-relaxed">
+            <p className="text-white text-lg max-w-xs leading-relaxed">
               Content subscription tiers designed to build identity, scale
               engagement, and dominate your market.
             </p>
@@ -263,16 +266,16 @@ export default function PricingSec() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <StarIcon />
-                <span className="text-(--highlight) text-xs md:text-sm font-bold uppercase tracking-[0.3em]">
-                  Lab Add-ons
+                <span className="text-(--highlight) text-xs md:text-lg font-medium uppercase tracking-[0.3em]">
+                  pricing
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-medium text-white leading-[1.1] tracking-tight">
-                AI Video{" "}
-                <span className="text-(--highlight)">&amp; Ad Lab</span>
+                watNidea <span className="text-(--highlight)">AI VIDEO</span> &
+                <span className="text-(--highlight)"> AD LAB</span>
               </h2>
             </div>
-            <p className="text-white/40 text-sm max-w-xs leading-relaxed">
+            <p className="text-white text-lg max-w-xs leading-relaxed">
               Specialized, high-tech visual solutions. Fixed-price project
               add-ons for elite campaigns.
             </p>

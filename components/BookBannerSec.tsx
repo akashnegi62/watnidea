@@ -112,7 +112,7 @@ export default function BookBannerSec() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={leftInView ? { opacity: 1, y: 0 } : {}}
-                  className="text-3xl md:text-5xl font-black text-white"
+                  className="text-3xl md:text-5xl font-medium text-white"
                 >
                   READY TO EVOLVE INTO{" "}
                   <span className="text-(--highlight)">A BRAND</span> THAT
@@ -189,7 +189,7 @@ export default function BookBannerSec() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-(--highlight) text-white font-bold text-sm py-4 rounded-xl shadow-lg shadow-(--highlight)/10 transition-transform"
+                className="w-full bg-(--highlight) text-white font-bold text-sm py-4 rounded-full shadow-lg shadow-(--highlight)/10 transition-transform"
               >
                 Start Your Project →
               </motion.button>

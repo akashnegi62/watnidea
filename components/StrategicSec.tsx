@@ -120,7 +120,7 @@ export default function WhyChooseUs() {
                     transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
                     className="overflow-hidden"
                   >
-                    <p className="text-white/70 text-base md:text-xl lg:text-2xl font-light max-w-2xl pt-3 md:pt-4">
+                    <p className="text-white text-base md:text-xl lg:text-2xl font-light max-w-2xl pt-3 md:pt-4">
                       {item.tagline}
                     </p>
                   </motion.div>

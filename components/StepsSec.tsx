@@ -83,7 +83,7 @@ export default function StepSec() {
   return (
     <section
       id="how-it-works"
-      className="relative min-h-screen w-full bg-white text-black pb-20"
+      className="relative min-h-screen w-full bg-white text-black py-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row px-6 md:px-12 relative py-12 md:py-0">
         {/* Left Side: Scrolling Images (Desktop Only) */}
@@ -117,17 +117,20 @@ export default function StepSec() {
                     height={20}
                   />
                 </motion.div>
-                <p className="text-(--highlight) text-sm font-bold uppercase tracking-[0.3em]">
+                <p className="text-(--highlight) text-lg font-medium uppercase tracking-[0.3em]">
                   How it works
                 </p>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-black leading-none tracking-tight mb-6">
+              <h2 className="text-4xl md:text-3xl lg:text-4xl font-medium text-black leading-none tracking-tight mb-6">
                 Step-by-Step guide <br /> to social success
               </h2>
-              <p className="text-gray-500 text-sm leading-relaxed max-w-md">
+              <p className="text-gray-500 text-md leading-relaxed max-w-md">
                 We follow a structured system to move your brand from low
-                visibility to consistent reach, engagement, and leads. Every
-                step is designed to deliver measurable growth.
+                visibility to consistent reach, engagement, and leads. From
+                strategy and content creation to execution and scaling, every
+                step is designed to deliver measurable growth. Our approach
+                focuses on attracting the right audience, building trust, and
+                converting attention into real business results.
               </p>
             </header>
 
@@ -144,7 +147,7 @@ export default function StepSec() {
                     {/* Title Button */}
                     <button
                       onClick={() => setActiveIndex(index)}
-                      className={`text-left text-2xl md:text-4xl font-bold transition-all duration-500 flex items-center justify-between ${
+                      className={`text-left text-2xl md:text-4xl font-medium transition-all duration-500 flex items-center justify-between ${
                         isActive ? "text-black" : "text-gray-300"
                       }`}
                     >
