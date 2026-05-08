@@ -28,8 +28,8 @@ function page() {
       <PricingSec />
       <StepsSec />
       <ResultSec />
-      {/* <FAQSec />
-      <BookBannerSec />
+      <FAQSec />
+      {/*<BookBannerSec />
       <Footer /> */}
     </>
   );
