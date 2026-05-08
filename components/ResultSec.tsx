@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
+import Image from "next/image";
 import {
   motion,
   useInView,
@@ -40,7 +41,7 @@ const QuoteMark = () => (
   <svg width="32" height="24" viewBox="0 0 32 24" fill="none">
     <path
       d="M0 24V14.4C0 6.4 4.8 1.6 14.4 0L16 3.2C11.2 4.8 8.8 8 8.8 12H14.4V24H0ZM17.6 24V14.4C17.6 6.4 22.4 1.6 32 0L33.6 3.2C28.8 4.8 26.4 8 26.4 12H32V24H17.6Z"
-      fill="var(--highlight)"
+      fill="currentColor"
     />
   </svg>
 );
@@ -92,8 +93,8 @@ function TestiCard({
                   border transition-all duration-500 select-none
                   ${
                     active
-                      ? "border-(--highlight)/60 bg-[#0f0b0b]"
-                      : "border-white/8 bg-[#111010] hover:border-white/15"
+                      ? "border-white bg-(--highlight)"
+                      : "border-white/8 bg-black hover:border-white/15"
                   }`}
       style={{
         boxShadow: active
@@ -112,19 +113,21 @@ function TestiCard({
 
       {/* index number — top left */}
       <div className="absolute top-5 left-6">
-        <span className="text-[11px] font-bold tracking-[0.22em] text-white/20 uppercase">
+        <span className="text-[11px] font-bold tracking-[0.22em] text-white uppercase">
           0{index + 1}
         </span>
       </div>
 
       {/* quote mark — top right */}
-      <div className="absolute top-5 right-6 opacity-70">
+      <div
+        className={`absolute top-5 right-6 opacity-70 ${active ? "text-white" : "text-(--highlight)"}`}
+      >
         <QuoteMark />
       </div>
 
       {/* quote body */}
       <div className="flex-1 px-6 pt-16 pb-6">
-        <p className="text-white/65 text-[15px] leading-[1.7] font-light">
+        <p className="text-white text-[15px] leading-[1.7] font-light">
           &quot;{t.quote}&quot;
         </p>
       </div>
@@ -133,10 +136,16 @@ function TestiCard({
       <div className="px-6 pb-5 flex items-center gap-3">
         {/* avatar placeholder */}
         <div
-          className="w-9 h-9 rounded-full bg-(--highlight)/20 border
-                        border-(--highlight)/30 flex items-center justify-center shrink-0"
+          className={`w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-colors duration-500
+                        ${
+                          active
+                            ? "bg-white/20 border-white/30"
+                            : "bg-(--highlight)/20 border-(--highlight)/30"
+                        }`}
         >
-          <span className="text-(--highlight) text-xs font-bold">
+          <span
+            className={`text-xs font-bold transition-colors duration-500 ${active ? "text-white" : "text-(--highlight)"}`}
+          >
             {t.name.charAt(0)}
           </span>
         </div>
@@ -144,7 +153,11 @@ function TestiCard({
           <p className="text-white font-bold text-sm leading-none mb-0.5">
             {t.name}
           </p>
-          <p className="text-white/35 text-xs">{t.role}</p>
+          <p
+            className={`text-xs transition-colors duration-500 ${active ? "text-white/60" : "text-white/35"}`}
+          >
+            {t.role}
+          </p>
         </div>
       </div>
 
@@ -168,6 +181,7 @@ function TestiCard({
             ease: "easeInOut",
             delay: index * 0.4,
           }}
+          className={active ? "text-white" : "text-(--highlight)"}
         >
           <QuoteMark />
         </motion.div>
@@ -189,42 +203,11 @@ export default function ResultSec() {
   });
   const smooth = useSpring(scrollYProgress, { stiffness: 50, damping: 18 });
   const asteriskRot = useTransform(smooth, [0, 1], [0, 360]);
-  // decorative orb parallax
-  const orbY = useTransform(smooth, [0, 1], ["-10%", "10%"]);
-  const orbX = useTransform(smooth, [0, 1], ["4%", "-4%"]);
-
   return (
     <section
       ref={outerRef}
       className="relative w-full bg-white overflow-hidden py-24 md:py-32"
     >
-      {/* ── decorative orb (top-right, echoes the globe in screenshot) ── */}
-      <motion.div
-        style={{ y: orbY, x: orbX }}
-        className="pointer-events-none absolute -top-32 -right-32 w-[420px] h-[420px]
-                   rounded-full opacity-[0.06]"
-        aria-hidden
-        // inline style for the gradient
-      >
-        <div
-          className="w-full h-full rounded-full"
-          style={{
-            background:
-              "conic-gradient(from 0deg, #121417, var(--highlight), #121417, var(--highlight), #121417)",
-          }}
-        />
-      </motion.div>
-
-      {/* ── faint grid texture ── */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.025]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, #121417 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-      />
-
       <div className="relative max-w-[1320px] mx-auto px-6 md:px-12 lg:px-16">
         {/* ── HEADER ── */}
         <div
@@ -239,13 +222,18 @@ export default function ResultSec() {
               transition={{ duration: 0.5 }}
               className="flex items-center gap-2.5 mb-7"
             >
-              <motion.span
+              <motion.div
                 style={{ rotate: asteriskRot }}
-                className="text-(--highlight) text-xl select-none inline-block"
+                className="flex items-center justify-center shrink-0"
               >
-                ✳
-              </motion.span>
-              <span className="text-[#121417]/45 text-[11px] font-bold uppercase tracking-[0.3em]">
+                <Image
+                  src="/Img/point_icon.svg"
+                  alt="Icon"
+                  width={24}
+                  height={24}
+                />
+              </motion.div>
+              <span className="text-(--highlight) text-lg font-bold uppercase tracking-[0.3em]">
                 Testimonials
               </span>
             </motion.div>
@@ -259,8 +247,7 @@ export default function ResultSec() {
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#121417]
                            leading-[1.04] tracking-tight"
               >
-                Real{" "}
-                <span className="text-(--highlight) italic">results</span>{" "}
+                Real <span className="text-(--highlight) italic">results</span>{" "}
                 from real
                 <br />
                 brands
@@ -304,7 +291,7 @@ export default function ResultSec() {
           animate={headerInView ? { scaleX: 1 } : {}}
           transition={{ duration: 0.9, delay: 0.28, ease: "easeOut" }}
           style={{ originX: 0 }}
-          className="h-px bg-[#121417]/10 mb-14"
+          className="h-[.5px] bg-black mb-14"
         />
 
         {/* ── DRAG hint ── */}
@@ -317,7 +304,7 @@ export default function ResultSec() {
           <motion.div
             animate={{ x: [0, 10, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="flex items-center gap-1.5 text-[#121417]/30 text-xs font-semibold
+            className="flex items-center gap-1.5 text-black text-xs font-semibold
                        uppercase tracking-[0.2em]"
           >
             <svg width="16" height="10" viewBox="0 0 16 10" fill="none">

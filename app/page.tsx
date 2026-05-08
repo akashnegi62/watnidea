@@ -17,7 +17,7 @@ function page() {
   return (
     <>
       {/* <Loader /> */}
-      <PricingSec />
+
       <FloatingNav />
       <HeroPage />
       <AboutSec />
@@ -26,7 +26,7 @@ function page() {
       <StrategicSec />
       <IdentitySec />
       <BannerSec />
-      
+      <PricingSec />
       <StepsSec />
       <ResultSec />
       <FAQSec />
