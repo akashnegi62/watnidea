@@ -43,30 +43,32 @@ const CHOOSE_DATA = [
 export default function WhyChooseUs() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  // 1. Setup Motion Values for Cursor
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // 2. Add Spring Physics for smooth "lagging" follow
   const springConfig = { stiffness: 100, damping: 25, mass: 0.5 };
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    // We offset the image by half its width/height so it centers on the cursor
     mouseX.set(e.clientX - 125);
     mouseY.set(e.clientY - 160);
+  };
+
+  // Toggle function for mobile/tablet clicks
+  const handleItemClick = (idx: number) => {
+    setHoveredIndex(hoveredIndex === idx ? null : idx);
   };
 
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative bg-black min-h-screen py-32 px-16 overflow-hidden"
+      className="relative bg-black min-h-screen py-20 md:py-32 px-6 md:px-12 lg:px-16 overflow-hidden"
     >
       {/* HEADER */}
-      <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between pr-10">
+      <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-4 md:mb-6">
             <motion.div
               animate={{ rotate: [0, 180, 360] }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
@@ -74,20 +76,21 @@ export default function WhyChooseUs() {
               <Image
                 src="/Img/point_icon.svg"
                 alt="Point Icon"
-                width={24}
-                height={24}
+                width={20}
+                height={20}
+                className="md:w-6 md:h-6"
               />
             </motion.div>
-            <p className="text-white/40 uppercase tracking-[0.3em] text-lg font-medium mb-0">
+            <p className="text-white/40 uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-lg font-medium mb-0">
               Why choose us
             </p>
           </div>
-          <h2 className="text-white text-5xl md:text-8xl font-medium tracking-tighter leading-none">
-            Strategic <span className="text-(--highlight)">Growth</span> <br />{" "}
-            Systems
+          <h2 className="text-white text-4xl md:text-6xl lg:text-8xl font-medium tracking-tighter leading-[1.1] md:leading-none">
+            Strategic <span className="text-(--highlight)">Growth</span>{" "}
+            <br className="hidden md:block" /> Systems
           </h2>
         </div>
-        <button className="mt-8 md:mt-0 group flex items-center gap-2 text-white border border-white/20 px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-xs tracking-widest">
+        <button className="group w-fit flex items-center gap-2 text-white border border-white/20 px-6 py-3 md:px-8 md:py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-[10px] md:text-xs tracking-widest">
           contact us <ArrowUpRight className="w-4 h-4" />
         </button>
       </div>
@@ -99,35 +102,41 @@ export default function WhyChooseUs() {
             key={item.id}
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="group relative border-b border-white/10 py-12 cursor-pointer z-10"
+            onClick={() => handleItemClick(idx)}
+            className="group relative border-b border-white/10 py-8 md:py-12 cursor-pointer z-10"
           >
             <div className="flex flex-col">
-              <h3 className="text-white text-4xl md:text-7xl font-medium tracking-tighter transition-opacity duration-500 group-hover:opacity-40">
+              <h3 className="text-white text-2xl md:text-5xl lg:text-7xl font-medium tracking-tighter transition-opacity duration-500 lg:group-hover:opacity-40">
                 {item.title}
               </h3>
 
-              {/* REVEAL TAGLINE */}
-              <div className="overflow-hidden mt-3 h-8">
-                <motion.p
-                  initial={{ y: "100%" }}
-                  animate={hoveredIndex === idx ? { y: 0 } : { y: "100%" }}
-                  transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
-                  className="text-white text-lg md:text-2xl font-light max-w-2xl"
-                >
-                  {item.tagline}
-                </motion.p>
-              </div>
+              {/* REVEAL TAGLINE: Uses AnimatePresence for dynamic height on mobile */}
+              <AnimatePresence>
+                {hoveredIndex === idx && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <p className="text-white/70 text-base md:text-xl lg:text-2xl font-light max-w-2xl pt-3 md:pt-4">
+                      {item.tagline}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
         ))}
       </div>
 
-      {/* CURSOR-FOLLOWING POPUP IMAGE */}
+      {/* CURSOR-FOLLOWING POPUP IMAGE (Hidden on mobile and tablet) */}
       <motion.div
         style={{
           x: smoothX,
           y: smoothY,
-          pointerEvents: "none", // Ensures image doesn't block hover on text
+          pointerEvents: "none",
         }}
         className="fixed top-0 left-0 z-50 hidden lg:block"
       >
@@ -141,7 +150,6 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="relative w-[250px] h-[320px] rounded-xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] border border-white/10"
             >
-              {/* Inner Glow/Blur effect */}
               <div
                 className="absolute inset-0 blur-2xl opacity-30 scale-125"
                 style={{
