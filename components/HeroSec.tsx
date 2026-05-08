@@ -71,7 +71,7 @@ export default function HeroSimple() {
       {/* ROTATING TEXT */}
       <motion.div
         style={{ y: textY }}
-        className="absolute bottom-24 md:bottom-32 left-6 md:left-20 z-30 text-white max-w-4xl"
+        className="absolute bottom-32 md:bottom-32 left-6 md:left-20 z-30 text-white max-w-4xl"
       >
         <AnimatePresence mode="wait">
           <motion.div

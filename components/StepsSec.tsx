@@ -83,7 +83,7 @@ export default function StepSec() {
   return (
     <section
       id="how-it-works"
-      className="relative min-h-screen w-full bg-white text-black py-20"
+      className="relative min-h-screen w-full bg-white text-black py-0 lg:pt-10"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row px-6 md:px-12 relative py-12 md:py-0">
         {/* Left Side: Scrolling Images (Desktop Only) */}
