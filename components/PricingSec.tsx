@@ -227,7 +227,7 @@ export default function PricingSec() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <StarIcon />
-                <span className="text-(--highlight) text-xs md:text-lg font-medium uppercase tracking-[0.3em]">
+                <span className="text-(--highlight) text-sm md:text-lg font-medium uppercase tracking-[0.3em]">
                   Pricing
                 </span>
               </div>
@@ -266,7 +266,7 @@ export default function PricingSec() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <StarIcon />
-                <span className="text-(--highlight) text-xs md:text-lg font-medium uppercase tracking-[0.3em]">
+                <span className="text-(--highlight) text-sm md:text-lg font-medium uppercase tracking-[0.3em]">
                   pricing
                 </span>
               </div>

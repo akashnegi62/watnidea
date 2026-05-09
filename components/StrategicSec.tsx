@@ -90,7 +90,7 @@ export default function WhyChooseUs() {
             <br className="hidden md:block" /> Systems
           </h2>
         </div>
-        <button className="group w-fit flex items-center gap-2 text-white border border-white/20 px-6 py-3 md:px-8 md:py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-[10px] md:text-xs tracking-widest">
+        <button className="group w-fit flex items-center gap-2 text-white border border-white/20 px-8 py-4 md:px-8 md:py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-xs md:text-sm tracking-widest">
           contact us <ArrowUpRight className="w-4 h-4" />
         </button>
       </div>
