@@ -1,5 +1,4 @@
-import Loader from "@/Ui/Loader";
-import FloatingNav from "@/Ui/FloatingNav";
+import Loader from "@/layout/Loader";
 import HeroPage from "@/components/HeroSec";
 import AboutSec from "@/components/AboutSec";
 import SectionSec from "@/components/ServiceSec";
@@ -12,12 +11,10 @@ import StepsSec from "@/components/StepsSec";
 import ResultSec from "@/components/ResultSec";
 import FAQSec from "@/components/FAQSec";
 import BookBannerSec from "@/components/BookBannerSec";
-import Footer from "@/Ui/Footer";
 function page() {
   return (
     <>
-      <Loader />
-      <FloatingNav />
+      {/* <Loader /> */}
       <HeroPage />
       <AboutSec />
       <SectionSec />
@@ -30,7 +27,6 @@ function page() {
       <ResultSec />
       <FAQSec />
       <BookBannerSec />
-      <Footer />
     </>
   );
 }
