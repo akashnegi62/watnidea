@@ -117,7 +117,7 @@ export default function BannerSec() {
   return (
     <section
       ref={outerRef}
-      className="relative w-full bg-[#f8f8f8] overflow-hidden py-24 md:py-32"
+      className="relative w-full bg-[#edf1f3] overflow-hidden py-24 md:py-32"
     >
       <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-0 items-stretch">
         {/* ══ LEFT — image + badge ══ */}

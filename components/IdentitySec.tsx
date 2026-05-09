@@ -51,7 +51,7 @@ export default function CoreServices() {
   return (
     <section
       ref={containerRef}
-      className="relative h-auto md:h-[400vh] bg-[#f8f8f8] py-20"
+      className="relative h-auto md:h-[400vh] bg-[#edf1f3] py-20"
     >
       <div className="relative md:sticky top-0 h-auto md:h-screen w-full flex flex-col justify-between py-12 md:py-16 overflow-hidden">
         {/* HEADER */}

@@ -83,7 +83,7 @@ export default function StepSec() {
   return (
     <section
       id="how-it-works"
-      className="relative min-h-screen w-full bg-white text-black py-0 lg:pt-10"
+      className="relative min-h-screen w-full bg-[#edf1f3] text-black py-0 lg:pt-10"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row px-6 md:px-12 relative py-12 md:py-0">
         {/* Left Side: Scrolling Images (Desktop Only) */}
@@ -149,7 +149,7 @@ export default function StepSec() {
                       type="button"
                       onClick={() => setActiveIndex(index)}
                       className={`text-left text-2xl md:text-4xl font-medium transition-all duration-500 flex items-center justify-between ${
-                        isActive ? "text-black" : "text-gray-300"
+                        isActive ? "text-black" : "text-gray-500"
                       }`}
                     >
                       {step.title}
