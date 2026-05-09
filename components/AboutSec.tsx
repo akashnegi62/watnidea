@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { Fingerprint, Paintbrush, BarChart3, Cpu } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -93,14 +94,14 @@ export default function AboutSec() {
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    const track = trackRef.current;
-    if (!container || !track) return;
+  useGSAP(
+    () => {
+      const container = containerRef.current;
+      const track = trackRef.current;
+      if (!container || !track) return;
 
-    const getScrollAmount = () => track.scrollWidth - window.innerWidth;
+      const getScrollAmount = () => track.scrollWidth - window.innerWidth;
 
-    const ctx = gsap.context(() => {
       gsap.to(track, {
         x: () => -getScrollAmount(),
         ease: "none",
@@ -114,10 +115,9 @@ export default function AboutSec() {
           invalidateOnRefresh: true,
         },
       });
-    }, container);
-
-    return () => ctx.revert();
-  }, []);
+    },
+    { scope: containerRef },
+  );
 
   return (
     <section

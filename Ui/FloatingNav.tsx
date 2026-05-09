@@ -59,11 +59,14 @@ export default function FloatingNav() {
         <div className="flex items-center gap-4 pointer-events-auto">
           {/* CONTACT US BUTTON - Hidden on Mobile */}
           <motion.button
+            onClick={() => {
+              window.location.href = "/contact";
+            }}
             onMouseEnter={() => setIsContactHovered(true)}
             onMouseLeave={() => setIsContactHovered(false)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden md:flex items-center gap-4 bg-[#DDE4E6] text-black rounded-full px-8 h-16 shadow-sm border-2 border-white overflow-hidden"
+            className="hidden md:flex items-center gap-4 bg-[#DDE4E6] text-black rounded-full px-8 h-16 shadow-sm border-2 border-white overflow-hidden cursor-pointer"
           >
             <div className="relative h-full w-[90px] flex items-center">
               <AnimatePresence mode="popLayout" initial={false}>
@@ -134,6 +137,7 @@ export default function FloatingNav() {
         {menuOpen && (
           <>
             <motion.div
+              key="nav-overlay"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -142,6 +146,7 @@ export default function FloatingNav() {
             />
 
             <motion.div
+              key="nav-panel"
               initial={{ x: 20, y: -20, opacity: 0, scale: 0.95 }}
               animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
               exit={{ x: 20, y: -20, opacity: 0, scale: 0.95 }}
@@ -165,7 +170,7 @@ export default function FloatingNav() {
                     >
                       <Link
                         href={link.href}
-                        onClick={() => !link.hasSub && setMenuOpen(false)}
+                        onClick={() => setMenuOpen(false)}
                         className="flex items-center py-3 md:py-4 rounded-3xl group-hover:bg-white md:group-hover:px-6 transition-all duration-300"
                       >
                         <div className="flex items-center gap-3 md:gap-4">
