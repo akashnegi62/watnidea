@@ -43,9 +43,9 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
         delay: index * 0.13,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex flex-col gap-3 p-7 border border-white/[0.07]
-                 rounded-2xl bg-white/3 hover:bg-white/6
-                 transition-colors duration-500 overflow-hidden"
+      className="group relative flex flex-col gap-3 p-7 border border-black/5
+                 rounded-2xl bg-white hover:shadow-2xl hover:shadow-black/5
+                 transition-all duration-500 overflow-hidden"
     >
       {/* animated corner accent */}
       <span
@@ -55,7 +55,7 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
       />
 
       {/* index number */}
-      <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/20">
+      <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-black">
         0{index + 1}
       </span>
 
@@ -83,11 +83,11 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
           ease: "easeOut",
         }}
         style={{ originX: 0 }}
-        className="h-[.5px] w-full bg-white/10"
+        className="h-[.5px] w-full bg-black"
       />
 
       <div>
-        <p className="text-white text-sm leading-relaxed">{stat.desc}</p>
+        <p className="text-black text-sm leading-relaxed">{stat.desc}</p>
       </div>
     </motion.div>
   );
@@ -117,7 +117,7 @@ export default function BannerSec() {
   return (
     <section
       ref={outerRef}
-      className="relative w-full bg-black overflow-hidden py-24 md:py-32"
+      className="relative w-full bg-[#f8f8f8] overflow-hidden py-24 md:py-32"
     >
       <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-0 items-stretch">
         {/* ══ LEFT — image + badge ══ */}
@@ -135,9 +135,9 @@ export default function BannerSec() {
               sizes="(max-width:1024px) 100vw, 50vw"
               priority
             />
-            {/* dark vignette overlay */}
-            <div className="absolute inset-0 bg-linear-to-r from-[#0e0a09]/60 via-transparent to-[#0e0a09]/10" />
-            <div className="absolute inset-0 bg-linear-to-t from-[#0e0a09]/70 via-transparent to-transparent" />
+            {/* light vignette overlay */}
+            <div className="absolute inset-0 bg-linear-to-r from-black/20 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
           </motion.div>
 
           {/* ── Rotating badge ── */}
@@ -217,7 +217,7 @@ export default function BannerSec() {
           <motion.div style={{ y: headY, opacity: headO }}>
             <h2
               className="text-4xl md:text-5xl lg:text-[3.6rem]
-                         text-white leading-[1.08] tracking-tight
+                         text-black leading-[1.08] tracking-tight
                          font-medium"
             >
               Key <span className="text-(--highlight)">facts</span> about
