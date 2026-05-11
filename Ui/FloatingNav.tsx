@@ -14,6 +14,7 @@ import Image from "next/image";
 const NAV_LINKS = [
   { id: "home", label: "Home", href: "/" },
   { id: "about", label: "About Us", href: "/about" },
+  { id: "blog", label: "Blog", href: "/blog" },
   { id: "services", label: "Services", href: "/services", hasSub: true },
 ];
 
@@ -21,6 +22,9 @@ const SUB_SERVICES = [
   { label: "Aura Architecture", href: "/services/aura" },
   { label: "The Hype Engine", href: "/services/hype" },
   { label: "Kinetic Studio", href: "/services/kinetic" },
+  { label: "The Digital HQ", href: "/services/digital" },
+  { label: "Synthetic Cinema", href: "/services/synthetic" },
+  { label: "The Echo System", href: "/services/echo" },
 ];
 
 export default function FloatingNav() {

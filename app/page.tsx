@@ -11,6 +11,7 @@ import StepsSec from "@/components/StepsSec";
 import ResultSec from "@/components/ResultSec";
 import FAQSec from "@/components/FAQSec";
 import BookBannerSec from "@/components/BookBannerSec";
+
 function page() {
   return (
     <>
