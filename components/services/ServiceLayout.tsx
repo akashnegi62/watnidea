@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import Image from "next/image";
@@ -9,56 +11,46 @@ import {
   Plus,
   Star,
 } from "lucide-react";
+import AboutService from "./AboutService";
+import { SERVICES_DATA } from "@/data/services";
 
 const Hero = ({ data }: { data: any }) => (
-  <section className="min-h-screen bg-black text-white flex flex-col justify-center px-8 md:px-24">
-    <div className="max-w-4xl">
-      <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-8">
-        {data.titlePrimary}{" "}
-        <span className="text-zinc-500">{data.titleSecondary}</span>
-        <br />
-        {data.titleThird}{" "}
-        <span className="text-zinc-500">{data.titleFourth}</span>
-      </h1>
-      <p className="text-lg md:text-xl text-zinc-400 max-w-xl mb-12">
-        {data.description}
-      </p>
-      <button className="group flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-tighter hover:bg-zinc-200 transition">
-        Get Started
-        <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
-      </button>
-    </div>
-  </section>
-);
-
-const About = ({ data }: { data: any }) => (
-  <section
-    id="about"
-    className="min-h-screen bg-white text-black flex items-center px-8 md:px-24 py-24"
-  >
-    <div className="grid md:grid-cols-2 gap-16 items-center">
-      <div className="aspect-square bg-zinc-100 relative overflow-hidden group">
-        <div className="absolute inset-0 flex items-center justify-center text-zinc-300 font-bold text-9xl select-none uppercase">
-          {data.bgText}
-        </div>
-        <Image
-          src="/api/placeholder/800/800"
-          alt="Team Work"
-          fill
-          className="object-cover mix-blend-multiply grayscale hover:grayscale-0 transition duration-700"
-        />
+  <section className="min-h-screen bg-black text-white flex items-center px-8 md:px-24 pt-20">
+    <div className="grid md:grid-cols-2 gap-16 items-center w-full max-w-7xl mx-auto">
+      {/* LEFT CONTENT */}
+      <div className="max-w-2xl order-2 md:order-1">
+        <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-8 tracking-tighter">
+          {data.titlePrimary}{" "}
+          <span className="text-zinc-500">{data.titleSecondary}</span>
+          <br />
+          {data.titleThird}{" "}
+          <span className="text-zinc-500">{data.titleFourth}</span>
+        </h1>
+        <p className="text-lg md:text-xl text-zinc-400 max-w-lg mb-12 leading-relaxed">
+          {data.description}
+        </p>
+        <button className="group flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-tighter hover:bg-zinc-200 transition-all">
+          Get Started
+          <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
+        </button>
       </div>
-      <div>
-        <span className="text-xs uppercase tracking-[0.3em] font-bold text-zinc-400 mb-4 block">
-          * {data.label}
-        </span>
-        <h2 className="text-5xl font-bold mb-8">{data.title}</h2>
-        <div className="border-l-4 border-black pl-8 py-2 mb-8">
-          <p className="text-xl leading-relaxed text-zinc-700">
-            {data.highlight}
-          </p>
+
+      {/* RIGHT DYNAMIC IMAGE */}
+      <div className="relative aspect-4/5 md:aspect-square w-full order-1 md:order-2">
+        <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden border border-zinc-800 shadow-2xl">
+          <Image
+            src={data.heroImage || "/api/placeholder/800/800"}
+            alt={`${data.titlePrimary} ${data.titleSecondary}`}
+            fill
+            className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-105 hover:scale-100"
+            priority
+          />
+          {/* Cinematic Overlay */}
+          <div className="absolute inset-0 bg-linear-to-tr from-black/40 via-transparent to-transparent pointer-events-none" />
         </div>
-        <p className="text-zinc-500">{data.subtext}</p>
+
+        {/* Abstract decorative element (Optional - matches your neon/futuristic style) */}
+        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-zinc-500/10 blur-3xl rounded-full -z-10" />
       </div>
     </div>
   </section>
@@ -287,11 +279,13 @@ const FAQ = () => (
   </section>
 );
 
-export default function ServiceLayout({ data }: { data: any }) {
+export default function ServiceLayout({ slug }: { slug: string }) {
+  const data = SERVICES_DATA[slug];
+
   return (
-    <main className="font-sans antialiased selection:bg-white selection:text-black">
+    <main className="font-sans antialiased selection:bg-white selection:text-black bg-black">
       <Hero data={data.hero} />
-      <About data={data.about} />
+      <AboutService data={data.about} />
       <Services data={data.included} />
       <Process data={data.process} />
       <Results data={data.stats} />

@@ -128,6 +128,9 @@ export default function ServiceSec() {
           <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
+
+      {/* Extra space at the bottom */}
+      <div className="md:h-[30vh] lg:h-[40vh] 2xl:h-[10vh]" />
     </section>
   );
 }

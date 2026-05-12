@@ -1,6 +1,7 @@
-import { SERVICES_DATA } from "@/data/services";
-import ServiceLayout from "@/components/ServiceLayout"; // Your template component
+// app/services/[slug]/page.tsx
+import ServiceLayout from "@/components/services/ServiceLayout";
 import { notFound } from "next/navigation";
+import { SERVICES_DATA } from "@/data/services";
 
 export default async function Page({
   params,
@@ -9,10 +10,11 @@ export default async function Page({
 }) {
   const { slug } = await params;
 
-  const serviceData = SERVICES_DATA[slug];
-  if (!serviceData) {
+  // Verify the service exists before moving to the layout
+  if (!SERVICES_DATA[slug]) {
     notFound();
   }
 
-  return <ServiceLayout data={serviceData} />;
+  // ONLY pass the slug string here
+  return <ServiceLayout slug={slug} />;
 }
