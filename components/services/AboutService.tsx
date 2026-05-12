@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 function FeatureCard({ item, index }: { item: any; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -99,16 +100,15 @@ const AboutService = ({ data }: { data: any }) => {
 
           {/* MORE ABOUT BUTTON */}
           <div className="flex justify-end mb-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <Link
+              href="/about"
               className="flex items-center gap-4 bg-(--highlight) hover:bg-black text-white pl-8 pr-2 py-2 rounded-full font-bold text-sm uppercase tracking-widest transition-all border-none"
             >
               More About
               <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black">
                 <ArrowRight size={20} />
               </div>
-            </motion.button>
+            </Link>
           </div>
 
           {/* FEATURE CARDS GRID */}

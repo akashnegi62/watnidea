@@ -115,9 +115,9 @@ export const Services = ({ data, title }: { data: any[]; title?: string }) => (
         </span>
       </div>
 
-      <button className="flex items-center gap-2 text-sm uppercase tracking-widest border-b border-white pb-2 hover:opacity-50 transition shrink-0">
+      <Link href="/services" className="flex items-center gap-2 text-sm uppercase tracking-widest border-b border-white pb-2 hover:opacity-50 transition shrink-0">
         See All Services <ArrowUpRight size={16} />
-      </button>
+      </Link>
     </div>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
