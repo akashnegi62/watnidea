@@ -45,7 +45,7 @@ export const SERVICES_DATA: any = {
         "In an era of infinite scrolling, your brand needs more than just a name—it needs a presence. We combine market psychology with high-end minimalist design to create a 'Main Character' identity for your business.",
       subtext: "We don’t just make you look good; we make you look essential.",
       bgText: "AURA",
-      aboutImage: "/Img/services/aura-about.jpg",
+      aboutImage: "/Img/aura.webp",
       aboutFeatures: [
         { title: "Brand Identity Design", icon: LayoutGrid },
         { title: "Positioning & Messaging", icon: Target },
@@ -126,7 +126,7 @@ export const SERVICES_DATA: any = {
       subtext:
         "We don't chase trends; we engineer the mechanics that start them.",
       bgText: "HYPE",
-      aboutImage: "/Img/services/hype-about.jpg",
+      aboutImage: "/Img/hype.webp",
       aboutFeatures: [
         { title: "Viral Mechanics", icon: Sparkles },
         { title: "Growth Hacking", icon: Rocket },
@@ -197,7 +197,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Breathes.",
       description:
         "Static is boring. We bring your brand to life with high-end motion graphics and interactive web experiences that demand focus.",
-      heroImage: "/Img/services/kinetic-hero.jpg",
+      heroImage: "/Img/kinetic.webp",
     },
     about: {
       label: "KINETIC STUDIO",
@@ -278,7 +278,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Legacy.",
       description:
         "We build digital headquarters that work as hard as you do. High-performance apps with aesthetic utility and strategic edge.",
-      heroImage: "/Img/services/digital-hero.jpg",
+      heroImage: "/Img/digital.webp",
     },
     about: {
       label: "THE DIGITAL HQ",
@@ -368,7 +368,7 @@ export const SERVICES_DATA: any = {
       subtext:
         "Imagine anything. We'll render it in 4K with high-contrast, moody lighting.",
       bgText: "FILM",
-      aboutImage: "/Img/services/synthetic-about.jpg",
+      aboutImage: "/Img/synthetic.webp",
       aboutFeatures: [
         { title: "Neural Rendering", icon: Wand2 },
         { title: "AI Composition", icon: Video },
@@ -439,7 +439,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Gravity.",
       description:
         "Stop shouting into the void. We build ecosystems where your brand's voice resonates and amplifies through your users.",
-      heroImage: "/Img/services/echo-hero.jpg",
+      heroImage: "/Img/echo.webp",
     },
     about: {
       label: "THE ECHO SYSTEM",
