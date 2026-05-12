@@ -101,10 +101,26 @@ export const SERVICES_DATA: any = {
       },
     ],
     stats: [
-      { value: "3X", label: "Brand Recall" },
-      { value: "120K", label: "Audience Growth" },
-      { value: "4.9/5", label: "Trust Score" },
-      { value: "2030", label: "Future Proofed" },
+      {
+        value: "Immediate Market Authority",
+        label: "",
+        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
+      },
+      {
+        value: "3X Brand Recall",
+        label: "",
+        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
+      },
+      {
+        value: "Deep Customer Trust",
+        label: "",
+        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
+      },
+      {
+        value: "Future Proof Foundations",
+        label: "",
+        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+      },
     ],
   },
 
@@ -182,10 +198,26 @@ export const SERVICES_DATA: any = {
       },
     ],
     stats: [
-      { value: "10M+", label: "Total Reach" },
-      { value: "450%", label: "ROI Average" },
-      { value: "24/7", label: "Monitoring" },
-      { value: "Top 1%", label: "Engagement" },
+      {
+        value: "Massive Market Velocity",
+        label: "",
+        desc: "Turn passive observers into active brand advocates through engineered viral mechanics at scale.",
+      },
+      {
+        value: "450% Average ROI",
+        label: "",
+        desc: "Direct-to-conversion frameworks that ensure every viral moment delivers measurable business growth.",
+      },
+      {
+        value: "Always-On Intelligence",
+        label: "",
+        desc: "Real-time trend monitoring to keep your brand at the absolute center of cultural conversations.",
+      },
+      {
+        value: "Top 1% Engagement",
+        label: "",
+        desc: "Beating the algorithm through deep psychological hooks that demand attention and action.",
+      },
     ],
   },
 
@@ -263,10 +295,26 @@ export const SERVICES_DATA: any = {
       },
     ],
     stats: [
-      { value: "60fps", label: "Fluidity" },
-      { value: "0.2s", label: "Response" },
-      { value: "Low", label: "Bundle Size" },
-      { value: "High", label: "Impact" },
+      {
+        value: "60FPS Visual Fluidity",
+        label: "",
+        desc: "Cinema-grade motion that makes your digital interface feel alive, breathing, and impossibly smooth.",
+      },
+      {
+        value: "Instant Interactive Focus",
+        label: "",
+        desc: "Response times optimized to capture the human eye 4X faster than static images.",
+      },
+      {
+        value: "Ultra-Light Performance",
+        label: "",
+        desc: "High-impact motion design optimized to load instantly on any device, anywhere in the world.",
+      },
+      {
+        value: "Irresistible First Impressions",
+        label: "",
+        desc: "Leave a lasting cognitive mark within the first 3 seconds of a user landing on your page.",
+      },
     ],
   },
 
@@ -343,10 +391,26 @@ export const SERVICES_DATA: any = {
       },
     ],
     stats: [
-      { value: "100", label: "Lighthouse Score" },
-      { value: "<1s", label: "Load Time" },
-      { value: "99.9%", label: "Uptime" },
-      { value: "Clean", label: "Codebase" },
+      {
+        value: "100/100 Speed Scores",
+        label: "",
+        desc: "Perfect technical foundations that delight both your users and search engine algorithms.",
+      },
+      {
+        value: "Zero Friction Experience",
+        label: "",
+        desc: "Sub-second load times designed to eliminate bounce rates and maximize conversion potential.",
+      },
+      {
+        value: "99.9% Enterprise Stability",
+        label: "",
+        desc: "Bulletproof cloud infrastructure designed to scale effortlessly from thousands to millions.",
+      },
+      {
+        value: "Clean Legacy Code",
+        label: "",
+        desc: "A modular, documented codebase built to remain scalable and maintainable for years to come.",
+      },
     ],
   },
 
@@ -424,10 +488,26 @@ export const SERVICES_DATA: any = {
       },
     ],
     stats: [
-      { value: "4K", label: "Resolution" },
-      { value: "80%", label: "Cost Saved" },
-      { value: "Neon", label: "Atmosphere" },
-      { value: "AI", label: "Powered" },
+      {
+        value: "4K Neural Fidelity",
+        label: "",
+        desc: "Hollywood-grade cinematic visuals rendered through advanced, next-gen AI-driven workflows.",
+      },
+      {
+        value: "80% Production Savings",
+        label: "",
+        desc: "Achieve high-fidelity CGI and complex world-building at a fraction of traditional production costs.",
+      },
+      {
+        value: "Moody Cinematic Lighting",
+        label: "",
+        desc: "Deep atmospheric visuals with neon accents and high-contrast depth that demand focus.",
+      },
+      {
+        value: "Next-Gen AI Workflows",
+        label: "",
+        desc: "Leveraging the bleeding edge of Stable Diffusion and CGI to render the once impossible.",
+      },
     ],
   },
 
@@ -504,10 +584,26 @@ export const SERVICES_DATA: any = {
       },
     ],
     stats: [
-      { value: "90%", label: "Retention" },
-      { value: "Organic", label: "Growth" },
-      { value: "High", label: "Sentiment" },
-      { value: "Global", label: "Reach" },
+      {
+        value: "90% Community Retention",
+        label: "",
+        desc: "Build a self-sustaining tribe that stays loyal to your brand identity for the long term.",
+      },
+      {
+        value: "Organic Social Gravity",
+        label: "",
+        desc: "Move from 'chasing leads' to building an ecosystem that pulls your target audience toward you.",
+      },
+      {
+        value: "Deep Tribal Loyalty",
+        label: "",
+        desc: "Create an instant emotional bond that turns passive customers into aggressive brand advocates.",
+      },
+      {
+        value: "Global Brand Resonance",
+        label: "Market Reach",
+        desc: "Ensure your brand voice resonates across borders and cultural gaps with surgical precision.",
+      },
     ],
   },
 };

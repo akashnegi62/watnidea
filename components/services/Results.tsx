@@ -58,7 +58,7 @@ export function StatCard({ stat, index }: { stat: any; index: number }) {
           delay: index * 0.13 + 0.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="relative z-10 text-5xl md:text-6xl font-medium tracking-tight text-(--highlight) group-hover:text-black transition-colors leading-none"
+        className="relative z-10 text-xl md:text-2xl font-bold tracking-tight text-(--highlight) group-hover:text-black transition-colors leading-tight uppercase"
       >
         {stat.value}
       </motion.p>
@@ -76,10 +76,12 @@ export function StatCard({ stat, index }: { stat: any; index: number }) {
         className="relative z-10 h-[.5px] w-full bg-white/10 group-hover:bg-black/20 transition-colors"
       />
 
-      <div className="relative z-10">
-        <p className="text-white/60 group-hover:text-black transition-colors text-sm leading-relaxed">
-          {stat.label}
-        </p>
+      <div className="relative z-10 flex flex-col gap-2">
+        {stat.desc && (
+          <p className="text-white/40 group-hover:text-black/70 transition-colors text-xs leading-relaxed">
+            {stat.desc}
+          </p>
+        )}
       </div>
     </motion.div>
   );
