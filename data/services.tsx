@@ -25,6 +25,7 @@ import {
   Share2,
   Wand2,
   Play,
+  TrendingUp,
 } from "lucide-react";
 
 export const SERVICES_DATA: any = {
@@ -126,97 +127,97 @@ export const SERVICES_DATA: any = {
 
   hype: {
     hero: {
-      titlePrimary: "Engineered for",
-      titleSecondary: "Velocity.",
-      titleThird: "Data for",
-      titleFourth: "Growth.",
+      titlePrimary: "From the ",
+      titleSecondary: "Scroll",
+      titleThird: "to the ",
+      titleFourth: "Soul.",
       description:
-        "Traditional marketing is dead. We build 'Hype Engines' that turn passive viewers into aggressive brand advocates.",
+        "Most brands post content. We create culture. The Hype Engine turns your social presence into a self-sustaining community that keeps your brand relevant 24/7.",
       heroImage: "/Img/growth.webp",
     },
     about: {
       label: "THE HYPE ENGINE",
       title: "Hype Engine",
       highlight:
-        "The Hype Engine is a data-driven viral framework. We don't just 'post'—we engineer cultural moments that capture attention and convert it into pure brand authority.",
+        "Social media isn't a megaphone; it’s an ecosystem. The Hype Engine is our specialized SMM framework designed for the attention economy. We don't just manage accounts — we engineer conversations. We blend data-driven timing with high-aesthetic content to ensure your brand isn't just seen, but felt. We bridge the gap between Active and Iconic.",
       subtext:
         "We don't chase trends; we engineer the mechanics that start them.",
       bgText: "HYPE",
       aboutImage: "/Img/hype.webp",
       aboutFeatures: [
-        { title: "Viral Mechanics", icon: Sparkles },
-        { title: "Growth Hacking", icon: Rocket },
-        { title: "Trend Authority", icon: Zap },
+        { title: "Content Strategy", icon: Sparkles },
+        { title: "Audience Growth", icon: Rocket },
+        { title: "Viral Execution", icon: Zap },
       ],
     },
     included: [
       {
-        title: "Viral Mechanics",
-        icon: Sparkles,
-        desc: "Designing shareable moments that trigger algorithmic amplification across social stacks.",
-      },
-      {
-        title: "Data-Driven Strategy",
-        icon: Cpu,
-        desc: "Using real-time analytics to protect the art and ensure every piece of content delivers ROI.",
-      },
-      {
-        title: "Influencer Loops",
-        icon: Users,
-        desc: "Building organic networks that amplify your message without the artificial 'ad' feel.",
-      },
-      {
-        title: "Trend Arbitrage",
+        title: "Trend Harvesting",
         icon: Activity,
-        desc: "Identifying cultural shifts before they happen to position your brand as a pioneer.",
+        desc: "Our team monitors cultural shifts in real-time, allowing your brand to jump on relevant trends before they become noise.",
+      },
+      {
+        title: "Aesthetic Content Curation",
+        icon: Sparkles,
+        desc: "High-fidelity visuals and captions that align perfectly with your 'Aura Architecture,' ensuring a feed that looks like a masterpiece.",
+      },
+      {
+        title: "Community Alchemy",
+        icon: MessageSquare,
+        desc: "We handle the comments, the DMs, and the mentions, turning casual viewers into high-intent brand advocates.",
+      },
+      {
+        title: "Strategic Playbooks",
+        icon: Target,
+        desc: "Platform-specific strategies for Instagram, TikTok, and LinkedIn that respect the unique 'vibe' of each audience.",
       },
     ],
     process: [
       {
         num: "01",
-        title: "Trend Mining",
+        title: "The Social Audit",
         icon: Search,
-        desc: "Identifying cultural gaps where your brand can insert itself with maximum impact.",
+        desc: "We analyze your current footprint, identifying what’s working and cutting out the 'filler' that’s hurting your reach.",
       },
       {
         num: "02",
-        title: "Creative Sprints",
-        icon: Zap,
-        desc: "Rapid prototyping of high-impact content and psychological social hooks.",
+        title: "The Content Blueprint",
+        icon: Layers,
+        desc: "We establish your pillars—the core topics and visual styles that will define your feed and attract your tribe.",
       },
       {
         num: "03",
-        title: "Deployment",
-        icon: Rocket,
-        desc: "Multi-channel launch with surgical precision and timing to trigger the 'Echo' effect.",
+        title: "The Execution Phase",
+        icon: Zap,
+        desc: "High-consistency posting backed by algorithmic optimization. We post when your audience is most hungry for content.",
       },
       {
         num: "04",
-        title: "Scaling",
+        title: "The Pulse Check",
         icon: Activity,
-        desc: "Doubling down on what works to create a self-sustaining hype cycle.",
+        desc: "Monthly deep-dives into analytics. We don't just report numbers; we tell you what they mean for your bottom line.",
       },
     ],
     stats: [
       {
-        value: "Massive Market Velocity",
+        value: "Immediate Market Authority",
         label: "",
-        desc: "Turn passive observers into active brand advocates through engineered viral mechanics at scale.",
+        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
       },
       {
-        value: "450% Average ROI",
+        value: "3X Brand Recall",
         label: "",
-        desc: "Direct-to-conversion frameworks that ensure every viral moment delivers measurable business growth.",
+        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
       },
       {
-        value: "Always-On Intelligence",
+        value: "Deep Customer Trust",
         label: "",
-        desc: "Real-time trend monitoring to keep your brand at the absolute center of cultural conversations.",
+        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
       },
       {
-        value: "Top 1% Engagement",
+        value: "Future Proof Foundations",
         label: "",
-        desc: "Beating the algorithm through deep psychological hooks that demand attention and action.",
+        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
       },
     ],
   },
@@ -296,24 +297,24 @@ export const SERVICES_DATA: any = {
     ],
     stats: [
       {
-        value: "60FPS Visual Fluidity",
+        value: "Immediate Market Authority",
         label: "",
-        desc: "Cinema-grade motion that makes your digital interface feel alive, breathing, and impossibly smooth.",
+        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
       },
       {
-        value: "Instant Interactive Focus",
+        value: "3X Brand Recall",
         label: "",
-        desc: "Response times optimized to capture the human eye 4X faster than static images.",
+        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
       },
       {
-        value: "Ultra-Light Performance",
+        value: "Deep Customer Trust",
         label: "",
-        desc: "High-impact motion design optimized to load instantly on any device, anywhere in the world.",
+        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
       },
       {
-        value: "Irresistible First Impressions",
+        value: "Future Proof Foundations",
         label: "",
-        desc: "Leave a lasting cognitive mark within the first 3 seconds of a user landing on your page.",
+        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
       },
     ],
   },
@@ -392,24 +393,24 @@ export const SERVICES_DATA: any = {
     ],
     stats: [
       {
-        value: "100/100 Speed Scores",
+        value: "Immediate Market Authority",
         label: "",
-        desc: "Perfect technical foundations that delight both your users and search engine algorithms.",
+        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
       },
       {
-        value: "Zero Friction Experience",
+        value: "3X Brand Recall",
         label: "",
-        desc: "Sub-second load times designed to eliminate bounce rates and maximize conversion potential.",
+        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
       },
       {
-        value: "99.9% Enterprise Stability",
+        value: "Deep Customer Trust",
         label: "",
-        desc: "Bulletproof cloud infrastructure designed to scale effortlessly from thousands to millions.",
+        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
       },
       {
-        value: "Clean Legacy Code",
+        value: "Future Proof Foundations",
         label: "",
-        desc: "A modular, documented codebase built to remain scalable and maintainable for years to come.",
+        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
       },
     ],
   },
@@ -489,24 +490,121 @@ export const SERVICES_DATA: any = {
     ],
     stats: [
       {
-        value: "4K Neural Fidelity",
+        value: "Immediate Market Authority",
         label: "",
-        desc: "Hollywood-grade cinematic visuals rendered through advanced, next-gen AI-driven workflows.",
+        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
       },
       {
-        value: "80% Production Savings",
+        value: "3X Brand Recall",
         label: "",
-        desc: "Achieve high-fidelity CGI and complex world-building at a fraction of traditional production costs.",
+        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
       },
       {
-        value: "Moody Cinematic Lighting",
+        value: "Deep Customer Trust",
         label: "",
-        desc: "Deep atmospheric visuals with neon accents and high-contrast depth that demand focus.",
+        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
       },
       {
-        value: "Next-Gen AI Workflows",
+        value: "Future Proof Foundations",
         label: "",
-        desc: "Leveraging the bleeding edge of Stable Diffusion and CGI to render the once impossible.",
+        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+      },
+    ],
+  },
+
+  growth: {
+    hero: {
+      titlePrimary: "Scale without",
+      titleSecondary: "Boundaries.",
+      titleThird: "Alchemy for",
+      titleFourth: "Revenue.",
+      description:
+        "We don't just grow businesses; we architect exponential expansion systems that turn market share into market dominance.",
+      heroImage: "/Img/growth.webp",
+    },
+    about: {
+      label: "GROWTH ALCHEMY",
+      title: "Growth Alchemy",
+      highlight:
+        "Growth is not a goal; it's a byproduct of a perfect system. We use mathematical precision and aggressive testing to unlock hidden revenue streams in your brand.",
+      subtext:
+        "From seed to scale, we provide the formula for consistent expansion.",
+      bgText: "SCALE",
+      aboutImage: "/Img/growth.webp",
+      aboutFeatures: [
+        { title: "Revenue Ops", icon: TrendingUp },
+        { title: "Funnel Mastery", icon: Zap },
+        { title: "LTV Scaling", icon: Users },
+      ],
+    },
+    included: [
+      {
+        title: "Revenue Architecture",
+        icon: TrendingUp,
+        desc: "Engineering full-funnel systems that convert cold strangers into high-value, lifelong customers.",
+      },
+      {
+        title: "Surgical Advertising",
+        icon: Zap,
+        desc: "High-performance ad strategies across Meta, Google, and LinkedIn that optimize for profit, not just reach.",
+      },
+      {
+        title: "Conversion Alchemy",
+        icon: Sparkles,
+        desc: "High-fidelity landing pages and checkout flows designed to minimize friction and maximize order value.",
+      },
+      {
+        title: "Predictable Scaling",
+        icon: Activity,
+        desc: "Using historical data and aggressive testing to forecast and execute your next phase of market expansion.",
+      },
+    ],
+    process: [
+      {
+        num: "01",
+        title: "The Audit",
+        icon: Search,
+        desc: "Identifying the bottlenecks in your current funnel that are leaking revenue and stalling growth.",
+      },
+      {
+        num: "02",
+        title: "The Formula",
+        icon: Zap,
+        desc: "Developing a custom scaling blueprint based on your specific unit economics and market goals.",
+      },
+      {
+        num: "03",
+        title: "The Launch",
+        icon: Rocket,
+        desc: "Deploying high-impact campaigns and systems with surgical precision across your entire digital stack.",
+      },
+      {
+        num: "04",
+        title: "The Compound",
+        icon: Activity,
+        desc: "Continuous optimization and re-investment strategies to trigger the exponential growth loop.",
+      },
+    ],
+    stats: [
+      {
+        value: "Immediate Market Authority",
+        label: "",
+        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
+      },
+      {
+        value: "3X Brand Recall",
+        label: "",
+        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
+      },
+      {
+        value: "Deep Customer Trust",
+        label: "",
+        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
+      },
+      {
+        value: "Future Proof Foundations",
+        label: "",
+        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
       },
     ],
   },
@@ -585,24 +683,24 @@ export const SERVICES_DATA: any = {
     ],
     stats: [
       {
-        value: "90% Community Retention",
+        value: "Immediate Market Authority",
         label: "",
-        desc: "Build a self-sustaining tribe that stays loyal to your brand identity for the long term.",
+        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
       },
       {
-        value: "Organic Social Gravity",
+        value: "3X Brand Recall",
         label: "",
-        desc: "Move from 'chasing leads' to building an ecosystem that pulls your target audience toward you.",
+        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
       },
       {
-        value: "Deep Tribal Loyalty",
+        value: "Deep Customer Trust",
         label: "",
-        desc: "Create an instant emotional bond that turns passive customers into aggressive brand advocates.",
+        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
       },
       {
-        value: "Global Brand Resonance",
-        label: "Market Reach",
-        desc: "Ensure your brand voice resonates across borders and cultural gaps with surgical precision.",
+        value: "Future Proof Foundations",
+        label: "",
+        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
       },
     ],
   },
