@@ -9,7 +9,7 @@ const Hero = ({ data }: { data: any }) => (
     <div className="grid md:grid-cols-2 gap-16 items-center w-full max-w-7xl mx-auto">
       {/* LEFT CONTENT */}
       <div className="max-w-2xl order-2 md:order-1">
-        <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-8 tracking-tighter">
+        <h1 className="text-6xl md:text-5xl font-bold leading-tight mb-8 tracking-tighter">
           {data.titlePrimary}{" "}
           <span className="text-zinc-500">{data.titleSecondary}</span>
           <br />
@@ -26,13 +26,13 @@ const Hero = ({ data }: { data: any }) => (
       </div>
 
       {/* RIGHT DYNAMIC IMAGE */}
-      <div className="relative aspect-4/5 md:aspect-square w-full order-1 md:order-2">
+      <div className="hidden md:hidden lg:block relative aspect-4/5 md:aspect-square w-full order-1 md:order-2">
         <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden border border-zinc-800 shadow-2xl">
           <Image
             src={data.heroImage || "/api/placeholder/800/800"}
             alt={`${data.titlePrimary} ${data.titleSecondary}`}
             fill
-            className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-105 hover:scale-100"
+            className="object-cover transition-all duration-1000 ease-in-out scale-105 hover:scale-100"
             priority
           />
           {/* Cinematic Overlay */}

@@ -53,10 +53,10 @@ export default function CoreServices() {
       ref={containerRef}
       className="relative h-auto md:h-[400vh] bg-[#edf1f3] py-20"
     >
-      <div className="relative md:sticky top-0 h-auto md:h-screen w-full flex flex-col justify-between py-12 md:py-16 overflow-hidden">
+      <div className="relative md:sticky top-0 h-auto md:min-h-screen w-full flex flex-col justify-between py-8 md:py-12">
         {/* HEADER */}
-        <div className="px-6 md:px-16 mb-10 md:mb-0">
-          <div className="flex items-center gap-3 mb-4 md:mb-8">
+        <div className="px-6 md:px-16 mb-6 md:mb-0">
+          <div className="flex items-center gap-3 mb-4 md:mb-6">
             <motion.div
               animate={{ rotate: [0, 180, 360] }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
@@ -80,7 +80,7 @@ export default function CoreServices() {
         </div>
 
         {/* IMAGE STAGE */}
-        <div className="px-6 md:px-16 flex flex-col w-full mb-12 md:mb-0">
+        <div className="px-6 md:px-16 flex flex-col w-full mb-8 md:mb-0">
           {/* Progress line - Hidden on mobile */}
           <div className="hidden md:block relative w-full h-px bg-black/10 mb-6">
             <motion.div
@@ -90,7 +90,7 @@ export default function CoreServices() {
           </div>
 
           {/* Cards Stage */}
-          <div className="relative w-full h-[250px] md:h-[clamp(200px,32vh,400px)]">
+          <div className="relative w-full h-[220px] md:h-[clamp(180px,30vh,350px)]">
             {/* Desktop Only Cards (1, 2, 3) */}
             <motion.div
               className="hidden md:block absolute top-0 overflow-hidden rounded-2xl"
@@ -99,6 +99,7 @@ export default function CoreServices() {
                 width: CARD_FINAL_WIDTH,
                 height: "100%",
                 zIndex: 1,
+                opacity: 1,
               }}
             >
               <Image
@@ -117,6 +118,7 @@ export default function CoreServices() {
                 width: CARD_FINAL_WIDTH,
                 height: "100%",
                 zIndex: 2,
+                opacity: 1,
               }}
             >
               <Image
@@ -135,6 +137,7 @@ export default function CoreServices() {
                 width: CARD_FINAL_WIDTH,
                 height: "100%",
                 zIndex: 3,
+                opacity: 1,
               }}
             >
               <Image
@@ -169,16 +172,18 @@ export default function CoreServices() {
         </div>
 
         {/* DESCRIPTION + BUTTON */}
-        <div className="px-6 md:px-16 flex flex-col md:flex-row items-end justify-between gap-8 md:gap-10">
+        <div className="px-6 md:px-16 flex flex-col md:flex-row items-center md:items-end justify-between gap-6 md:gap-10">
           <div className="max-w-3xl">
             <p className="text-black text-xl md:text-2xl leading-tight font-medium">
               <span className="text-black font-black">watNidea</span> combines
               branding, creative execution, and growth systems into one unified
               engine. We don’t operate like a traditional agency—we design
               identities, build digital ecosystems, and scale them with
-              precision.
+              precision. <br />
+              From strategy to content, websites to campaigns—every element is
+              connected, intentional, and built to perform.
             </p>
-            <p className="text-black/70 text-base md:text-lg mt-4 max-w-2xl leading-snug">
+            <p className="text-black/70 text-base md:text-lg mt-3 md:mt-4 max-w-2xl leading-snug">
               Whether you need clarity, visibility, or scale, we ensure your
               brand doesn&apos;t just exist— it dominates.
             </p>

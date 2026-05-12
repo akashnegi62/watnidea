@@ -9,6 +9,7 @@ import Results from "./Results";
 import WhyChooseUs from "./WhyChooseUs";
 import Testimonials from "./Testimonials";
 import FAQ from "./FAQ";
+import BookBannerSec from "../BookBannerSec";
 
 export default function ServiceLayout({ slug }: { slug: string }) {
   const data = SERVICES_DATA[slug];
@@ -25,6 +26,7 @@ export default function ServiceLayout({ slug }: { slug: string }) {
       <WhyChooseUs />
       <Testimonials />
       <FAQ />
+      <BookBannerSec />
     </main>
   );
 }

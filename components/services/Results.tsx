@@ -193,15 +193,14 @@ const Results = ({ data }: { data: any[] }) => {
               />
             </motion.div>
             <span className="text-(--highlight) text-lg font-bold uppercase tracking-[0.28em]">
-              Performance
+              Results{" "}
             </span>
           </motion.div>
 
           <motion.div style={{ y: headY, opacity: headO }}>
             <h2 className="text-4xl md:text-5xl lg:text-[3.6rem] text-white leading-[1.08] tracking-tight font-medium">
-              Proven <span className="text-(--highlight)">Results</span> that
-              <br />
-              Drive Growth
+              What You Can Expect From{" "}
+              <span className="text-(--highlight)">Aura Architecture</span>
             </h2>
           </motion.div>
 

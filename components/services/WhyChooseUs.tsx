@@ -6,7 +6,7 @@ import { Star, ShieldCheck, Users, Brain } from "lucide-react";
 import { ProcessCard } from "./Process";
 
 const WhyChooseUs = () => (
-  <section className="min-h-screen bg-[#edf1f3] text-black px-8 md:px-24 py-24 flex items-center">
+  <section className="min-h-[50vh] bg-[#edf1f3] text-black px-8 md:px-24 py-24 flex items-center">
     <div className="w-full">
       <div className="mb-16">
         <div className="flex items-center gap-3 mb-4">
@@ -26,7 +26,7 @@ const WhyChooseUs = () => (
             WHY CHOOSE WATNIDEA
           </span>
         </div>
-        <h2 className="text-5xl font-bold">Creative Growth Strategies</h2>
+        <h2 className="text-5xl font-bold">Creative <span className="text-(--highlight)">Growth</span> Strategies</h2>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {[

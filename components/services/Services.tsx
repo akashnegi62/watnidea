@@ -1,9 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
-export function ServiceCard({ service, index }: { service: any; index: number }) {
+export function ServiceCard({
+  service,
+  index,
+}: {
+  service: any;
+  index: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-8% 0px" });
   const Icon = service.icon;
@@ -79,13 +88,36 @@ export const Services = ({ data }: { data: any[] }) => (
     id="services"
     className="min-h-screen bg-black text-white px-8 md:px-24 py-24"
   >
-    <div className="flex justify-between items-end mb-20">
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
       <div>
-        <span className="text-xs uppercase tracking-[0.3em] font-bold text-zinc-600 mb-4 block">
-          * OUR SERVICES
+        <div className="flex items-center gap-3 mb-4">
+          <motion.div
+            animate={{ rotate: [0, 180, 360] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            className="flex items-center justify-center select-none"
+          >
+            <Image
+              src="/Img/point_icon.svg"
+              alt="Point Icon"
+              width={18}
+              height={18}
+            />
+          </motion.div>
+          <span className="text-xs uppercase tracking-[0.3em] font-bold text-zinc-600">
+            SERVICES
+          </span>
+        </div>
+        <h2 className="text-[clamp(2.5rem,8vw,7.5rem)] md:text-7xl font-bold">
+          What&apos;s Included in Our
+        </h2>
+        <span className="text-[clamp(2.5rem,8vw,7.5rem)] md:text-7xl font-bold text-(--highlight)">
+          Aura Architecture Services
         </span>
-        <h2 className="text-5xl font-bold">What&apos;s Included</h2>
       </div>
+
+      <button className="flex items-center gap-2 text-sm uppercase tracking-widest border-b border-white pb-2 hover:opacity-50 transition shrink-0">
+        See All Services <ArrowUpRight size={16} />
+      </button>
     </div>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -93,5 +125,7 @@ export const Services = ({ data }: { data: any[] }) => (
         <ServiceCard key={i} service={service} index={i} />
       ))}
     </div>
+    <p className="text-center">Let’s make something great together. <Link className="text-(--highlight) underline" href="/contact">Get Quote</Link></p>
+    
   </section>
 );

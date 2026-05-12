@@ -26,7 +26,7 @@ const CARDS = [
     tag: "Office",
     icon: <MapPin size={32} strokeWidth={1.5} />,
     hint: "Visit us for personalized digital marketing support.",
-    value: "Sector 63, Noida, UP 201309",
+    value: "2nd floor, G-283, G Block, Sector 63, Noida, Chotpur, Uttar Pradesh 201309",
     href: "https://maps.google.com",
   },
 ];
@@ -131,13 +131,16 @@ export default function ContactSec() {
         {/* FORM + MAP SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
           {/* FORM CARD */}
-          <div className="bg-[#0f0f0f] border border-white/10 rounded-[2.5rem] p-8 md:p-12">
+          <div className="bg-[#0f0f0f] border border-white/10 rounded-xl md:rounded-[2.5rem] p-8 md:p-12">
             <form className="flex flex-col gap-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <Field placeholder="First Name" />
                 <Field placeholder="Last Name" />
               </div>
-              <Field placeholder="Email Address" type="email" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <Field placeholder="Email Address" type="email" />
+                <Field placeholder="Mobile Number" type="tel" />
+              </div>
               <Field
                 as="textarea"
                 placeholder="How can we help you?"
@@ -159,7 +162,7 @@ export default function ContactSec() {
           </div>
 
           {/* MAP CARD */}
-          <div className="bg-[#0f0f0f] border border-white/10 rounded-[2.5rem] overflow-hidden min-h-[400px]">
+          <div className="bg-[#0f0f0f] border border-white/10 rounded-xl md:rounded-[2.5rem] overflow-hidden min-h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2!2d77.3910!3d28.6270!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a9b5555555%3A0x0!2sG-283%2C+G+Block%2C+Sector+63%2C+Noida%2C+Uttar+Pradesh+201309!5e0!3m2!1sen!2sin!4v1000000000000"
               width="100%"

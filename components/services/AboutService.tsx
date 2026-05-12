@@ -58,7 +58,7 @@ const AboutService = ({ data }: { data: any }) => {
             src={data.aboutImage || "/api/placeholder/800/1000"}
             alt="About Brand"
             fill
-            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+            className="object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
           />
           <div className="absolute -inset-4 bg-(--highlight)/10 blur-3xl -z-10" />
         </div>

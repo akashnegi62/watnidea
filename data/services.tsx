@@ -36,7 +36,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Teeth.",
       description:
         "A logo isn't a brand; a feeling is. We build the 'Aura' that makes your business undeniable in a crowded market.",
-      heroImage: "/Img/services/aura-hero.jpg",
+      heroImage: "/Img/digital.webp",
     },
     about: {
       label: "AURA ARCHITECTURE",
@@ -45,7 +45,7 @@ export const SERVICES_DATA: any = {
         "In an era of infinite scrolling, your brand needs more than just a name—it needs a presence. We combine market psychology with high-end minimalist design to create a 'Main Character' identity for your business.",
       subtext: "We don’t just make you look good; we make you look essential.",
       bgText: "AURA",
-      aboutImage: "/Img/aura.webp",
+      aboutImage: "/Img/aura.jpeg",
       aboutFeatures: [
         { title: "Brand Identity Design", icon: LayoutGrid },
         { title: "Positioning & Messaging", icon: Target },
@@ -116,7 +116,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Growth.",
       description:
         "Traditional marketing is dead. We build 'Hype Engines' that turn passive viewers into aggressive brand advocates.",
-      heroImage: "/Img/services/hype-hero.jpg",
+      heroImage: "/Img/growth.webp",
     },
     about: {
       label: "THE HYPE ENGINE",
@@ -207,7 +207,7 @@ export const SERVICES_DATA: any = {
       subtext:
         "If it doesn't move, it's not alive. We give your brand a heartbeat.",
       bgText: "MOVE",
-      aboutImage: "/Img/services/kinetic-about.jpg",
+      aboutImage: "/Img/echo.webp",
       aboutFeatures: [
         { title: "UI Animation", icon: Monitor },
         { title: "GSAP Mastery", icon: Activity },
@@ -287,7 +287,7 @@ export const SERVICES_DATA: any = {
         "Your website isn't a brochure; it's your most important employee. We build full-stack solutions with Next.js that prioritize speed and aesthetic power.",
       subtext: "Aesthetics meet performance. We don't compromise on either.",
       bgText: "CODE",
-      aboutImage: "/Img/services/digital-about.jpg",
+      aboutImage: "/Img/growth.webp",
       aboutFeatures: [
         { title: "Full-Stack Ops", icon: Cpu },
         { title: "Scalable Code", icon: Code },
@@ -358,7 +358,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Vision.",
       description:
         "The line between real and synthetic is gone. We create high-fidelity cinematic video and CGI using next-gen AI workflows.",
-      heroImage: "/Img/services/synthetic-hero.jpg",
+      heroImage: "/Img/aura.jpeg",
     },
     about: {
       label: "SYNTHETIC CINEMA",
@@ -439,7 +439,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Gravity.",
       description:
         "Stop shouting into the void. We build ecosystems where your brand's voice resonates and amplifies through your users.",
-      heroImage: "/Img/echo.webp",
+      heroImage: "/Img/growth.webp",
     },
     about: {
       label: "THE ECHO SYSTEM",
@@ -448,7 +448,7 @@ export const SERVICES_DATA: any = {
         "An Echo System is a self-sustaining community. We help you move from 'talking at' people to 'talking with' a tribe that builds the brand for you.",
       subtext: "We create the spark; the community creates the fire.",
       bgText: "ECHO",
-      aboutImage: "/Img/services/echo-about.jpg",
+      aboutImage: "/Img/echo.webp",
       aboutFeatures: [
         { title: "Tribe Building", icon: Users },
         { title: "Viral Resonance", icon: Share2 },

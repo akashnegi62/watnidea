@@ -72,7 +72,7 @@ const Testimonials = () => {
 
   const handleNext = () => {
     setCurrentIndex((prev) =>
-      prev + 1 < TESTIMONIALS_DATA.length ? prev + 1 : prev
+      prev + 1 < TESTIMONIALS_DATA.length ? prev + 1 : prev,
     );
   };
 
@@ -104,20 +104,24 @@ const Testimonials = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2.5 mb-6">
-              <Image
-                src="/Img/point_icon.svg"
-                alt="Icon"
-                width={24}
-                height={24}
-                className="animate-pulse"
-              />
+              <motion.div
+                animate={{ rotate: [0, 180, 360] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                className="flex items-center justify-center select-none"
+              >
+                <Image
+                  src="/Img/point_icon.svg"
+                  alt="Point Icon"
+                  width={18}
+                  height={18}
+                />
+              </motion.div>
               <span className="text-(--highlight) text-sm font-bold uppercase tracking-[0.3em]">
                 Testimonials
               </span>
             </div>
             <h2 className="text-5xl md:text-7xl font-bold text-[#121417] leading-[1.1] tracking-tight">
-              Real <span className="text-(--highlight)">results</span> from{" "}
-              <br /> real brands
+              What <span className="text-(--highlight)">client</span> says
             </h2>
           </div>
 

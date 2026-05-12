@@ -27,7 +27,7 @@ export function ProcessCard({ item, index }: { item: any; index: number }) {
         <div className="text-(--highlight) group-hover:scale-110 transition-transform duration-500">
           {Icon && <Icon size={32} />}
         </div>
-        <span className="text-4xl font-black text-black/5 transition-colors duration-500">
+        <span className="text-4xl font-black text-black transition-colors duration-500">
           {item.num}
         </span>
       </div>
@@ -47,7 +47,7 @@ export function ProcessCard({ item, index }: { item: any; index: number }) {
 export const Process = ({ data }: { data: any[] }) => (
   <section
     id="process"
-    className="min-h-screen bg-[#edf1f3] text-black px-8 md:px-24 py-24"
+    className="min-h-[80vh] bg-[#edf1f3] text-black px-8 md:px-24 py-24"
   >
     <div className="flex justify-between items-end mb-16">
       <div>
@@ -65,10 +65,13 @@ export const Process = ({ data }: { data: any[] }) => (
             />
           </motion.div>
           <span className="text-xs uppercase tracking-[0.3em] font-bold text-(--highlight)">
-            OUR PROCESS
+            How We Work Together
           </span>
         </div>
-        <h2 className="text-5xl font-bold">Step-by-Step Guide</h2>
+        <h2 className="text-5xl font-bold">Step-by-Step Guide to</h2>
+        <span className="text-5xl font-bold text-(--highlight)">
+          Brand Building
+        </span>
       </div>
     </div>
 

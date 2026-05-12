@@ -7,7 +7,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { MessageCircle, ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -24,6 +24,7 @@ const SUB_SERVICES = [
   { label: "Kinetic Studio", href: "/services/kinetic" },
   { label: "The Digital HQ", href: "/services/digital" },
   { label: "Synthetic Cinema", href: "/services/synthetic" },
+  { label: "Growth Alchemy", href: "/services/growth" },
   { label: "The Echo System", href: "/services/echo" },
 ];
 
@@ -31,6 +32,7 @@ export default function FloatingNav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isContactHovered, setIsContactHovered] = useState(false);
   const [servicesHovered, setServicesHovered] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   const { scrollY } = useScroll();
   const logoY = useTransform(scrollY, [0, 100], [0, -120]);
@@ -170,12 +172,12 @@ export default function FloatingNav() {
                     <motion.div
                       whileHover="hover"
                       initial="initial"
-                      className="group"
+                      className="group flex items-center justify-between"
                     >
                       <Link
                         href={link.href}
                         onClick={() => setMenuOpen(false)}
-                        className="flex items-center py-3 md:py-4 rounded-3xl group-hover:bg-white md:group-hover:px-6 transition-all duration-300"
+                        className="flex-1 flex items-center py-3 md:py-4 rounded-3xl group-hover:bg-white md:group-hover:px-6 transition-all duration-300"
                       >
                         <div className="flex items-center gap-3 md:gap-4">
                           <motion.div
@@ -198,17 +200,35 @@ export default function FloatingNav() {
                           </span>
                         </div>
                       </Link>
+
+                      {link.hasSub && (
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setIsMobileServicesOpen(!isMobileServicesOpen);
+                          }}
+                          className="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-white/50 text-black hover:bg-white transition-all mr-2"
+                        >
+                          <motion.div
+                            animate={{
+                              rotate: isMobileServicesOpen ? 180 : 0,
+                            }}
+                          >
+                            <ChevronDown size={24} />
+                          </motion.div>
+                        </button>
+                      )}
                     </motion.div>
 
                     {/* SUB-SERVICES */}
                     {link.hasSub && (
                       <AnimatePresence>
-                        {servicesHovered && (
+                        {(servicesHovered || isMobileServicesOpen) && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="pl-4 md:pl-14 mt-2 flex flex-col gap-3 md:gap-4 overflow-hidden"
+                            className="pl-4 md:pl-14 mt-2 flex flex-col gap-3 md:gap-2 overflow-hidden"
                           >
                             {SUB_SERVICES.map((sub) => (
                               <Link
