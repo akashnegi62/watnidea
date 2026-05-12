@@ -101,6 +101,11 @@ export const SERVICES_DATA: any = {
         desc: "A launch-ready brand kit designed to scale with your ambition.",
       },
     ],
+    processHeader: {
+      title: "Brand Building",
+      description:
+        "We follow a proven process to build strong, scalable, and impactful brand strategies. Every step is designed to ensure clarity, consistency, and measurable growth.",
+    },
     stats: [
       {
         value: "Immediate Market Authority",
@@ -121,6 +126,42 @@ export const SERVICES_DATA: any = {
         value: "Future Proof Foundations",
         label: "",
         desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: "Aesthetic-First",
+        icon: Star,
+        desc: "We believe beauty is a competitive advantage.",
+      },
+      {
+        title: "Future-Proofed",
+        icon: ShieldCheck,
+        desc: "We build identities that look as good in 2030 as today.",
+      },
+      {
+        title: "Human-Centric",
+        icon: Users,
+        desc: "We design for people, not just algorithms.",
+      },
+      {
+        title: "Cognitive Design",
+        icon: Brain,
+        desc: "We don’t just design for the eye; we design for the brain. We use psychological triggers to ensure your brand isn't just seen, but remembered at a subconscious level.",
+      },
+    ],
+    faq: [
+      {
+        q: "What is the difference between a logo and Aura Architecture?",
+        a: "A logo is a symbol. Aura Architecture is the entire emotional and visual experience—including how you speak, how you feel, and how you stand out from competitors.",
+      },
+      {
+        q: "How long does the branding process take?",
+        a: "A standard Brand Identity project typically takes 4 to 6 weeks from the initial Deep Dive to the final Handover.",
+      },
+      {
+        q: "Do I get files for social media?",
+        a: "Yes. Every brand kit includes optimized assets for Instagram, LinkedIn, TikTok, and Web",
       },
     ],
   },
@@ -198,6 +239,11 @@ export const SERVICES_DATA: any = {
         desc: "Monthly deep-dives into analytics. We don't just report numbers; we tell you what they mean for your bottom line.",
       },
     ],
+    processHeader: {
+      title: "social success",
+      description:
+        "We follow a simple and structured process to ensure your social media growth is consistent and effective.",
+    },
     stats: [
       {
         value: "Immediate Market Authority",
@@ -218,489 +264,722 @@ export const SERVICES_DATA: any = {
         value: "Future Proof Foundations",
         label: "",
         desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: "Native Expertise",
+        icon: Users,
+        desc: 'We don\'t use "social media manuals." We live on the platforms we manage.',
+      },
+      {
+        title: "Algorithm-Agile",
+        icon: Zap,
+        desc: "When the platforms change, we pivot instantly.",
+      },
+      {
+        title: "Vibe-Consistent",
+        icon: ShieldCheck,
+        desc: "We ensure your social media actually matches your high-end brand identity.",
+      },
+      {
+        title: "Data-Driven Intuition",
+        icon: Brain,
+        desc: 'We balance "the vibe" with "the math." We use real-time social signals and sentiment analysis to back our creative choices, so we’re never just guessing.',
+      },
+    ],
+    faq: [
+      {
+        q: "Do you create the content or just post it?",
+        a: "We do both. From high-octane Reels to minimalist graphics, we produce the assets and manage the distribution.",
+      },
+      {
+        q: "How often will you post?",
+        a: "Quality over quantity. We find the 'sweet spot' for your specific industry, usually ranging from 3 to 5 high-impact posts per week plus daily Stories.",
+      },
+      {
+        q: "Can you handle crisis management?",
+        a: "Absolutely. We monitor your brand's sentiment and are ready to respond to any community feedback with grace and strategy.",
       },
     ],
   },
 
   kinetic: {
     hero: {
-      titlePrimary: "Motion that",
-      titleSecondary: "Commands.",
-      titleThird: "Design that",
-      titleFourth: "Breathes.",
+      titlePrimary: "Visual Dopamine for a 3 - ",
+      titleSecondary: "Second World.", //
+      titleThird: "",
+      titleFourth: "", //
       description:
-        "Static is boring. We bring your brand to life with high-end motion graphics and interactive web experiences that demand focus.",
+        "Stop the scroll. Hold the gaze. From cinematic brand stories to high-octane vertical edits, we capture the motion that drives emotion.",
       heroImage: "/Img/kinetic.webp",
     },
     about: {
       label: "KINETIC STUDIO",
       title: "Kinetic Studio",
       highlight:
-        "Movement captures the eye 4x faster than static images. We use physics-based animation to tell deeper stories and create interfaces that feel alive.",
-      subtext:
-        "If it doesn't move, it's not alive. We give your brand a heartbeat.",
+        "Static content is a ghost. In 2026, if you aren't moving, you're invisible. Kinetic Studio is our high-performance video wing. We specialize in 'Short-Form Mastery'—creating videos that feel like a premium cinematic experience but are optimized for the fast-paced nature of modern platforms. We don't just shoot footage; we edit for retention.",
+      subtext: "",
       bgText: "MOVE",
       aboutImage: "/Img/echo.webp",
       aboutFeatures: [
-        { title: "UI Animation", icon: Monitor },
-        { title: "GSAP Mastery", icon: Activity },
-        { title: "Physics Logic", icon: Play },
+        { title: "Cinematic Content", icon: Monitor },
+        { title: "Storytelling Direction", icon: Activity },
+        { title: "High-End Editing", icon: Play },
       ],
     },
     included: [
       {
-        title: "UI Animation",
+        title: "Cinematic Brand Films",
+        icon: Video,
+        desc: 'High-production storytelling that captures the "Aura" of your business in 4K.',
+      },
+      {
+        title: "Vertical-First Content",
         icon: Monitor,
-        desc: "Seamless transitions and micro-interactions for modern web applications.",
+        desc: 'Reels, TikToks, and Shorts designed natively for mobile viewing, focusing on high-energy transitions and "Hook" dynamics.',
       },
       {
-        title: "GSAP Masterclass",
-        icon: Activity,
-        desc: "Performance-optimized scroll triggers and complex timeline animations for the web.",
-      },
-      {
-        title: "Brand Motion",
+        title: "Motion Graphics & VFX",
         icon: Sparkles,
-        desc: "Logo reveals and kinetic typography that leave a lasting impression in seconds.",
+        desc: 'Adding that "Future-Professional" polish with sleek, minimalist text overlays and visual effects.',
       },
       {
-        title: "Interactive Canvas",
-        icon: Globe,
-        desc: "Web GL and specialized rendering for high-performance visual storytelling.",
+        title: "Corporate Video Production",
+        icon: Layers,
+        desc: "Produce professional videos for business presentations and branding",
+      },
+      {
+        title: "Post-Production Lab",
+        icon: Wand2,
+        desc: 'Sound design, color grading, and "Retention Editing" that ensures viewers watch until the final frame.',
       },
     ],
     process: [
       {
         num: "01",
-        title: "Storyboarding",
-        icon: Layers,
-        desc: "Mapping out the motion journey and physics before a single frame is animated.",
+        title: "The Storyboard",
+        icon: Search,
+        desc: "We script the hooks and map out the visual flow before a single frame is shot.",
       },
       {
         num: "02",
-        title: "Motion Design",
-        icon: Activity,
-        desc: "Crafting the easing, timing, and atmospheric lighting of every movement.",
+        title: "The Capture",
+        icon: Video,
+        desc: 'Whether on-site or in-studio, we shoot with a focus on lighting, composition, and "Vibe Check" aesthetics.',
       },
       {
         num: "03",
-        title: "Refining",
-        icon: FlaskConical,
-        desc: "Polishing every detail to ensure silk-smooth performance across all modern devices.",
+        title: "The Edit",
+        icon: Activity,
+        desc: "This is where the magic happens. We pace the video to the beat of the cultural moment, ensuring maximum engagement.",
       },
       {
         num: "04",
-        title: "Export",
-        icon: Rocket,
-        desc: "Lottie, high-res video, or optimized code assets ready for production deployment.",
+        title: "The Optimization",
+        icon: CheckCircle2,
+        desc: "Exporting in every format you need—from 9:16 for social to 16:9 for your website.",
       },
     ],
+    processHeader: {
+      title: "social success",
+      description:
+        "We follow a step-by-step process to create high-quality and impactful videos. Each stage focuses on clarity, creativity, and results.",
+    },
     stats: [
       {
-        value: "Immediate Market Authority",
+        value: "Maximum Retention",
         label: "",
-        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
+        desc: "We stop the 'scroll-past.' Our rhythmic editing ensures viewers stay engaged from the first hook to the final frame.",
       },
       {
-        value: "3X Brand Recall",
+        value: "Algorithmic Favor",
         label: "",
-        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
+        desc: "High watch-time tells platforms your brand is 'Gold,' triggering massive organic reach without extra ad spend.",
       },
       {
-        value: "Deep Customer Trust",
+        value: "Cinematic Authority",
         label: "",
-        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
+        desc: "Elevate your brand instantly with 4K production that makes your business look like the industry's 'Main Character.'",
       },
       {
-        value: "Future Proof Foundations",
+        value: "Auditory Branding",
         label: "",
-        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+        desc: "Sound design that makes your brand recognizable even with eyes closed. We treat audio as 50% of the experience.",
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: "Retention-Obsessed",
+        icon: Brain,
+        desc: "We edit for the human attention span, not just for the art.",
+      },
+      {
+        title: "Platform-Native",
+        icon: Monitor,
+        desc: "We know exactly what lighting and pacing works for TikTok vs. what works for a Website Hero.",
+      },
+      {
+        title: "High-End Gear, Low-Friction Feel",
+        icon: Zap,
+        desc: "Professional 4K production without the 'clunky' traditional agency overhead.",
+      },
+      {
+        title: "Trend-Informed",
+        icon: Activity,
+        desc: "We know the 'editing styles' that are currently trending before they hit the mainstream.",
+      },
+    ],
+    faq: [
+      {
+        q: "Do you provide the scripts for the videos?",
+        a: "Yes. We handle everything from the initial hook-writing to the final color grade.",
+      },
+      {
+        q: "Can you edit footage we already have?",
+        a: "Absolutely. Our 'Post-Production Lab' can take your raw files and give them the watNidea 'Kinetic' polish.",
       },
     ],
   },
 
   digital: {
     hero: {
-      titlePrimary: "Products for",
-      titleSecondary: "Humans.",
-      titleThird: "Code for",
-      titleFourth: "Legacy.",
+      titlePrimary: "Your Flagship in the",
+      titleSecondary: "Digital Wild.", //
+      titleThird: "",
+      titleFourth: "", //
       description:
-        "We build digital headquarters that work as hard as you do. High-performance apps with aesthetic utility and strategic edge.",
+        "A website shouldn't just exist it should convert. We build high-speed, aesthetic-first digital headquarters that turn casual visitors into loyalists.",
       heroImage: "/Img/digital.webp",
     },
     about: {
       label: "THE DIGITAL HQ",
       title: "Digital HQ",
       highlight:
-        "Your website isn't a brochure; it's your most important employee. We build full-stack solutions with Next.js that prioritize speed and aesthetic power.",
-      subtext: "Aesthetics meet performance. We don't compromise on either.",
+        "In 2026, your website is your most powerful employee. The Digital HQ is our approach to web development that balances 'The Vibe' with 'The Velocity.' We don't do clunky templates or slow-loading pages. We build custom, responsive, and ultra-clean digital environments that act as the central nervous system for your brand’s growth. It’s where your Aura Architecture meets high-performance engineering.",
+      subtext: "",
       bgText: "CODE",
       aboutImage: "/Img/growth.webp",
       aboutFeatures: [
-        { title: "Full-Stack Ops", icon: Cpu },
-        { title: "Scalable Code", icon: Code },
-        { title: "SEO Authority", icon: Globe },
+        { title: "Website Design", icon: Cpu },
+        { title: "Conversion Optimization", icon: Code },
+        { title: "Speed & Performance", icon: Globe },
       ],
     },
     included: [
       {
-        title: "Next.js Mastery",
-        icon: Globe,
-        desc: "Leveraging Turbopack and Server Components for instant load times and perfect SEO scores.",
+        title: "Custom UI/UX Design",
+        icon: LayoutGrid,
+        desc: "User interfaces that feel intuitive and user experiences that remove every bit of friction from the customer journey.",
       },
       {
-        title: "Aesthetic UI",
-        icon: Star,
-        desc: "Interfaces that look like high-end art but function with surgical, data-driven precision.",
+        title: "Speed & Performance Optimization",
+        icon: Zap,
+        desc: "Clean code and optimized assets ensuring your site loads in under 2 seconds. In a world of short attention spans, speed is a feature.",
       },
       {
-        title: "Scalable Infra",
-        icon: Cpu,
-        desc: "Cloud-native backend systems designed to handle millions of requests without breaking.",
+        title: "SEO-Friendly Structure",
+        icon: Search,
+        desc: "Develop websites with clean structure for better search visibility",
       },
       {
-        title: "Security First",
+        title: "Mobile-First Engineering",
+        icon: Monitor,
+        desc: "Over 80% of your audience is on their phone. We build for the palm of the hand first, then the desktop.",
+      },
+      {
+        title: "Integrated CMS",
         icon: ShieldCheck,
-        desc: "Hardened digital environments that protect your brand data and user privacy.",
+        desc: "A backend that doesn't require a PhD to use. We give you the keys to your kingdom so you can update content on the fly.",
       },
     ],
     process: [
       {
         num: "01",
-        title: "Discovery",
-        icon: Brain,
-        desc: "Defining user personas and mapping complex functional requirements to brand goals.",
+        title: "The Blueprint (Wireframing)",
+        icon: Layers,
+        desc: "We map out the user flow and architecture to ensure the logic is sound before we start the art.",
       },
       {
         num: "02",
-        title: "Architecture",
-        icon: Layers,
-        desc: "Designing a data structure that protects both the artistic vision and raw performance.",
+        title: "The Mockup (Design)",
+        icon: LayoutGrid,
+        desc: "We apply your brand’s visual DNA to the wireframes, creating a high-fidelity prototype you can 'feel.'",
       },
       {
         num: "03",
-        title: "Development",
-        icon: Zap,
-        desc: "Clean, documented code built for long-term maintainability and future scaling.",
+        title: "The Build (Development)",
+        icon: Code,
+        desc: "Our developers bring the design to life with clean, scalable code and AEO-ready structure.",
       },
       {
         num: "04",
-        title: "Launch",
-        icon: Rocket,
-        desc: "Rigorous stress testing and deployment to global edge networks for speed.",
+        title: "The Stress Test (QA & Launch)",
+        icon: CheckCircle2,
+        desc: "We test across all browsers and devices to ensure perfection before the world sees it.",
       },
     ],
+    processHeader: {
+      title: "Social Success",
+      description:
+        "We follow a simple and structured process to ensure your Website growth is consistent and effective.",
+    },
     stats: [
       {
-        value: "Immediate Market Authority",
+        value: "Frictionless Journeys",
         label: "",
-        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
+        desc: "We eliminate the 'decision fatigue' that kills sales, guiding visitors naturally toward your checkout or CTA.",
       },
       {
-        value: "3X Brand Recall",
+        value: "Ultra-Low Bounce Rates",
         label: "",
-        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
+        desc: "With sub-2-second load speeds, you stop losing customers before the page even loads. Speed is a feature.",
       },
       {
-        value: "Deep Customer Trust",
+        value: "Mobile-First Dominance",
         label: "",
-        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
+        desc: "A flawless experience for the 80% of your audience browsing on their phones. Built for the palm of the hand.",
       },
       {
-        value: "Future Proof Foundations",
+        value: "AI & Search Ready",
         label: "",
-        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+        desc: "A clean tech-stack ensuring you rank higher on both Google and modern AI search engines from Day 1.",
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: "AEO-Baked In",
+        icon: Search,
+        desc: "We build sites that AI search engines and Google love, ensuring you’re discoverable from Day 1",
+      },
+      {
+        title: "Minimalist Code",
+        icon: Code,
+        desc: "No 'bloat.' We use modern tech stacks that keep your site lean, mean, and incredibly fast.",
+      },
+      {
+        title: "Conversion-Centric Design",
+        icon: Target,
+        desc: "We don't just design for awards; we design for your bottom line. Every button placement is intentional.",
+      },
+      {
+        title: "Transparent Ownership",
+        icon: ShieldCheck,
+        desc: "No 'hosting hostages.' Once it’s built, it’s yours. You own 100% of your site and its data",
+      },
+    ],
+    faq: [
+      {
+        q: "Will I be able to edit my own website?",
+        a: "Absolutely. We build on user-friendly platforms and provide a 'Welcome Kit' video tutorial showing you exactly how to swap images and text.",
+      },
+      {
+        q: "Is the site optimized for SEO?",
+        a: "Yes. We handle all the technical heavy lifting—meta tags, alt-text, and site mapping—so you start ranking immediately.",
       },
     ],
   },
 
   synthetic: {
     hero: {
-      titlePrimary: "Cinematic",
-      titleSecondary: "AI.",
-      titleThird: "Future",
-      titleFourth: "Vision.",
+      titlePrimary: "Hollywood", //
+      titleSecondary: "Scale.", //
+      titleThird: "Startup",
+      titleFourth: " Speed.", //
       description:
-        "The line between real and synthetic is gone. We create high-fidelity cinematic video and CGI using next-gen AI workflows.",
+        "Why spend months and millions on a shoot when you can generate the future in seconds? Synthetic Cinema brings high-fidelity, AI-driven video ads to your brand’s arsenal.",
       heroImage: "/Img/aura.jpeg",
     },
     about: {
       label: "SYNTHETIC CINEMA",
       title: "Synthetic Cinema",
       highlight:
-        "Hollywood-grade visuals at a fraction of the cost. We use neural rendering to create moody, cinematic content that was once impossible for startups.",
-      subtext:
-        "Imagine anything. We'll render it in 4K with high-contrast, moody lighting.",
+        "The barrier between Big Brands and Startups has officially collapsed. Synthetic Cinema is our specialized AI video production service. We use generative AI, neural rendering, and synthetic voice-overs to create hyper-realistic video ads that would traditionally require a massive crew, location scouting, and months of editing. We give you the power to produce cinematic content at the speed of your ideas.",
+      subtext: "",
       bgText: "FILM",
       aboutImage: "/Img/synthetic.webp",
       aboutFeatures: [
-        { title: "Neural Rendering", icon: Wand2 },
-        { title: "AI Composition", icon: Video },
-        { title: "Future CGI", icon: Sparkles },
+        { title: "AI Video Production", icon: Wand2 },
+        { title: "Creative Testing", icon: Video },
+        { title: "Cost Efficiency", icon: Sparkles },
       ],
     },
     included: [
       {
-        title: "AI Video",
-        icon: Video,
-        desc: "Stable Video Diffusion and custom training for hyper-consistent brand visuals.",
+        title: "AI Avatar Synthesis",
+        icon: Users,
+        desc: "Realistic digital humans that speak your brand’s message in any language, removing the need for expensive talent scouting.",
       },
       {
-        title: "CGI Environments",
+        title: "Generative Visual Environments",
         icon: Globe,
-        desc: "Futuristic landscapes and product mockups with neon lighting and high-contrast depth.",
+        desc: "Creating impossible locations from futuristic cityscapes to surreal dreamscapes without leaving the studio.",
       },
       {
-        title: "Cinematic Editing",
-        icon: Layers,
-        desc: "Mood-focused post-production that turns AI clips into storytelling masterpieces.",
+        title: "Neural Voice-Overs",
+        icon: MessageSquare,
+        desc: "Studio-quality audio in multiple dialects and tones, perfectly synced to your visual content.",
       },
       {
-        title: "Concept Art",
-        icon: Wand2,
-        desc: "Rapid visualization of complex brand worlds using generative neural networks.",
+        title: "Script & Prompt Engineering",
+        icon: Brain,
+        desc: "We don't just 'use AI'; we master it. We craft the complex prompts and scripts that ensure the output is on-brand and high-conversion.",
       },
     ],
     process: [
       {
         num: "01",
-        title: "World Building",
+        title: "The Concept Synthesis",
         icon: Brain,
-        desc: "Defining the visual rules, lighting style, and moody thematic elements of the film.",
+        desc: "We define the hook and the narrative. What is the one thing we want the viewer to feel?",
       },
       {
         num: "02",
-        title: "Prompting",
+        title: "The Generation Phase",
         icon: Sparkles,
-        desc: "Using advanced neural workflows to generate initial raw high-fidelity cinematic assets.",
+        desc: "Our AI architects use a tech stack of leading generative tools to create the raw visual and auditory assets.",
       },
       {
         num: "03",
-        title: "Post-Production",
-        icon: FlaskConical,
-        desc: "Color grading and custom sound design to achieve a true professional cinema feel.",
+        title: "The Human Polish",
+        icon: Wand2,
+        desc: "Our editors step in to add the 'soul.' We color grade, pace, and refine the AI output to ensure it meets our premium quality standards.",
       },
       {
         num: "04",
-        title: "Mastering",
-        icon: CheckCircle2,
-        desc: "Final 4K export ready for web, immersive displays, or large-scale digital social ads.",
+        title: "Version Scaling",
+        icon: TrendingUp,
+        desc: "We generate multiple variations of the ad for A/B testing, ensuring we find the highest-performing creative for your campaign.",
       },
     ],
+    processHeader: {
+      title: "social success",
+      description:
+        "We follow a simple and effective process to deliver high-performing video ads. Each step is focused on clarity, creativity, and results.",
+    },
     stats: [
       {
-        value: "Immediate Market Authority",
+        value: "Unbeatable Speed",
         label: "",
-        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
+        desc: "Go from idea to high-end ad in days. While competitors book crews, your AI-driven ads are already live.",
       },
       {
-        value: "3X Brand Recall",
+        value: "Radical Cost Efficiency",
         label: "",
-        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
+        desc: "Hollywood-level production value without the 5-figure overhead of travel, talent, and heavy equipment.",
       },
       {
-        value: "Deep Customer Trust",
+        value: "Infinite Scaling",
         label: "",
-        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
+        desc: "Generate dozens of variations for A/B testing instantly, allowing data to dictate your winning creative strategy.",
       },
       {
-        value: "Future Proof Foundations",
+        value: "Human-Polish Quality",
         label: "",
-        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+        desc: "We blend cutting-edge AI with expert editing to ensure your content looks premium, not robotic.",
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: "Pioneering Tech-Stack",
+        icon: Cpu,
+        desc: "We use the most advanced 2026 AI models, ensuring your ads don't look 'robotic' or 'cheap.'",
+      },
+      {
+        title: "Infinite Scalability",
+        icon: Layers,
+        desc: "Need 50 versions of an ad for 50 different audiences? We can deliver that in days, not months.",
+      },
+      {
+        title: "Ethical AI Use",
+        icon: ShieldCheck,
+        desc: "We ensure all assets are generated using licensed and ethical frameworks.",
+      },
+      {
+        title: "Hyper-Personalization",
+        icon: Users,
+        desc: "We can tailor AI content to specific demographics, making your audience feel like the ad was made just for them.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does AI video look 'real'?",
+        a: "In 2026, the gap is gone. With our 'Human Polish' phase, we ensure the final output is indistinguishable from high-end traditional cinematography.",
+      },
+      {
+        q: "Can I use my own voice or face in the AI ads?",
+        a: "Yes. We can create 'Digital Twins' for founders or influencers, allowing you to scale your personal brand without spending every day in front of a camera.",
       },
     ],
   },
 
   growth: {
     hero: {
-      titlePrimary: "Scale without",
-      titleSecondary: "Boundaries.",
-      titleThird: "Alchemy for",
-      titleFourth: "Revenue.",
+      titlePrimary: "Data into ",
+      titleSecondary: "Dollars.", //
+      titleThird: "Insights into ",
+      titleFourth: "Impact.", //
       description:
-        "We don't just grow businesses; we architect exponential expansion systems that turn market share into market dominance.",
+        "We don't just hunt for clicks we secure the bag. Growth Alchemy is our precision-targeted approach to scaling your brand through high-velocity paid media.",
       heroImage: "/Img/growth.webp",
     },
     about: {
       label: "GROWTH ALCHEMY",
       title: "Growth Alchemy",
       highlight:
-        "Growth is not a goal; it's a byproduct of a perfect system. We use mathematical precision and aggressive testing to unlock hidden revenue streams in your brand.",
-      subtext:
-        "From seed to scale, we provide the formula for consistent expansion.",
+        "Performance marketing is often treated like a math problem, but we treat it like a science. Growth Alchemy is our framework for turning raw data into profitable growth. We combine aggressive A/B testing with high-end creative assets to find your ready-to-buy audience. Whether it's Meta, or Google , we optimize for the only metric that truly matters: Your Return on Investment (ROI).",
+      subtext: "",
       bgText: "SCALE",
       aboutImage: "/Img/growth.webp",
       aboutFeatures: [
-        { title: "Revenue Ops", icon: TrendingUp },
-        { title: "Funnel Mastery", icon: Zap },
-        { title: "LTV Scaling", icon: Users },
+        { title: "Paid Ads Strategy", icon: TrendingUp },
+        { title: "Funnel Systems", icon: Zap },
+        { title: "Data Optimization", icon: Users },
       ],
     },
     included: [
       {
-        title: "Revenue Architecture",
+        title: "Full-Funnel Meta & Google Ads",
         icon: TrendingUp,
-        desc: "Engineering full-funnel systems that convert cold strangers into high-value, lifelong customers.",
+        desc: "Managing your paid social from awareness to checkout with creative that stops the scroll.",
       },
       {
-        title: "Surgical Advertising",
+        title: "Search Engine Dominance (PPC)",
+        icon: Search,
+        desc: "Capturing high-intent customers on Google and YouTube exactly when they are looking for your solution.",
+      },
+      {
+        title: "Conversion Rate Optimization (CRO)",
         icon: Zap,
-        desc: "High-performance ad strategies across Meta, Google, and LinkedIn that optimize for profit, not just reach.",
+        desc: "Analyzing your landing pages to remove friction and ensure every paid click has the highest chance of converting.",
       },
       {
-        title: "Conversion Alchemy",
-        icon: Sparkles,
-        desc: "High-fidelity landing pages and checkout flows designed to minimize friction and maximize order value.",
+        title: "Website Content Creation",
+        icon: MessageSquare,
+        desc: "We develop clear and professional website content that explains your services effectively.",
       },
       {
-        title: "Predictable Scaling",
+        title: "Retargeting Blueprints",
         icon: Activity,
-        desc: "Using historical data and aggressive testing to forecast and execute your next phase of market expansion.",
+        desc: "Creating 'invisible' loops that follow your visitors and bring them back to complete their purchase.",
       },
     ],
     process: [
       {
         num: "01",
-        title: "The Audit",
+        title: "The Funnel Audit",
         icon: Search,
-        desc: "Identifying the bottlenecks in your current funnel that are leaking revenue and stalling growth.",
+        desc: "We look at your current sales journey to find the 'leaks' where you’re losing money.",
       },
       {
         num: "02",
-        title: "The Formula",
-        icon: Zap,
-        desc: "Developing a custom scaling blueprint based on your specific unit economics and market goals.",
+        title: "The Infrastructure Build",
+        icon: Layers,
+        desc: "We set up advanced tracking (Pixels, API, and GTM) so every cent is accounted for.",
       },
       {
         num: "03",
-        title: "The Launch",
-        icon: Rocket,
-        desc: "Deploying high-impact campaigns and systems with surgical precision across your entire digital stack.",
+        title: "The Testing Phase",
+        icon: Zap,
+        desc: "We launch 'micro-campaigns' to test different creatives and audiences, identifying the winners early.",
       },
       {
         num: "04",
-        title: "The Compound",
-        icon: Activity,
-        desc: "Continuous optimization and re-investment strategies to trigger the exponential growth loop.",
+        title: "The Aggressive Scale",
+        icon: Rocket,
+        desc: "Once we find the winning formula, we pour fuel on the fire, increasing spend while maintaining your target acquisition cost.",
       },
     ],
+    processHeader: {
+      title: "Social Success",
+      description:
+        "We follow a simple and effective process to create content that performs well and delivers consistent results. Each step is focused on clarity, user intent, and long-term growth.",
+    },
     stats: [
       {
-        value: "Immediate Market Authority",
+        value: "Maximum Retention",
         label: "",
-        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
+        desc: "We stop the 'scroll-past.' Our rhythmic editing ensures viewers stay engaged from the first hook to the final frame.",
       },
       {
-        value: "3X Brand Recall",
+        value: "Algorithmic Favor",
         label: "",
-        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
+        desc: "High watch-time tells platforms your brand is 'Gold,' triggering massive organic reach without extra ad spend.",
       },
       {
-        value: "Deep Customer Trust",
+        value: "Cinematic Authority",
         label: "",
-        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
+        desc: "Elevate your brand instantly with 4K production that makes your business look like the industry's 'Main Character.'",
       },
       {
-        value: "Future Proof Foundations",
+        value: "Auditory Branding",
         label: "",
-        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+        desc: "Sound design that makes your brand recognizable even with eyes closed. We treat audio as 50% of the experience.",
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: "Creative-First Performance",
+        icon: Sparkles,
+        desc: "Most 'math' agencies use ugly ads. We use Aura Architecture and Kinetic Studio assets to ensure your ads look as good as they perform.",
+      },
+      {
+        title: "Algorithmic Mastery",
+        icon: Brain,
+        desc: "We don't fight the platform's AI; we feed it. We know exactly how to structure campaigns to work with the 2026 algorithms, not against them.",
+      },
+      {
+        title: "Total Transparency",
+        icon: Activity,
+        desc: "You get a live dashboard. No hidden fees, no 'vague' reports—just real-time data.",
+      },
+      {
+        title: "High-Aesthetic Conversion",
+        icon: Target,
+        desc: "We prove that 'high-end' and 'high-conversion' can exist in the same ad.",
+      },
+    ],
+    faq: [
+      {
+        q: "What is the minimum ad budget you work with?",
+        a: "We recommend a 'Testing Phase' budget of at least $1,500$–$2,000$ per month to gather enough data for the algorithms to learn.",
+      },
+      {
+        q: "Do you guarantee results?",
+        a: "No ethical agency guarantees sales, but we guarantee optimization. We guarantee that your cost per acquisition will decrease as our 'Alchemy' process refines your data.",
       },
     ],
   },
 
   echo: {
     hero: {
-      titlePrimary: "Community",
-      titleSecondary: "Echo.",
-      titleThird: "Social",
-      titleFourth: "Gravity.",
+      titlePrimary: "Be", //
+      titleSecondary: "Everywhere.", //
+      titleThird: "Be",
+      titleFourth: "Unforgettable.", //
       description:
-        "Stop shouting into the void. We build ecosystems where your brand's voice resonates and amplifies through your users.",
+        "Don't just show up dominate the space. The Echo System is our holistic digital marketing strategy designed to make your brand omnipresent, resonant, and impossible to ignore.",
       heroImage: "/Img/growth.webp",
     },
     about: {
       label: "THE ECHO SYSTEM",
       title: "Echo System",
       highlight:
-        "An Echo System is a self-sustaining community. We help you move from 'talking at' people to 'talking with' a tribe that builds the brand for you.",
-      subtext: "We create the spark; the community creates the fire.",
+        "Isolated marketing is wasted marketing. The Echo System is an omnichannel framework that synchronizes your Aura Architecture, Hype Engine, and Kinetic Studio assets into one seamless machine. We ensure that when a customer sees you on Google Ads, they find you on Google, and they remember you in their inbox. It’s about creating a digital echo that reinforces your value at every turn, turning a single impression into a lifelong obsession.",
+      subtext: "",
       bgText: "ECHO",
       aboutImage: "/Img/echo.webp",
       aboutFeatures: [
-        { title: "Tribe Building", icon: Users },
-        { title: "Viral Resonance", icon: Share2 },
-        { title: "Heart Logic", icon: Heart },
+        { title: "Search Visibility", icon: Users },
+        { title: "Content Systems", icon: Share2 },
+        { title: "Omnichannel Presence", icon: Heart },
       ],
     },
     included: [
       {
-        title: "Community Design",
-        icon: Users,
-        desc: "Building specialized Discord or private forums where your most loyal tribe lives.",
+        title: "Omnichannel Strategy",
+        icon: Globe,
+        desc: "A unified roadmap that ensures your brand voice and visuals are consistent across Social, Search, and Web.",
       },
       {
-        title: "Content Strategy",
+        title: "Search & Answer Engine Optimization (SEO/AEO)",
+        icon: Search,
+        desc: "Optimizing your digital footprint so that both humans and AI models (like Gemini and GPT) recommend your brand first.",
+      },
+      {
+        title: "Retention & Lifecycle Marketing",
         icon: MessageSquare,
-        desc: "A narrative loop that keeps your community engaged and talking day after day.",
+        desc: "Strategic email and SMS flows that keep your existing audience engaged and buying.",
       },
       {
-        title: "Loyalty Engines",
-        icon: Star,
-        desc: "Gamification and unique rewards that turn standard customers into lifelong advocates.",
-      },
-      {
-        title: "Sentiment Maps",
-        icon: Activity,
-        desc: "Monitoring the 'vibe' of your community to adjust brand direction in real-time.",
+        title: "Content Syndication",
+        icon: Share2,
+        desc: "Taking your high-performing assets and distributing them across the platforms where they will have the highest cultural impact.",
       },
     ],
     process: [
       {
         num: "01",
-        title: "Tribe Scouting",
+        title: "The Echosystem Audit",
         icon: Search,
-        desc: "Finding where your most passionate potential advocates currently congregate.",
+        desc: "We map out your current digital touchpoints to see where the 'echo' is breaking.",
       },
       {
         num: "02",
-        title: "Space Design",
+        title: "The Strategic Blueprint",
         icon: Layers,
-        desc: "Building the high-end digital 'home' for your community to connect and grow.",
+        desc: "We design a cross-platform flow that guides users from discovery to conversion without friction",
       },
       {
         num: "03",
-        title: "Engagement",
-        icon: Activity,
-        desc: "Seeding the first conversations and establishing the unique community energy.",
+        title: "The Deployment",
+        icon: Rocket,
+        desc: "We launch your integrated campaigns, ensuring that every piece of content supports the next.",
       },
       {
         num: "04",
-        title: "Autonomy",
-        icon: ShieldCheck,
-        desc: "Transitioning to a self-managed tribe system that scales organically without you.",
+        title: "The Synthesis",
+        icon: Activity,
+        desc: "We look at the holistic data—not just platform by platform—to see how the entire system is driving growth.",
       },
     ],
+    processHeader: {
+      title: "Social Success",
+      description:
+        "We follow a clear and simple process to grow your business online. Each step focuses on visibility, engagement, and results.",
+    },
     stats: [
       {
-        value: "Immediate Market Authority",
+        value: "Dominant Brand Omnipresence",
         label: "",
-        desc: "Move from 'newcomer' to 'industry leader' with a visual identity that commands respect and demands attention.",
+        desc: "Move from being 'a choice' to being 'the only choice.' Your brand bEchomes a constant presence in your customer’s digital life.",
       },
       {
-        value: "3X Brand Recall",
+        value: "Compounded Marketing ROI",
         label: "",
-        desc: "Be the first name customers remember through high-end minimalist design and deep psychological triggers.",
+        desc: "By syncing all channels, you eliminate wasted spend. Each service (Ads, Social, SEO) begins to feed the other, lowering your total cost of acquisition.",
       },
       {
-        value: "Deep Customer Trust",
+        value: "AI & Search Engine Authority",
         label: "",
-        desc: "Create an instant emotional bond that makes price-shopping irrelevant for your target audience.",
+        desc: "Be the first answer given by both Google and AI models. We ensure your brand’s 'Aura' is rEchognized and rEchommended by the latest algorithms.",
       },
       {
-        value: "Future Proof Foundations",
+        value: "Lifecycle Revenue Growth",
         label: "",
-        desc: "Receive a Brand Bible that ensures your identity stays consistent as you scale from lakhs to crores.",
+        desc: "Stop losing customers after the first sale. Our integrated retention flows turn one-time buyers into brand advocates who drive recurring revenue.",
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: "Holistic Visionaries",
+        icon: Globe,
+        desc: "We don't think in 'silos.' we see the whole digital landscape and how your brand fits into it.",
+      },
+      {
+        title: "AEO-Native",
+        icon: Search,
+        desc: "We were born in the era of AI. We optimize your brand for the way people search now, not five years ago.",
+      },
+      {
+        title: "Aesthetic Consistency",
+        icon: Star,
+        desc: "We ensure your 'Vibe' is never diluted, no matter which platform the customer finds you on.",
+      },
+      {
+        title: "Psychological Sequencing",
+        icon: Brain,
+        desc: "We understand the 'Customer Journey' and deliver the right message at the right psychological moment.",
+      },
+    ],
+    faq: [
+      {
+        q: "Do I need all your services to use The Echo System?",
+        a: "Not necessarily, but it works best when your Branding and Social are aligned. We can integrate our strategy with your existing assets or build them from scratch.",
+      },
+      {
+        q: "How do you measure the success of an 'Echo'?",
+        a: "We look at 'Blended ROI'—how your total marketing spend is driving total revenue, as well as organic brand search volume and direct traffic.",
       },
     ],
   },

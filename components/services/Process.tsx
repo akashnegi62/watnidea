@@ -44,7 +44,15 @@ export function ProcessCard({ item, index }: { item: any; index: number }) {
   );
 }
 
-export const Process = ({ data }: { data: any[] }) => (
+export const Process = ({
+  data,
+  title = "Brand Building",
+  description = "We follow a step-by-step process to create high-quality and impactful results. Each stage focuses on clarity, creativity, and results.",
+}: {
+  data: any[];
+  title?: string;
+  description?: string;
+}) => (
   <section
     id="process"
     className="min-h-[80vh] bg-[#edf1f3] text-black px-8 md:px-24 py-24"
@@ -69,9 +77,8 @@ export const Process = ({ data }: { data: any[] }) => (
           </span>
         </div>
         <h2 className="text-5xl font-bold">Step-by-Step Guide to</h2>
-        <span className="text-5xl font-bold text-(--highlight)">
-          Brand Building
-        </span>
+        <span className="text-5xl font-bold text-(--highlight)">{title}</span>
+        <p className="text-base text-black mt-4">{description}</p>
       </div>
     </div>
 

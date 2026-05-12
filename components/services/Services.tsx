@@ -83,7 +83,7 @@ export function ServiceCard({
   );
 }
 
-export const Services = ({ data }: { data: any[] }) => (
+export const Services = ({ data, title }: { data: any[]; title?: string }) => (
   <section
     id="services"
     className="min-h-screen bg-black text-white px-8 md:px-24 py-24"
@@ -111,7 +111,7 @@ export const Services = ({ data }: { data: any[] }) => (
           What&apos;s Included in Our
         </h2>
         <span className="text-[clamp(2.5rem,8vw,7.5rem)] md:text-7xl font-bold text-(--highlight)">
-          Aura Architecture Services
+          {title || "Aura Architecture"} Services
         </span>
       </div>
 
@@ -125,7 +125,7 @@ export const Services = ({ data }: { data: any[] }) => (
         <ServiceCard key={i} service={service} index={i} />
       ))}
     </div>
-    <p className="text-center">Let’s make something great together. <Link className="text-(--highlight) underline" href="/contact">Get Quote</Link></p>
+    <p className="text-center mt-10">Let’s make something great together. <Link className="text-(--highlight) underline" href="/contact">Get Quote</Link></p>
     
   </section>
 );

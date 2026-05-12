@@ -20,12 +20,16 @@ export default function ServiceLayout({ slug }: { slug: string }) {
     <main className="font-sans antialiased selection:bg-white selection:text-black bg-black">
       <Hero data={data.hero} />
       <AboutService data={data.about} />
-      <Services data={data.included} />
-      <Process data={data.process} />
+      <Services data={data.included} title={data.about.title} />
+      <Process
+        data={data.process}
+        title={data.processHeader?.title}
+        description={data.processHeader?.description}
+      />
       <Results data={data.stats} />
-      <WhyChooseUs />
+      <WhyChooseUs data={data.whyChooseUs} />
       <Testimonials />
-      <FAQ />
+      <FAQ data={data.faq} />
       <BookBannerSec />
     </main>
   );

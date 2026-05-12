@@ -5,22 +5,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, Plus, Minus } from "lucide-react";
 import { useState } from "react";
 
-const FAQ_DATA = [
-  {
-    q: "What is the difference between a logo and Aura Architecture?",
-    a: "A logo is just a symbol; Aura Architecture is the entire visual and emotional ecosystem. It encompasses your brand's voice, typography, color psychology, and market positioning to create a 'Main Character' identity that feels essential, not just decorative.",
-  },
-  {
-    q: "How long does the branding process take?",
-    a: "Our typical 'Concept Lab' to 'Handover' process takes between 4 to 6 weeks. This ensures we have enough time for the 'Deep Dive' research phase, creative exploration, and rigorous stress-testing of your new identity across all platforms.",
-  },
-  {
-    q: "Do I get files for social media?",
-    a: "Yes, every brand identity package includes a comprehensive 'Brand Bible' and a full kit of social media assets. This includes optimized profile images, banner templates, and content style guides specifically designed for Instagram, LinkedIn, and X (Twitter).",
-  },
-];
+const FAQ = ({ data }: { data?: any[] }) => {
+  const defaultFAQ = [
+    {
+      q: "What is the difference between a logo and Aura Architecture?",
+      a: "A logo is just a symbol; Aura Architecture is the entire visual and emotional ecosystem. It encompasses your brand's voice, typography, color psychology, and market positioning to create a 'Main Character' identity that feels essential, not just decorative.",
+    },
+    {
+      q: "How long does the branding process take?",
+      a: "Our typical 'Concept Lab' to 'Handover' process takes between 4 to 6 weeks. This ensures we have enough time for the 'Deep Dive' research phase, creative exploration, and rigorous stress-testing of your new identity across all platforms.",
+    },
+    {
+      q: "Do I get files for social media?",
+      a: "Yes, every brand identity package includes a comprehensive 'Brand Bible' and a full kit of social media assets. This includes optimized profile images, banner templates, and content style guides specifically designed for Instagram, LinkedIn, and X (Twitter).",
+    },
+  ];
 
-const FAQ = () => {
+  const items = data && data.length > 0 ? data : defaultFAQ;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -67,7 +68,7 @@ const FAQ = () => {
           </div>
         </div>
         <div className="space-y-4">
-          {FAQ_DATA.map((item, i) => (
+          {items.map((item, i) => (
             <div
               key={i}
               className={`bg-white border border-black/5 rounded-2xl overflow-hidden transition-all duration-300 ${
