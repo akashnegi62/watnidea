@@ -1,6 +1,8 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 //  Animated counter hook (Simplified)
 function useCounter(target: number, inView: boolean) {
@@ -186,13 +188,16 @@ export default function BookBannerSec() {
                 </div>
               </div>
 
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-(--highlight) text-white font-bold text-sm py-4 rounded-full shadow-lg shadow-(--highlight)/10 transition-transform"
-              >
-                Start Your Project →
-              </motion.button>
+              <Link href="/contact">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-(--highlight) text-white font-bold text-sm py-4 rounded-full shadow-lg shadow-(--highlight)/10 transition-transform flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  Start Your Project
+                  <ArrowUpRight className="w-5 h-5" />
+                </motion.div>
+              </Link>
 
               <p className="text-white text-sm text-center mt-4">
                 Takes only 30 seconds • No commitment

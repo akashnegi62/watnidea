@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const TESTIMONIALS = [
   {
@@ -126,17 +127,19 @@ export default function ResultCarousel() {
 
           {/* Grouped buttons */}
           <div className="flex flex-col items-end gap-6 pb-2">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center bg-[#121417] rounded-full pl-7 pr-2 py-2 group hover:bg-(--highlight) transition-colors duration-300"
-            >
-              <span className="text-white font-bold text-sm mr-4">
-                Contact Us
-              </span>
-              <span className="w-10 h-10 rounded-full bg-(--highlight) group-hover:bg-white/20 flex items-center justify-center transition-colors">
-                <ArrowIcon />
-              </span>
-            </motion.button>
+            <Link href="/contact">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center bg-[#121417] rounded-full pl-7 pr-2 py-2 group hover:bg-(--highlight) transition-colors duration-300 cursor-pointer"
+              >
+                <span className="text-white font-bold text-sm mr-4">
+                  Contact Us
+                </span>
+                <span className="w-10 h-10 rounded-full bg-(--highlight) group-hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <ArrowIcon />
+                </span>
+              </motion.div>
+            </Link>
 
             <div className="flex gap-3">
               <button

@@ -2,48 +2,56 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
 const SERVICES = [
   {
     title: "Aura Architecture",
     subTitle: "Branding",
+    slug: "aura",
     description:
       "We define your brand soul, positioning, and visual DNA to create a powerful identity that stands out with purpose and clarity.",
   },
   {
     title: "The Digital HQ",
     subTitle: "Web Development",
+    slug: "digital",
     description:
       "High-speed, conversion-focused websites that act as your 24/7 sales engine and digital headquarters.",
   },
   {
     title: "The Hype Engine",
     subTitle: "SMM",
+    slug: "hype",
     description:
       "We engineer conversations, trends, and communities that turn your audience into a loyal brand tribe.",
   },
   {
     title: "Kinetic Studio",
     subTitle: "Video",
+    slug: "kinetic",
     description:
       "Cinematic brand films, reels, and visual storytelling designed to capture instant attention and engagement.",
   },
   {
     title: "Growth Alchemy",
     subTitle: "Performance",
+    slug: "growth",
     description:
       "Paid ads and funnel systems engineered to turn every rupee into predictable, scalable revenue.",
   },
   {
     title: "Synthetic Cinema",
     subTitle: "AI Ads",
+    slug: "synthetic",
     description:
       "AI-powered cinematic ads that scale your brand storytelling at the speed of imagination.",
   },
   {
     title: "The Echo System",
     subTitle: "Omnichannel",
+    slug: "echo",
     description:
       "SEO, AEO, and content systems that make your brand visible everywhere your audience exists.",
   },
@@ -86,10 +94,13 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               </p>
             </div>
 
-            <button className="group flex items-center gap-2 text-white font-medium text-base md:text-lg border-b border-white/20 pb-1 hover:border-white transition-all self-start xl:self-auto">
+            <Link
+              href={`/services/${service.slug}`}
+              className="group flex items-center gap-2 text-white font-medium text-base md:text-lg border-b border-white/20 pb-1 hover:border-white transition-all self-start xl:self-auto"
+            >
               Read more
               <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </button>
+            </Link>
           </div>
         </div>
       </motion.div>

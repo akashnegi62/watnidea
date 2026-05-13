@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -189,19 +190,20 @@ export default function WeBuildSec() {
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <motion.a
-              href="#contact"
-              className="inline-flex items-center gap-2 font-bold text-xs md:text-sm tracking-widest uppercase px-8 py-4 rounded-full"
-              style={{
-                background: "#ba2c27",
-                color: "#000",
-              }}
-              whileHover={{ scale: 1.05, backgroundColor: "#fff" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact us
-              <span className="text-lg">↗</span>
-            </motion.a>
+            <Link href="/contact">
+              <motion.div
+                className="inline-flex items-center gap-2 font-bold text-xs md:text-sm tracking-widest uppercase px-8 py-4 rounded-full cursor-pointer"
+                style={{
+                  background: "#ba2c27",
+                  color: "#000",
+                }}
+                whileHover={{ scale: 1.05, backgroundColor: "#fff" }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact us
+                <span className="text-lg">↗</span>
+              </motion.div>
+            </Link>
           </motion.div>
         </div>
 

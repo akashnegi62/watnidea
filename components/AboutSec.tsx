@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import Image from "next/image";
-import { Paintbrush, BarChart3, Cpu, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,7 +47,6 @@ const slides = [
     highlight: "Are Utility",
     subtext: "Eye-catching visuals that elevate your brand.",
     accent: "text-emerald-400",
-    icon: <Paintbrush className="w-12 h-12 text-emerald-400" />,
   },
   {
     id: "04",
@@ -56,7 +55,6 @@ const slides = [
     highlight: "Protects the Art",
     subtext: "Creative ideas powered by real data.",
     accent: "text-blue-500",
-    icon: <BarChart3 className="w-12 h-12 text-blue-500" />,
   },
   {
     id: "05",
@@ -65,7 +63,6 @@ const slides = [
     highlight: "the Future",
     subtext: "Driven by AI and evolving trends.",
     accent: "text-orange-500",
-    icon: <Cpu className="w-12 h-12 text-orange-400" />,
   },
 ];
 
@@ -159,9 +156,6 @@ export default function AboutSec() {
             {/* TYPE 3: FEATURES (Slide 3, 4, 5) */}
             {slide.type === "feature" && (
               <div className="max-w-7xl flex flex-col items-center">
-                <div className="mb-10 opacity-50 bg-white/5 p-6 rounded-full border border-white/5">
-                  {slide.icon}
-                </div>
                 <h2 className="text-[clamp(3.5rem,8.5vw,10.5rem)] font-bold leading-[0.9] tracking-tighter mb-10">
                   <span className="text-white/20 block mb-2">
                     {slide.heading}
