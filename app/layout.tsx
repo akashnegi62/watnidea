@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import GlobalBottomBlur from "@/Ui/GlobalBottomBlur";
 import FloatingNav from "@/Ui/FloatingNav";
@@ -9,6 +9,11 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
 });
 export const metadata: Metadata = {
   title: "WatNidea",
@@ -21,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased ${poppins.variable}`}>
-      <body className="min-h-full flex flex-col font-sans">
+    <html lang="en" className={`h-full antialiased ${poppins.variable} ${playfair.variable}`}>
+      <body className="min-h-full flex flex-col font-poppins">
         <FloatingNav />
         {children}
         <GlobalBottomBlur />

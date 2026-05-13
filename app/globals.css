@@ -1,7 +1,14 @@
 @import "tailwindcss";
-
 :root {
   --highlight: #ba2c27;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+body {
+  font-family: var(--font-poppins), sans-serif;
 }
 
 @layer utilities {
