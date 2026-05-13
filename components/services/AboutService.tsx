@@ -84,7 +84,7 @@ const AboutService = ({ data }: { data: any }) => {
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-bold mb-10 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 leading-tight">
             What is a <span className="text-(--highlight)">{data.title}?</span>
           </h2>
 

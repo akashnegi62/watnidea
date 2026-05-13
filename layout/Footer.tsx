@@ -4,19 +4,26 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 
 // ─── Data ─────────────────────────────────────────────────
-const QUICK_LINKS = ["Services", "About", "Contact", "Let's Talk"];
-const SERVICES = [
-  "Synthetic Cinema",
-  "The Hype Engine",
-  "The Echo System",
-  "Growth Alchemy",
+const QUICK_LINKS = [
+  { name: "Services", href: "/services" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+  { name: "Let's Talk", href: "/contact" },
 ];
+
+const SERVICES = [
+  { name: "Synthetic Cinema", href: "/services/synthetic" },
+  { name: "The Hype Engine", href: "/services/hype" },
+  { name: "The Echo System", href: "/services/echo" },
+  { name: "Growth Alchemy", href: "/services/growth" },
+];
+
 const LEGAL = ["Privacy Policy", "Terms & Conditions", "Disclaimer"];
 
 const SOCIALS = [
   {
     name: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/watnidea?igsh=MXZ2OWl0bW1wODBpbw%3D%3D",
     icon: (
       <svg
         width="18"
@@ -36,7 +43,7 @@ const SOCIALS = [
   },
   {
     name: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/watnideaa",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -45,7 +52,7 @@ const SOCIALS = [
   },
   {
     name: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/watnidea/?originalSubdomain=in",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
@@ -69,7 +76,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
           {/* Column 1: Brand Description (Span 5) */}
           <div className="lg:col-span-5 space-y-6">
-            <p className="text-[12px] font-black uppercase tracking-[0.3em] text-(--highlight)">
+            <p className="text-[15px] font-black tracking-[0.3em] text-(--highlight)">
               Agency Overview
             </p>
             <p className="text-white text-lg leading-relaxed max-w-md">
@@ -83,33 +90,33 @@ export default function Footer() {
 
           {/* Column 2: Quick Links (Span 3) */}
           <div className="lg:col-span-3 flex flex-col gap-4">
-            <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-(--highlight)">
+            <p className="text-[15px] font-bold tracking-[0.2em] text-(--highlight)">
               Quick Links
             </p>
             {QUICK_LINKS.map((link) => (
               <Link
-                key={link}
-                href="#"
-                className="text-sm font-bold uppercase tracking-widest hover:text-(--highlight) transition-colors w-fit"
+                key={link.name}
+                href={link.href}
+                className="text-sm font-bold tracking-widest hover:text-(--highlight) transition-colors w-fit"
               >
-                {link}
+                {link.name}
               </Link>
             ))}
           </div>
 
           {/* Column 3: Services (Span 4) */}
           <div className="lg:col-span-4 flex flex-col gap-4">
-            <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-(--highlight)">
+            <p className="text-[15px] font-bold tracking-[0.2em] text-(--highlight)">
               Services
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
               {SERVICES.map((service) => (
                 <Link
-                  key={service}
-                  href="#"
-                  className="text-sm font-bold uppercase tracking-widest hover:text-(--highlight) transition-colors w-fit"
+                  key={service.name}
+                  href={service.href}
+                  className="text-sm font-bold tracking-widest hover:text-(--highlight) transition-colors w-fit"
                 >
-                  {service}
+                  {service.name}
                 </Link>
               ))}
             </div>
@@ -132,6 +139,8 @@ export default function Footer() {
               <motion.a
                 key={social.name}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ backgroundColor: "rgba(255,255,255,0.1)", y: -3 }}
                 className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white transition-all"
               >

@@ -153,9 +153,8 @@ export default function WeBuildSec() {
 
           <div className="overflow-hidden">
             <motion.h2
-              className="font-medium uppercase leading-[0.95] tracking-tighter"
+              className="font-medium text-4xl md:text-5xl lg:text-7xl leading-[0.95] tracking-tighter"
               style={{
-                fontSize: "clamp(2rem, 7vw, 7rem)",
                 color: "#fff",
               }}
               initial={{ y: "100%" }}

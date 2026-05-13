@@ -66,8 +66,7 @@ export default function WhyChooseUs() {
           </div>
           <h2 className="text-white text-3xl md:text-5xl lg:text-7xl font-medium tracking-tighter leading-[1.1] md:leading-none">
             Creative Systems for <br />{" "}
-            <span className="text-(--highlight)">Modern Growth</span>{" "}
-            <br className="hidden md:block" /> strategies
+            <span className="text-(--highlight)">Modern Growth</span> strategies
           </h2>
         </div>
         <motion.button

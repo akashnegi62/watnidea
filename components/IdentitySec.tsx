@@ -74,7 +74,7 @@ export default function CoreServices() {
               What We Do Best
             </p>
           </div>
-          <h2 className="text-3xl md:text-5xl lg:text-[4.5rem] font-medium text-white tracking-tight leading-[1.1] md:leading-none">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-medium text-white tracking-tight leading-[1.1] md:leading-none">
             An <span className="text-[#ba2c27]">Identity Lab</span> Built for
             Growth.
           </h2>

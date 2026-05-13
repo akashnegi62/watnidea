@@ -67,8 +67,7 @@ export default function WhyChooseUs() {
             </p>
           </div>
           <h2 className="text-white text-4xl md:text-5xl lg:text-7xl font-medium tracking-tighter leading-[1.1] md:leading-none">
-            Strategic <span className="text-(--highlight)">Growth</span>{" "}
-            <br className="hidden md:block" /> Systems
+            Strategic <span className="text-(--highlight)">Growth</span> Systems
           </h2>
         </div>
         <Link
