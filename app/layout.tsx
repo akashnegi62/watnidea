@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import GlobalBottomBlur from "@/Ui/GlobalBottomBlur";
-import FloatingNav from "@/Ui/FloatingNav";
+import Navbar from "@/layout/Navbar";
 import Footer from "@/layout/Footer";
 
 const poppins = Poppins({
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`h-full antialiased ${poppins.variable} ${playfair.variable}`}>
       <body className="min-h-full flex flex-col font-poppins">
-        <FloatingNav />
+        <Navbar />
         {children}
         <GlobalBottomBlur />
         <Footer />
