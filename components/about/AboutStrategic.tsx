@@ -1,11 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
@@ -43,27 +38,12 @@ const CHOOSE_DATA = [
 export default function WhyChooseUs() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const springConfig = { stiffness: 100, damping: 25, mass: 0.5 };
-  const smoothX = useSpring(mouseX, springConfig);
-  const smoothY = useSpring(mouseY, springConfig);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    mouseX.set(e.clientX - 125);
-    mouseY.set(e.clientY - 160);
-  };
-
   const handleItemClick = (idx: number) => {
     setHoveredIndex(hoveredIndex === idx ? null : idx);
   };
 
   return (
-    <section
-      onMouseMove={handleMouseMove}
-      className="relative bg-black min-h-screen py-20 md:py-32 px-6 md:px-12 lg:px-16 overflow-hidden"
-    >
+    <section className="relative bg-black min-h-screen py-20 md:py-32 px-6 md:px-12 lg:px-16 overflow-hidden">
       {/* HEADER */}
       <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
@@ -84,7 +64,7 @@ export default function WhyChooseUs() {
               Why choose us
             </p>
           </div>
-          <h2 className="text-white text-4xl md:text-6xl lg:text-8xl font-medium tracking-tighter leading-[1.1] md:leading-none">
+          <h2 className="text-white text-3xl md:text-5xl lg:text-7xl font-medium tracking-tighter leading-[1.1] md:leading-none">
             Creative Systems for <br />{" "}
             <span className="text-(--highlight)">Modern Growth</span>{" "}
             <br className="hidden md:block" /> strategies
@@ -110,67 +90,51 @@ export default function WhyChooseUs() {
             onClick={() => handleItemClick(idx)}
             className="group relative border-b border-white/10 py-8 md:py-12 cursor-pointer z-10"
           >
-            <div className="flex flex-col">
-              <h3 className="text-white text-2xl md:text-5xl lg:text-7xl font-medium tracking-tighter transition-opacity duration-500 lg:group-hover:opacity-40">
+            <div className="flex items-center justify-between">
+              <h3 className="text-white text-xl md:text-4xl lg:text-6xl font-medium tracking-tighter transition-opacity duration-500 lg:group-hover:opacity-40">
                 {item.title}
               </h3>
 
-              <AnimatePresence>
-                {hoveredIndex === idx && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <p className="text-white text-base md:text-xl lg:text-2xl font-light max-w-2xl pt-3 md:pt-4">
-                      {item.tagline}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <div className="relative w-8 h-8 md:w-12 md:h-12 shrink-0 flex items-center justify-center">
+                <motion.svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-white/40 group-hover:text-white transition-colors"
+                  animate={{
+                    rotate: hoveredIndex === idx ? 0 : -45,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  <path d="M12 5v14" />
+                  <path d="M19 12l-7 7-7-7" />
+                </motion.svg>
+              </div>
             </div>
+
+            <AnimatePresence>
+              {hoveredIndex === idx && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
+                  className="overflow-hidden"
+                >
+                  <p className="text-white text-base md:text-xl lg:text-2xl font-light max-w-2xl pt-3 md:pt-4">
+                    {item.tagline}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
-
-      {/* CURSOR-FOLLOWING POPUP IMAGE */}
-      <motion.div
-        style={{
-          x: smoothX,
-          y: smoothY,
-          pointerEvents: "none",
-        }}
-        className="fixed top-0 left-0 z-50 hidden lg:block"
-      >
-        <AnimatePresence mode="wait">
-          {hoveredIndex !== null && (
-            <motion.div
-              key={hoveredIndex}
-              initial={{ opacity: 0, scale: 0.5, filter: "blur(15px)" }}
-              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-              exit={{ opacity: 0, scale: 0.5, filter: "blur(15px)" }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="relative w-[250px] h-[320px] rounded-xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] border border-white/10"
-            >
-              <div
-                className="absolute inset-0 blur-2xl opacity-30 scale-125"
-                style={{
-                  background: `url(${CHOOSE_DATA[hoveredIndex].image})`,
-                  backgroundSize: "cover",
-                }}
-              />
-              <Image
-                src={CHOOSE_DATA[hoveredIndex].image}
-                alt="Preview"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
     </section>
   );
 }

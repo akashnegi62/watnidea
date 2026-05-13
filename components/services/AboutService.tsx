@@ -24,13 +24,13 @@ function FeatureCard({ item, index }: { item: any; index: number }) {
         delay: index * 0.1,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex flex-col p-6 rounded-2xl border border-black/5 bg-white hover:shadow-2xl hover:shadow-black/5 transition-all duration-500 overflow-hidden"
+      className="group relative flex flex-col p-6 rounded-2xl border border-white/5 bg-[#121417] hover:shadow-2xl hover:shadow-black/5 transition-all duration-500 overflow-hidden"
     >
       {/* Animated Corner Accent */}
       <span className="absolute top-0 left-0 w-6 h-6 border-t border-l border-(--highlight) rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {/* Index Number */}
-      <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 mb-2">
+      <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">
         0{index + 1}
       </span>
 
@@ -38,7 +38,7 @@ function FeatureCard({ item, index }: { item: any; index: number }) {
         <div className="text-(--highlight) group-hover:scale-110 transition-transform duration-500">
           {Icon && <Icon size={24} />}
         </div>
-        <h3 className="text-black font-bold leading-tight text-lg">
+        <h3 className="text-white font-bold leading-tight text-lg">
           {item.title}
         </h3>
       </div>
@@ -50,11 +50,11 @@ const AboutService = ({ data }: { data: any }) => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-[#edf1f3] text-black flex items-center px-8 md:px-24 py-24"
+      className="min-h-screen bg-black text-white flex items-center px-8 md:px-24 py-24"
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
         {/* LEFT: IMAGE CONTAINER */}
-        <div className="relative aspect-4/5 rounded-[2.5rem] overflow-hidden border border-black/5 group">
+        <div className="relative aspect-4/5 rounded-[2.5rem] overflow-hidden border border-white/5 group">
           <Image
             src={data.aboutImage || "/api/placeholder/800/1000"}
             alt="About Brand"
@@ -89,9 +89,9 @@ const AboutService = ({ data }: { data: any }) => {
           </h2>
 
           {/* Core Concept Box */}
-          <div className="relative p-8 rounded-3xl bg-white border border-black/5 shadow-sm border-l-2 border-l-(--highlight) mb-10">
-            <p className="text-lg md:text-xl leading-relaxed text-black italic">
-              <span className="text-black font-bold not-italic block mb-2 text-sm uppercase tracking-widest">
+          <div className="relative p-8 rounded-3xl bg-[#121417] border border-white/5 shadow-sm border-l-2 border-l-(--highlight) mb-10">
+            <p className="text-lg md:text-xl leading-relaxed text-white italic">
+              <span className="text-white font-bold not-italic block mb-2 text-sm uppercase tracking-widest">
                 The Core Concept
               </span>
               &quot;{data.highlight}&quot;

@@ -141,7 +141,7 @@ export default function ServiceSec() {
       </div>
 
       {/* Extra space at the bottom */}
-      <div className="md:h-[30vh] lg:h-[40vh] 2xl:h-[10vh]" />
+      <div className="md:h-[30vh] lg:h-[30vh] 2xl:h-[10vh]" />
     </section>
   );
 }

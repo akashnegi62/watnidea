@@ -34,7 +34,7 @@ const WhyChooseUs = ({ data }: { data?: any[] }) => {
   const items = data && data.length > 0 ? data : defaultData;
 
   return (
-    <section className="min-h-[50vh] bg-[#edf1f3] text-black px-8 md:px-24 py-24 flex items-center">
+    <section className="min-h-[50vh] bg-black text-white px-8 md:px-24 py-24 flex items-center">
       <div className="w-full">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div>
@@ -55,13 +55,13 @@ const WhyChooseUs = ({ data }: { data?: any[] }) => {
                 WHY CHOOSE WATNIDEA
               </span>
             </div>
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-5xl font-bold text-white">
               Creative <span className="text-(--highlight)">Growth</span> Strategies
             </h2>
           </div>
           <Link
             href="/contact"
-            className="flex items-center gap-2 text-sm uppercase tracking-widest border-b border-black pb-2 hover:opacity-50 transition shrink-0"
+            className="flex items-center gap-2 text-sm uppercase tracking-widest border-b border-white pb-2 hover:opacity-50 transition shrink-0 text-white"
           >
             Contact us <ArrowUpRight size={16} />
           </Link>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 const Hero = ({ data }: { data: any }) => (
-  <section className="min-h-screen bg-black text-white flex items-center px-8 md:px-24 pt-20">
+  <section className="bg-black text-white flex items-center px-8 md:px-24 py-12">
     <div className="grid md:grid-cols-2 gap-16 items-center w-full max-w-7xl mx-auto">
       {/* LEFT CONTENT */}
       <div className="max-w-2xl order-2 md:order-1">

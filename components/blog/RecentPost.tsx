@@ -10,9 +10,6 @@ import { BlogPost } from "@/data/blogs";
 export default function RecentPost({ post }: { post: BlogPost }) {
   return (
     <section className="relative w-full min-h-[70vh] flex items-center pt-32 pb-20 px-6 md:px-12 lg:px-24 bg-black overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-(--highlight)/5 blur-[120px] z-0 pointer-events-none" />
-
       <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -30,7 +27,7 @@ export default function RecentPost({ post }: { post: BlogPost }) {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold text-white mb-8 leading-tight">
             {post.title}
           </h1>
 

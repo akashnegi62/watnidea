@@ -25,13 +25,13 @@ function FeatureCard({ item, index }: { item: { title: string; icon: any }; inde
         delay: index * 0.1,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex flex-col p-6 rounded-2xl border border-black/5 bg-white hover:shadow-2xl hover:shadow-black/5 transition-all duration-500 overflow-hidden"
+      className="group relative flex flex-col p-6 rounded-2xl border border-white/5 bg-[#121417] hover:shadow-2xl hover:shadow-black/5 transition-all duration-500 overflow-hidden"
     >
       {/* Animated Corner Accent */}
       <span className="absolute top-0 left-0 w-6 h-6 border-t border-l border-(--highlight) rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {/* Index Number */}
-      <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 mb-2">
+      <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">
         0{index + 1}
       </span>
 
@@ -39,7 +39,7 @@ function FeatureCard({ item, index }: { item: { title: string; icon: any }; inde
         <div className="text-(--highlight) group-hover:scale-110 transition-transform duration-500">
           <Icon size={24} />
         </div>
-        <h3 className="text-black font-bold leading-tight text-lg">
+        <h3 className="text-white font-bold leading-tight text-lg">
           {item.title}
         </h3>
       </div>
@@ -83,7 +83,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-[#edf1f3] text-black flex items-center px-8 md:px-24 py-24"
+      className="min-h-screen bg-black text-white flex items-center px-8 md:px-24 py-24"
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
         {/* LEFT: IMAGE & STATS CONTAINER */}
@@ -106,21 +106,21 @@ const About = () => {
           {/* STATS SECTION */}
           <div className="flex flex-wrap items-center gap-8 md:gap-16 px-4">
             <div className="flex flex-col">
-              <div className="text-6xl md:text-7xl font-black text-(--highlight) flex items-center tracking-tighter">
+              <div className="text-5xl md:text-6xl font-black text-(--highlight) flex items-center tracking-tighter">
                 <Counter value={25} />+
               </div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mt-2">
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 mt-2">
                 Collective Aura
               </span>
             </div>
             
-            <div className="h-16 w-px bg-black/10 hidden sm:block" />
+            <div className="h-16 w-px bg-white/10 hidden sm:block" />
 
             <div className="flex flex-col gap-1">
-              <span className="text-xl md:text-2xl font-bold text-black leading-none">
+              <span className="text-xl md:text-2xl font-bold text-white leading-none">
                 Creative execution
               </span>
-              <span className="text-xl md:text-2xl font-bold text-black leading-none">
+              <span className="text-xl md:text-2xl font-bold text-white leading-none">
                 Digital marketing
               </span>
             </div>
@@ -147,14 +147,14 @@ const About = () => {
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-bold mb-10 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold mb-10 leading-tight">
             The End of <span className="text-(--highlight)">&quot;Average.&quot;</span>
           </h2>
 
           {/* Core Concept Box */}
-          <div className="relative p-8 rounded-3xl bg-white border border-black/5 shadow-sm border-l-2 border-l-(--highlight) mb-10">
-            <p className="text-lg md:text-xl leading-relaxed text-black italic">
-              <span className="text-black font-bold not-italic block mb-2 text-sm uppercase tracking-widest">
+          <div className="relative p-8 rounded-3xl bg-[#121417] border border-white/5 shadow-sm border-l-2 border-l-(--highlight) mb-10">
+            <p className="text-lg md:text-xl leading-relaxed text-white italic">
+              <span className="text-white font-bold not-italic block mb-2 text-sm uppercase tracking-widest">
                 The Aura Architect
               </span>
               &quot;We don’t just build brands - we architect Aura. watNidea is a 2026-native creative powerhouse where high-end aesthetics meet aggressive technical growth.&quot;

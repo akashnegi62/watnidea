@@ -51,7 +51,7 @@ function Stat({
       transition={{ duration: 0.5, delay }}
       className="flex flex-col gap-1"
     >
-      <p className="text-2xl md:text-3xl font-black text-(--highlight) leading-none tracking-tight">
+      <p className="text-xl md:text-2xl font-black text-(--highlight) leading-none tracking-tight">
         {isNumber ? counted : value}
         {suffix}
       </p>
@@ -114,7 +114,7 @@ export default function BookBannerSec() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={leftInView ? { opacity: 1, y: 0 } : {}}
-                  className="text-2xl md:text-4xl font-medium text-white"
+                  className="text-xl md:text-3xl font-medium text-white"
                 >
                   READY TO EVOLVE INTO{" "}
                   <span className="text-(--highlight)">A BRAND</span> THAT

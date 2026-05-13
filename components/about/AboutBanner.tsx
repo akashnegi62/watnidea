@@ -43,8 +43,8 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
         delay: index * 0.13,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex flex-col gap-3 p-7 border border-black/5
-                 rounded-2xl bg-white hover:shadow-2xl hover:shadow-black/5
+      className="group relative flex flex-col gap-3 p-7 border border-white/5
+                 rounded-2xl bg-[#121417] hover:shadow-2xl hover:shadow-black/5
                  transition-all duration-500 overflow-hidden"
     >
       {/* animated corner accent */}
@@ -55,7 +55,7 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
       />
 
       {/* index number */}
-      <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-black">
+      <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/40">
         0{index + 1}
       </span>
 
@@ -68,7 +68,7 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
           delay: index * 0.13 + 0.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="text-5xl md:text-6xl font-medium tracking-tight text-(--highlight) leading-none"
+        className="text-4xl md:text-5xl font-medium tracking-tight text-(--highlight) leading-none"
       >
         {stat.value}
       </motion.p>
@@ -83,11 +83,11 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
           ease: "easeOut",
         }}
         style={{ originX: 0 }}
-        className="h-[.5px] w-full bg-black"
+        className="h-[.5px] w-full bg-white/10"
       />
 
       <div>
-        <p className="text-black text-sm leading-relaxed">{stat.desc}</p>
+        <p className="text-white/60 text-sm leading-relaxed">{stat.desc}</p>
       </div>
     </motion.div>
   );
@@ -117,7 +117,7 @@ export default function BannerSec() {
   return (
     <section
       ref={outerRef}
-      className="relative w-full bg-[#edf1f3] overflow-hidden py-24 md:py-32"
+      className="relative w-full bg-black overflow-hidden py-24 md:py-32"
     >
       <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-0 items-stretch">
         {/* ══ LEFT — image + badge ══ */}
@@ -216,8 +216,8 @@ export default function BannerSec() {
           {/* headline */}
           <motion.div style={{ y: headY, opacity: headO }}>
             <h2
-              className="text-4xl md:text-5xl lg:text-[3.6rem]
-                         text-black leading-[1.08] tracking-tight
+              className="text-3xl md:text-4xl lg:text-[2.8rem]
+                         text-white leading-[1.08] tracking-tight
                          font-medium"
             >
               Key <span className="text-(--highlight)">facts</span> about

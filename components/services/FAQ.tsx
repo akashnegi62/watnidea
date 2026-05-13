@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, Plus, Minus } from "lucide-react";
 import { useState } from "react";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const FAQ = ({ data }: { data?: any[] }) => {
   const defaultFAQ = [
     {
@@ -29,7 +30,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
   };
 
   return (
-    <section className="bg-[#edf1f3] text-black px-8 md:px-24 py-24">
+    <section className="bg-black text-white px-8 md:px-24 py-24">
       <div className="grid md:grid-cols-2 gap-16">
         <div>
           <div className="flex items-center gap-3 mb-4">
@@ -53,7 +54,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
             Answers to your common{" "}
             <span className="text-(--highlight)">questions</span>
           </h2>
-          <div className="flex items-center gap-4 bg-white border border-black/5 shadow-sm p-6 rounded-2xl w-fit">
+          <div className="flex items-center gap-4 bg-[#121417] border border-white/5 shadow-sm p-6 rounded-2xl w-fit">
             <span className="text-4xl font-bold text-(--highlight)">4.9</span>
             <div className="flex text-(--highlight)">
               <Star fill="currentColor" size={16} />
@@ -62,7 +63,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
               <Star fill="currentColor" size={16} />
               <Star fill="currentColor" size={16} />
             </div>
-            <span className="text-xs uppercase tracking-widest text-black/40 font-bold">
+            <span className="text-xs uppercase tracking-widest text-white/40 font-bold">
               Customer Reviews
             </span>
           </div>
@@ -71,7 +72,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
           {items.map((item, i) => (
             <div
               key={i}
-              className={`bg-white border border-black/5 rounded-2xl overflow-hidden transition-all duration-300 ${
+              className={`bg-[#121417] border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 ${
                 openIndex === i
                   ? "shadow-xl shadow-black/5"
                   : "hover:shadow-lg hover:shadow-black/5"
@@ -90,7 +91,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
                     openIndex === i
                       ? "bg-(--highlight) text-white rotate-180"
-                      : "bg-[#edf1f3] text-black"
+                      : "bg-[#1C1C1C] text-white"
                   }`}
                 >
                   {openIndex === i ? <Minus size={20} /> : <Plus size={20} />}
@@ -105,7 +106,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <div className="px-6 pb-6 text-black/60 leading-relaxed border-t border-black/5 pt-4 mx-6">
+                    <div className="px-6 pb-6 text-white/60 leading-relaxed border-t border-white/5 pt-4 mx-6">
                       {item.a}
                     </div>
                   </motion.div>

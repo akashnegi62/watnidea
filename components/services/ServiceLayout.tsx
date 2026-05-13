@@ -10,6 +10,7 @@ import WhyChooseUs from "./WhyChooseUs";
 import Testimonials from "./Testimonials";
 import FAQ from "./FAQ";
 import BookBannerSec from "../BookBannerSec";
+import Heading from "@/layout/Heading";
 
 export default function ServiceLayout({ slug }: { slug: string }) {
   const data = SERVICES_DATA[slug];
@@ -18,6 +19,7 @@ export default function ServiceLayout({ slug }: { slug: string }) {
 
   return (
     <main className="font-sans antialiased selection:bg-white selection:text-black bg-black">
+      <Heading name={data.about.title} isService />
       <Hero data={data.hero} />
       <AboutService data={data.about} />
       <Services data={data.included} title={data.about.title} />

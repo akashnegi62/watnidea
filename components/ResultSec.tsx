@@ -119,7 +119,7 @@ export default function ResultCarousel() {
                 Testimonials
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-white leading-[1.1] tracking-tight">
               Real <span className="text-(--highlight)">results</span> from{" "}
               <br /> real brands
             </h2>
@@ -218,7 +218,7 @@ export default function ResultCarousel() {
 
                   <div className="mx-4 mb-4 rounded-2xl bg-white/10 border border-white/5 px-6 py-5 flex items-center justify-between">
                     <div>
-                      <p className="text-white font-black text-3xl tracking-tighter leading-none mb-1">
+                      <p className="text-white font-black text-2xl tracking-tighter leading-none mb-1">
                         {t.stat}
                       </p>
                       <p className="text-white/50 text-[10px] uppercase font-bold tracking-widest">

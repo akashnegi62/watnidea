@@ -19,7 +19,7 @@ export function ProcessCard({ item, index }: { item: any; index: number }) {
         delay: index * 0.1,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex flex-col p-8 rounded-2xl border border-black/5 bg-white hover:shadow-2xl hover:shadow-black/5 transition-all duration-500 overflow-hidden"
+      className="group relative flex flex-col p-8 rounded-2xl border border-white/5 bg-[#121417] hover:shadow-2xl hover:shadow-black/5 transition-all duration-500 overflow-hidden"
     >
       <span className="absolute top-0 left-0 w-8 h-8 border-t border-l border-(--highlight) rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -27,16 +27,16 @@ export function ProcessCard({ item, index }: { item: any; index: number }) {
         <div className="text-(--highlight) group-hover:scale-110 transition-transform duration-500">
           {Icon && <Icon size={32} />}
         </div>
-        <span className="text-4xl font-black text-black transition-colors duration-500">
+        <span className="text-4xl font-black text-white/20 transition-colors duration-500 group-hover:text-white">
           {item.num}
         </span>
       </div>
 
       <div className="flex flex-col gap-3">
-        <h3 className="text-black font-bold leading-tight text-xl uppercase tracking-tight">
+        <h3 className="text-white font-bold leading-tight text-xl uppercase tracking-tight">
           {item.title}
         </h3>
-        <p className="text-black/60 leading-relaxed text-sm md:text-base">
+        <p className="text-white/60 leading-relaxed text-sm md:text-base">
           {item.desc}
         </p>
       </div>
@@ -55,7 +55,7 @@ export const Process = ({
 }) => (
   <section
     id="process"
-    className="min-h-[80vh] bg-[#edf1f3] text-black px-8 md:px-24 py-24"
+    className="min-h-[80vh] bg-black text-white px-8 md:px-24 py-24"
   >
     <div className="flex justify-between items-end mb-16">
       <div>
@@ -76,9 +76,9 @@ export const Process = ({
             How We Work Together
           </span>
         </div>
-        <h2 className="text-5xl font-bold">Step-by-Step Guide to</h2>
+        <h2 className="text-5xl font-bold text-white">Step-by-Step Guide to</h2>
         <span className="text-5xl font-bold text-(--highlight)">{title}</span>
-        <p className="text-base text-black mt-4">{description}</p>
+        <p className="text-base text-white/60 mt-4">{description}</p>
       </div>
     </div>
 

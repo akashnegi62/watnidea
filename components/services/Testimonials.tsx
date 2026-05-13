@@ -98,7 +98,7 @@ const Testimonials = () => {
   return (
     <section
       ref={outerRef}
-      className="relative w-full bg-[#edf1f3] overflow-hidden py-24 md:py-32"
+      className="relative w-full bg-black overflow-hidden py-24 md:py-32"
     >
       <div className="relative max-w-[1320px] mx-auto px-6 md:px-12 lg:px-16">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
@@ -120,7 +120,7 @@ const Testimonials = () => {
                 Testimonials
               </span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold text-[#121417] leading-[1.1] tracking-tight">
+            <h2 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
               What <span className="text-(--highlight)">client</span> says
             </h2>
           </div>
@@ -128,7 +128,7 @@ const Testimonials = () => {
           <div className="flex flex-col items-end gap-6 pb-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="flex items-center bg-[#121417] rounded-full pl-7 pr-2 py-2 group hover:bg-(--highlight) transition-colors duration-300"
+              className="flex items-center bg-[#121417] border border-white/10 rounded-full pl-7 pr-2 py-2 group hover:bg-(--highlight) transition-colors duration-300"
             >
               <span className="text-white font-bold text-sm mr-4">
                 Contact Us
@@ -142,14 +142,14 @@ const Testimonials = () => {
               <button
                 onClick={handlePrev}
                 disabled={currentIndex === 0}
-                className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center disabled:opacity-20 hover:bg-black/5 transition-all"
+                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center disabled:opacity-20 hover:bg-white/5 transition-all text-white"
               >
                 <ArrowIcon rotate />
               </button>
               <button
                 onClick={handleNext}
                 disabled={currentIndex === TESTIMONIALS_DATA.length - 1}
-                className="w-12 h-12 rounded-full bg-[#121417] text-white flex items-center justify-center disabled:opacity-20 hover:bg-black transition-all"
+                className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center disabled:opacity-20 hover:bg-zinc-200 transition-all"
               >
                 <ArrowIcon />
               </button>

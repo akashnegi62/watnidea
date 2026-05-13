@@ -6,7 +6,7 @@ import { Target, Eye } from "lucide-react";
 
 export default function AboutIdentity() {
   return (
-    <section className="bg-[#edf1f3] py-24 md:py-32 px-6 md:px-16 overflow-hidden">
+    <section className="bg-black py-24 md:py-32 px-6 md:px-16 overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         {/* HEADER SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
@@ -28,19 +28,19 @@ export default function AboutIdentity() {
               </p>
             </div>
 
-            <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-medium text-[#121417] tracking-tight leading-[1.05] mb-12">
+            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-medium text-white tracking-tight leading-[1.05] mb-12">
               What is <span className="text-[#ba2c27]">watNidea?</span>
             </h2>
 
             <div className="max-w-4xl">
-              <p className="text-[#121417] text-xl md:text-3xl leading-snug font-medium mb-8">
+              <p className="text-white text-xl md:text-3xl leading-snug font-medium mb-8">
                 <span className="font-black">watNidea</span> (pronounced:
                 What-an-idea!) is an{" "}
                 <span className="text-[#ba2c27]">Identity Lab</span>. We sit at
                 the intersection of cultural intuition and algorithmic
                 precision.
               </p>
-              <p className="text-[#121417]/70 text-lg md:text-xl leading-relaxed">
+              <p className="text-white/60 text-lg md:text-xl leading-relaxed">
                 We realized that traditional agencies were too slow and
                 freelancers were too scattered, so we built the
                 &quot;Un-Agency.&quot; We are a collective of designers,
@@ -75,16 +75,16 @@ export default function AboutIdentity() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -10 }}
-            className="bg-white p-10 md:p-16 rounded-[3rem] shadow-sm border border-black/5 flex flex-col gap-8 group"
+            className="bg-[#121417] p-10 md:p-16 rounded-[3rem] shadow-sm border border-white/5 flex flex-col gap-8 group"
           >
             <div className="w-16 h-16 bg-[#ba2c27] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-[#ba2c27]/20 group-hover:scale-110 transition-transform">
               <Target size={32} />
             </div>
             <div>
-              <h3 className="text-3xl md:text-4xl font-black text-[#121417] mb-6 tracking-tight">
+              <h3 className="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight">
                 Our Mission.
               </h3>
-              <p className="text-[#121417]/70 text-lg md:text-xl leading-relaxed">
+              <p className="text-white/70 text-lg md:text-xl leading-relaxed">
                 To transform brands into cultural signals — blending high-end
                 aesthetics with performance-driven systems that convert
                 attention into authority and revenue.
