@@ -159,7 +159,7 @@ export default function FloatingNav() {
               animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
               exit={{ x: 20, y: -20, opacity: 0, scale: 0.95 }}
               transition={springHeavy}
-              className="fixed top-[90px] md:top-[110px] right-4 md:right-10 z-140 w-[calc(100%-2rem)] md:max-w-[420px] bg-[#E8EAEB] rounded-[2.5rem] md:rounded-[3rem] shadow-2xl flex flex-col p-6 md:p-10 overflow-hidden"
+              className="fixed top-[80px] md:top-[110px] right-4 md:right-10 z-140 w-[calc(100%-2rem)] md:max-w-[420px] bg-[#E8EAEB] rounded-[2.5rem] md:rounded-[3rem] shadow-2xl flex flex-col p-6 md:p-10 overflow-y-auto max-h-[calc(100vh-100px)] md:max-h-[calc(100vh-140px)] scrollbar-hide"
             >
               <div className="flex flex-col gap-1 md:gap-2 mt-2">
                 {NAV_LINKS.map((link) => (

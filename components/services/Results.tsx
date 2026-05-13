@@ -87,7 +87,7 @@ export function StatCard({ stat, index }: { stat: any; index: number }) {
   );
 }
 
-const Results = ({ data }: { data: any[] }) => {
+const Results = ({ data, title }: { data: any[]; title?: string }) => {
   const outerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(outerRef, { once: true, margin: "-100px" });
 
@@ -202,7 +202,7 @@ const Results = ({ data }: { data: any[] }) => {
           <motion.div style={{ y: headY, opacity: headO }}>
             <h2 className="text-4xl md:text-5xl lg:text-[3.6rem] text-white leading-[1.08] tracking-tight font-medium">
               What You Can Expect From{" "}
-              <span className="text-(--highlight)">Aura Architecture</span>
+              <span className="text-(--highlight)">{title}</span>
             </h2>
           </motion.div>
 
