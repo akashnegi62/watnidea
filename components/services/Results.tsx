@@ -111,11 +111,11 @@ const Results = ({ data, title }: { data: any[]; title?: string }) => {
   return (
     <section
       ref={outerRef}
-      className="relative w-full bg-black overflow-hidden py-24 md:py-32"
+      className="relative w-full bg-black overflow-hidden py-16 md:py-32"
     >
       <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-0 items-stretch">
         {/* ══ LEFT — image + badge ══ */}
-        <div className="relative overflow-hidden rounded-3xl lg:rounded-none lg:rounded-l-3xl min-h-[440px] lg:min-h-0">
+        <div className="relative overflow-hidden rounded-2xl md:rounded-3xl lg:rounded-none lg:rounded-l-3xl min-h-[300px] md:min-h-[440px] lg:min-h-0">
           {/* parallax image wrapper */}
           <motion.div
             style={{ y: imgY }}
@@ -134,7 +134,7 @@ const Results = ({ data, title }: { data: any[]; title?: string }) => {
           </motion.div>
 
           {/* ── Rotating badge ── */}
-          <div className="absolute top-8 right-8 z-10 w-24 h-24 bg-(--highlight) rounded-full">
+          <div className="absolute top-4 right-4 md:top-8 md:right-8 z-10 w-20 h-20 md:w-24 md:h-24 bg-(--highlight) rounded-full shadow-xl">
             <motion.svg
               style={{ rotate: badgeRot }}
               viewBox="0 0 96 96"
@@ -159,8 +159,14 @@ const Results = ({ data, title }: { data: any[]; title?: string }) => {
               </text>
             </motion.svg>
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-10 h-10 rounded-full border border-(--highlight) flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/20 flex items-center justify-center">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  className="md:w-3.5 md:h-3.5"
+                >
                   <path
                     d="M3 11L11 3M11 3H5M11 3V9"
                     stroke="white"
@@ -175,39 +181,41 @@ const Results = ({ data, title }: { data: any[]; title?: string }) => {
         </div>
 
         {/* ══ RIGHT — content panel ══ */}
-        <div className="lg:pl-14 flex flex-col justify-between gap-10">
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="flex items-center gap-2.5"
-          >
+        <div className="lg:pl-14 flex flex-col justify-between gap-10 md:gap-14">
+          <div className="space-y-6 md:space-y-8">
             <motion.div
-              animate={{ rotate: [0, 180, 360] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-              className="flex items-center justify-center select-none"
+              initial={{ opacity: 0, x: 20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="flex items-center gap-2.5"
             >
-              <Image
-                src="/Img/point_icon.svg"
-                alt="Point Icon"
-                width={20}
-                height={20}
-              />
+              <motion.div
+                animate={{ rotate: [0, 180, 360] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                className="flex items-center justify-center select-none"
+              >
+                <Image
+                  src="/Img/point_icon.svg"
+                  alt="Point Icon"
+                  width={18}
+                  height={18}
+                />
+              </motion.div>
+              <span className="text-(--highlight) text-sm md:text-lg font-bold uppercase tracking-[0.28em]">
+                Results{" "}
+              </span>
             </motion.div>
-            <span className="text-(--highlight) text-lg font-bold uppercase tracking-[0.28em]">
-              Results{" "}
-            </span>
-          </motion.div>
 
-          <motion.div style={{ y: headY, opacity: headO }}>
-            <h2 className="text-4xl md:text-5xl lg:text-[3.6rem] text-white leading-[1.08] tracking-tight font-medium">
-              What You Can Expect From{" "}
-              <span className="text-(--highlight)">{title}</span>
-            </h2>
-          </motion.div>
+            <motion.div style={{ y: headY, opacity: headO }}>
+              <h2 className="text-3xl md:text-5xl lg:text-[3.6rem] text-white leading-[1.1] tracking-tighter font-bold">
+                What You Can Expect From{" "}
+                <span className="text-(--highlight)">{title}</span>
+              </h2>
+            </motion.div>
+          </div>
 
           {/* 2×2 stats grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
             {data.map((stat, i) => (
               <StatCard key={i} stat={stat} index={i} />
             ))}

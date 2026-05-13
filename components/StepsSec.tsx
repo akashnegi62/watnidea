@@ -177,7 +177,7 @@ export default function StepSec() {
                           }}
                           className="overflow-hidden"
                         >
-                          <p className="text-white/60 text-base leading-relaxed max-w-md">
+                          <p className="text-white text-base leading-relaxed max-w-md">
                             {step.description}
                           </p>
 

@@ -93,10 +93,10 @@ export default function BookBannerSec() {
   const cardInView = useInView(cardRef, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative w-full bg-black py-20 md:py-32 overflow-hidden">
+    <section className="relative w-full bg-black py-16 md:py-32 overflow-hidden">
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div
-          className="relative rounded-3xl overflow-hidden border border-white/10 bg-[#0A0A0A]"
+          className="relative rounded-4xl md:rounded-3xl overflow-hidden border border-white/10 bg-[#0A0A0A]"
           style={{
             boxShadow: "0 30px 60px -12px rgba(0,0,0,0.5)",
           }}
@@ -110,11 +110,11 @@ export default function BookBannerSec() {
               ref={leftRef}
               className="p-8 md:p-14 lg:border-r border-white/5"
             >
-              <div className="mb-10 space-y-1">
+              <div className="mb-8 md:mb-10 space-y-1">
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={leftInView ? { opacity: 1, y: 0 } : {}}
-                  className="text-xl md:text-3xl font-medium text-white"
+                  className="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tighter leading-tight"
                 >
                   READY TO EVOLVE INTO{" "}
                   <span className="text-(--highlight)">A BRAND</span> THAT
@@ -126,16 +126,16 @@ export default function BookBannerSec() {
                 initial={{ opacity: 0 }}
                 animate={leftInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.4 }}
-                className="text-white text-base leading-relaxed max-w-lg mb-12"
+                className="text-white/60 text-sm md:text-base leading-relaxed max-w-lg mb-10 md:mb-12"
               >
-                When your business needs more than just a logo when it needs a
-                pulse watNidea steps in. We engineer branding and digital
+                When your business needs more than just a logo—when it needs a
+                pulse—watNidea steps in. We engineer branding and digital
                 marketing solutions that are sleek, fast, and engineered to
                 support your journey from a startup to an industry icon.
               </motion.p>
 
               {/* Stats */}
-              <div className="flex flex-wrap gap-10 md:gap-16">
+              <div className="grid grid-cols-2 sm:flex flex-wrap gap-8 md:gap-16">
                 <Stat
                   value={15}
                   suffix="+"
@@ -166,15 +166,15 @@ export default function BookBannerSec() {
               className="p-8 md:p-14 bg-white/2 flex flex-col justify-center"
             >
               <div className="mb-8">
-                <h3 className="text-white text-xl md:text-2xl font-black mb-4">
+                <h3 className="text-white text-xl md:text-2xl font-bold mb-4 tracking-tight">
                   Book Your <span className="text-(--highlight)">Strategy</span>{" "}
                   Call
                 </h3>
-                <p className="text-white text-lg mb-8">
+                <p className="text-white/80 text-base md:text-lg mb-8 leading-snug">
                   Get a personalized plan to scale your business.
                 </p>
 
-                <div className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                   {["Growth Audit", "Ad Strategy", "Content Plan"].map(
                     (l, i) => (
                       <CheckItem
@@ -188,18 +188,18 @@ export default function BookBannerSec() {
                 </div>
               </div>
 
-              <Link href="/contact">
+              <Link href="/contact" className="block w-full">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-(--highlight) text-white font-bold text-sm py-4 rounded-full shadow-lg shadow-(--highlight)/10 transition-transform flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-(--highlight) text-white font-bold text-xs md:text-sm py-4 md:py-5 rounded-full shadow-lg shadow-(--highlight)/20 transition-transform flex items-center justify-center gap-2 cursor-pointer uppercase tracking-widest"
                 >
                   Start Your Project
-                  <ArrowUpRight className="w-5 h-5" />
+                  <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
                 </motion.div>
               </Link>
 
-              <p className="text-white text-sm text-center mt-4">
+              <p className="text-white/40 text-[10px] md:text-xs text-center mt-6">
                 Takes only 30 seconds • No commitment
               </p>
             </div>

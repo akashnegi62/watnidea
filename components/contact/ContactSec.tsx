@@ -41,7 +41,7 @@ function InfoCard({ card, index }: { card: (typeof CARDS)[0]; index: number }) {
       href={card.href}
       target="_blank"
       rel="noreferrer"
-      className="relative flex flex-col justify-between rounded-2xl overflow-hidden p-8 md:p-10 lg:aspect-square no-underline"
+      className="relative flex flex-col justify-between rounded-2xl overflow-hidden p-6 md:p-8 lg:p-10 lg:aspect-square no-underline group"
       style={{
         background: "#0f0f0f",
         border: "1px solid rgba(255,255,255,0.08)",
@@ -66,7 +66,7 @@ function InfoCard({ card, index }: { card: (typeof CARDS)[0]; index: number }) {
 
       {/* Icon Circle */}
       <motion.div
-        className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center"
+        className="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-10 lg:mb-0"
         style={{ background: ACCENT_COLOR }}
         variants={{ hover: { scale: 1.1, backgroundColor: "#fff" } }}
       >
@@ -79,26 +79,26 @@ function InfoCard({ card, index }: { card: (typeof CARDS)[0]; index: number }) {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col gap-4">
+      <div className="relative z-10 flex flex-col gap-3 md:gap-4">
         <motion.p
           variants={{ hover: { color: "#000" } }}
-          className="text-white uppercase tracking-widest text-xs font-mono"
+          className="text-white uppercase tracking-[0.2em] text-[10px] font-bold"
         >
           {card.tag}
         </motion.p>
 
         <motion.h3
-          className="font-medium leading-[1.1] uppercase"
-          style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", color: "#fff" }}
+          className="font-bold leading-[1.1] uppercase tracking-tighter"
+          style={{ fontSize: "clamp(1.2rem, 3vw, 2.2rem)", color: "#fff" }}
           variants={{ hover: { color: "#000" } }}
         >
           {card.value}
         </motion.h3>
 
         <motion.p
-          className="text-sm leading-relaxed"
-          style={{ color: "#ffffff", maxWidth: "25ch" }}
-          variants={{ hover: { color: "rgba(0,0,0,0.7)" } }}
+          className="text-xs md:text-sm leading-relaxed"
+          style={{ color: "#ffffff", opacity: 0.6, maxWidth: "25ch" }}
+          variants={{ hover: { color: "rgba(0,0,0,0.7)", opacity: 1 } }}
         >
           {card.hint}
         </motion.p>
@@ -119,10 +119,10 @@ function Field({ as: Tag = "input", placeholder, ...props }: any) {
 
 export default function ContactSec() {
   return (
-    <section className="relative w-full bg-black overflow-hidden px-6 py-20 md:py-32">
+    <section className="relative w-full bg-black overflow-hidden px-6 py-16 md:py-32">
       <div className="max-w-[1400px] mx-auto relative z-10">
         {/* INFO CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12 md:mb-16">
           {CARDS.map((card, i) => (
             <InfoCard key={i} card={card} index={i} />
           ))}
@@ -131,13 +131,17 @@ export default function ContactSec() {
         {/* FORM + MAP SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
           {/* FORM CARD */}
-          <div className="bg-[#0f0f0f] border border-white/10 rounded-xl md:rounded-[2.5rem] p-8 md:p-12">
-            <form className="flex flex-col gap-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="bg-[#0f0f0f] border border-white/10 rounded-2xl md:rounded-[2.5rem] p-6 md:p-12 lg:p-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-10 md:mb-12 tracking-tighter">
+              Let&apos;s build your <br className="hidden sm:block" />
+              <span className="text-(--highlight)">digital empire</span>
+            </h2>
+            <form className="flex flex-col gap-4 md:gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                 <Field placeholder="First Name" />
                 <Field placeholder="Last Name" />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                 <Field placeholder="Email Address" type="email" />
                 <Field placeholder="Mobile Number" type="tel" />
               </div>
@@ -154,7 +158,7 @@ export default function ContactSec() {
                   color: "#000",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-4 bg-[#ba2c27] text-white font-bold uppercase tracking-widest text-xs py-5 rounded-full flex items-center justify-center gap-2 transition-colors"
+                className="mt-4 bg-[#ba2c27] text-white font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs py-5 rounded-full flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#ba2c27]/10"
               >
                 Send Message <ArrowUpRight size={18} />
               </motion.button>
@@ -162,7 +166,7 @@ export default function ContactSec() {
           </div>
 
           {/* MAP CARD */}
-          <div className="bg-[#0f0f0f] border border-white/10 rounded-xl md:rounded-[2.5rem] overflow-hidden min-h-[400px]">
+          <div className="bg-[#0f0f0f] border border-white/10 rounded-2xl md:rounded-[2.5rem] overflow-hidden min-h-[350px] md:min-h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2!2d77.3910!3d28.6270!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a9b5555555%3A0x0!2sG-283%2C+G+Block%2C+Sector+63%2C+Noida%2C+Uttar+Pradesh+201309!5e0!3m2!1sen!2sin!4v1000000000000"
               width="100%"

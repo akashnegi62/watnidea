@@ -98,11 +98,11 @@ const Testimonials = () => {
   return (
     <section
       ref={outerRef}
-      className="relative w-full bg-black overflow-hidden py-24 md:py-32"
+      className="relative w-full bg-black overflow-hidden py-16 md:py-32"
     >
       <div className="relative max-w-[1320px] mx-auto px-6 md:px-12 lg:px-16">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="max-w-2xl">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-8">
+          <div className="max-w-3xl">
             <div className="flex items-center gap-2.5 mb-6">
               <motion.div
                 animate={{ rotate: [0, 180, 360] }}
@@ -116,29 +116,17 @@ const Testimonials = () => {
                   height={18}
                 />
               </motion.div>
-              <span className="text-(--highlight) text-lg font-Testimonials uppercase tracking-[0.3em]">
+              <span className="text-(--highlight) text-sm md:text-lg font-bold uppercase tracking-[0.3em]">
                 Testimonials
               </span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tighter">
               What <span className="text-(--highlight)">client</span> says
             </h2>
           </div>
 
-          <div className="flex flex-col items-end gap-6 pb-2">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center bg-[#121417] border border-white/10 rounded-full pl-7 pr-2 py-2 group hover:bg-(--highlight) transition-colors duration-300"
-            >
-              <span className="text-white font-bold text-sm mr-4">
-                Contact Us
-              </span>
-              <span className="w-10 h-10 rounded-full bg-(--highlight) group-hover:bg-white/20 flex items-center justify-center transition-colors">
-                <ArrowIcon />
-              </span>
-            </motion.button>
-
-            <div className="flex gap-3">
+          <div className="flex flex-col items-start lg:items-end gap-6 pb-2 w-full lg:w-auto">
+            <div className="flex gap-3 ml-auto lg:ml-0">
               <button
                 onClick={handlePrev}
                 disabled={currentIndex === 0}

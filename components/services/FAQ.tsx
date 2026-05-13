@@ -30,8 +30,8 @@ const FAQ = ({ data }: { data?: any[] }) => {
   };
 
   return (
-    <section className="bg-black text-white px-8 md:px-24 py-24">
-      <div className="grid md:grid-cols-2 gap-16">
+    <section className="bg-black text-white px-6 md:px-24 py-16 md:py-24">
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
         <div>
           <div className="flex items-center gap-3 mb-4">
             <motion.div
@@ -46,24 +46,26 @@ const FAQ = ({ data }: { data?: any[] }) => {
                 height={18}
               />
             </motion.div>
-            <span className="text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
+            <span className="text-sm md:text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
               FAQS
             </span>
           </div>
-          <h2 className="text-5xl font-bold mb-8">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tighter leading-tight">
             Answers to your common{" "}
             <span className="text-(--highlight)">questions</span>
           </h2>
-          <div className="flex items-center gap-4 bg-[#121417] border border-white/5 shadow-sm p-6 rounded-2xl w-fit">
-            <span className="text-4xl font-bold text-(--highlight)">4.9</span>
+          <div className="flex items-center gap-4 bg-[#121417] border border-white/5 shadow-sm p-5 md:p-6 rounded-2xl w-fit">
+            <span className="text-3xl md:text-4xl font-bold text-(--highlight)">
+              4.9
+            </span>
             <div className="flex text-(--highlight)">
-              <Star fill="currentColor" size={16} />
-              <Star fill="currentColor" size={16} />
-              <Star fill="currentColor" size={16} />
-              <Star fill="currentColor" size={16} />
-              <Star fill="currentColor" size={16} />
+              <Star fill="currentColor" size={14} />
+              <Star fill="currentColor" size={14} />
+              <Star fill="currentColor" size={14} />
+              <Star fill="currentColor" size={14} />
+              <Star fill="currentColor" size={14} />
             </div>
-            <span className="text-xs uppercase tracking-widest text-white font-bold">
+            <span className="text-[10px] md:text-xs uppercase tracking-widest text-white font-bold">
               Customer Reviews
             </span>
           </div>

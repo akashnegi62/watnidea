@@ -50,7 +50,7 @@ const FAQItem = ({
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-6 px-4 md:px-6 focus:outline-none"
       >
-        <span className="text-left text-lg md:text-xl font-medium text-white/90">
+        <span className="text-left text-lg md:text-xl font-medium text-white">
           {question}
         </span>
 
@@ -64,7 +64,7 @@ const FAQItem = ({
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-white/60 group-hover:text-white transition-colors"
+            className="text-white group-hover:text-white transition-colors"
             animate={{
               rotate: isOpen ? 0 : -45,
             }}
@@ -88,7 +88,7 @@ const FAQItem = ({
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-4 md:px-6 pb-6 text-white/60 leading-relaxed text-base md:text-lg">
+            <div className="px-4 md:px-6 pb-6 text-white leading-relaxed text-base md:text-lg">
               {answer}
             </div>
           </motion.div>
@@ -125,7 +125,7 @@ export default function FAQSec() {
 
             {/* Bottom Content: Text */}
             <div className="relative z-10 mt-12">
-              <p className="text-2xl md:text-3xl font-medium tracking-tight text-white/90 leading-snug">
+              <p className="text-2xl md:text-3xl font-medium tracking-tight text-white leading-snug">
                 Explore our trust score & customer reviews
               </p>
             </div>
@@ -157,7 +157,7 @@ export default function FAQSec() {
               <br />
               common <span className="text-(--highlight)">questions</span>
             </h2>
-            <p className="text-white/60 text-lg md:text-xl max-w-2xl leading-relaxed">
+            <p className="text-white text-lg md:text-xl max-w-2xl leading-relaxed">
               Find clear and concise answers to the most frequently asked
               questions about{" "}
               <span className="text-white font-medium">watNidea</span>&apos;s

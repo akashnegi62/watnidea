@@ -142,7 +142,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ backgroundColor: "rgba(255,255,255,0.1)", y: -3 }}
-                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white transition-all"
+                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-white transition-all"
               >
                 {social.icon}
               </motion.a>

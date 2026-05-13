@@ -86,10 +86,10 @@ export function ServiceCard({
 export const Services = ({ data, title }: { data: any[]; title?: string }) => (
   <section
     id="services"
-    className="min-h-screen bg-black text-white px-8 md:px-24 py-24"
+    className="min-h-screen bg-black text-white px-6 md:px-24 py-16 md:py-24"
   >
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
-      <div>
+    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-20 gap-8">
+      <div className="max-w-4xl">
         <div className="flex items-center gap-3 mb-4">
           <motion.div
             animate={{ rotate: [0, 180, 360] }}
@@ -103,29 +103,37 @@ export const Services = ({ data, title }: { data: any[]; title?: string }) => (
               height={18}
             />
           </motion.div>
-          <span className="text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
+          <span className="text-sm md:text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
             SERVICES
           </span>
         </div>
-        <h2 className="text-[clamp(2.5rem,8vw,7.5rem)] md:text-7xl font-bold">
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter">
           What&apos;s Included in Our
+          <br />
+          <span className="text-(--highlight)">
+            {title || "Aura Architecture"} Services
+          </span>
         </h2>
-        <span className="text-[clamp(2.5rem,8vw,7.5rem)] md:text-7xl font-bold text-(--highlight)">
-          {title || "Aura Architecture"} Services
-        </span>
       </div>
 
-      <Link href="/services" className="flex items-center gap-2 text-sm uppercase tracking-widest border-b border-white pb-2 hover:opacity-50 transition shrink-0">
+      <Link
+        href="/services"
+        className="flex items-center gap-2 text-xs md:text-sm uppercase tracking-widest border-b border-white pb-2 hover:opacity-50 transition shrink-0"
+      >
         See All Services <ArrowUpRight size={16} />
       </Link>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
       {data.map((service, i) => (
         <ServiceCard key={i} service={service} index={i} />
       ))}
     </div>
-    <p className="text-center mt-10">Let’s make something great together. <Link className="text-(--highlight) underline" href="/contact">Get Quote</Link></p>
-    
+    <p className="text-center mt-12 md:mt-16 text-sm md:text-base text-white/60">
+      Let’s make something great together.{" "}
+      <Link className="text-(--highlight) underline font-bold" href="/contact">
+        Get Quote
+      </Link>
+    </p>
   </section>
 );

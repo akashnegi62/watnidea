@@ -104,7 +104,7 @@ function ServiceCard({
 
         <motion.p
           className="text-base md:text-lg leading-relaxed font-medium"
-          style={{ color: "rgba(255,255,255,0.5)", maxWidth: "30ch" }}
+          style={{ color: "#fff", maxWidth: "30ch" }}
           variants={{ hover: { color: "#000" } }}
           transition={{ duration: 0.3 }}
         >

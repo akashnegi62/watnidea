@@ -34,10 +34,10 @@ const WhyChooseUs = ({ data }: { data?: any[] }) => {
   const items = data && data.length > 0 ? data : defaultData;
 
   return (
-    <section className="min-h-[50vh] bg-black text-white px-8 md:px-24 py-24 flex items-center">
+    <section className="min-h-[50vh] bg-black text-white px-6 md:px-24 py-16 md:py-24 flex items-center">
       <div className="w-full">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-          <div>
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-8">
+          <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <motion.div
                 animate={{ rotate: [0, 180, 360] }}
@@ -51,17 +51,18 @@ const WhyChooseUs = ({ data }: { data?: any[] }) => {
                   height={18}
                 />
               </motion.div>
-              <span className="text-xs uppercase tracking-[0.3em] font-bold text-(--highlight)">
+              <span className="text-sm md:text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
                 WHY CHOOSE WATNIDEA
               </span>
             </div>
-            <h2 className="text-5xl font-bold text-white">
-              Creative <span className="text-(--highlight)">Growth</span> Strategies
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter leading-tight">
+              Creative <span className="text-(--highlight)">Growth</span>{" "}
+              Strategies
             </h2>
           </div>
           <Link
             href="/contact"
-            className="flex items-center gap-2 text-sm uppercase tracking-widest border-b border-white pb-2 hover:opacity-50 transition shrink-0 text-white"
+            className="flex items-center gap-2 text-xs md:text-sm uppercase tracking-widest border-b border-white pb-2 hover:opacity-50 transition shrink-0 text-white"
           >
             Contact us <ArrowUpRight size={16} />
           </Link>

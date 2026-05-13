@@ -55,10 +55,10 @@ export const Process = ({
 }) => (
   <section
     id="process"
-    className="min-h-[80vh] bg-black text-white px-8 md:px-24 py-24"
+    className="min-h-[70vh] bg-black text-white px-6 md:px-24 py-16 md:py-24"
   >
-    <div className="flex justify-between items-end mb-16">
-      <div>
+    <div className="flex justify-between items-end mb-12 md:mb-16">
+      <div className="max-w-3xl">
         <div className="flex items-center gap-3 mb-4">
           <motion.div
             animate={{ rotate: [0, 180, 360] }}
@@ -72,13 +72,18 @@ export const Process = ({
               height={18}
             />
           </motion.div>
-          <span className="text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
+          <span className="text-sm md:text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
             How We Work Together
           </span>
         </div>
-        <h2 className="text-5xl font-bold text-white">Step-by-Step Guide to</h2>
-        <span className="text-5xl font-bold text-(--highlight)">{title}</span>
-        <p className="text-base text-white mt-4">{description}</p>
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter leading-tight mb-2">
+          Step-by-Step Guide to
+          <br />
+          <span className="text-(--highlight)">{title}</span>
+        </h2>
+        <p className="text-sm md:text-base text-white/60 mt-4 leading-relaxed max-w-2xl">
+          {description}
+        </p>
       </div>
     </div>
 
