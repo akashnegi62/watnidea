@@ -34,7 +34,7 @@ export default function AboutIdentity() {
 
             <div className="max-w-4xl">
               <p className="text-white text-xl md:text-3xl leading-snug font-medium mb-8">
-                <span className="font-black">watNidea</span> (pronounced:
+                <span className="font-black text-(--highlight)">watNidea</span> (pronounced:
                 What-an-idea!) is an{" "}
                 <span className="text-[#ba2c27]">Identity Lab</span>. We sit at
                 the intersection of cultural intuition and algorithmic

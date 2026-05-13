@@ -46,7 +46,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
                 height={18}
               />
             </motion.div>
-            <span className="text-xs uppercase tracking-[0.3em] font-bold text-(--highlight)">
+            <span className="text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
               FAQS
             </span>
           </div>

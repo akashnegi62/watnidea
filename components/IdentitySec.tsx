@@ -70,7 +70,7 @@ export default function CoreServices() {
                 className="md:w-6 md:h-6"
               />
             </motion.div>
-            <p className="text-[#ba2c27] font-semibold uppercase tracking-[0.2em] text-sm md:text-lg mb-0">
+            <p className="text-[#ba2c27] font-medium uppercase tracking-[0.2em] text-sm md:text-lg mb-0">
               What We Do Best
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function CoreServices() {
               From strategy to content, websites to campaigns—every element is
               connected, intentional, and built to perform.
             </p>
-            <p className="text-white/70 text-base md:text-lg mt-3 md:mt-4 max-w-2xl leading-snug">
+            <p className="text-white text-base md:text-lg mt-3 md:mt-4 max-w-2xl leading-snug">
               Whether you need clarity, visibility, or scale, we ensure your
               brand doesn&apos;t just exist— it dominates.
             </p>
@@ -194,7 +194,7 @@ export default function CoreServices() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group w-full md:w-auto flex items-center justify-center gap-4 bg-[#121417] text-white px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-lg font-bold shadow-xl hover:bg-[#ba2c27] transition-colors duration-300 shrink-0 cursor-pointer"
+              className="group w-full md:w-auto flex items-center justify-center gap-4 bg-(--highlight) hover:bg-white text-white hover:text-black px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-lg font-bold shadow-xl transition-colors duration-300 shrink-0 cursor-pointer"
             >
               Discover more
               <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

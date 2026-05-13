@@ -148,14 +148,14 @@ export default function FAQSec() {
                   height={20}
                 />
               </motion.div>
-              <span className="text-[--highlight] font-bold tracking-[0.2em] uppercase text-lg">
+              <span className="text-(--highlight) font-medium tracking-[0.2em] uppercase text-lg">
                 faqs
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-[2.8rem] font-medium tracking-tight leading-[1.1] text-white uppercase mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-medium tracking-tight leading-[1.1] text-white mb-4">
               Answers to your
               <br />
-              common questions
+              common <span className="text-(--highlight)">questions</span>
             </h2>
             <p className="text-white/60 text-lg md:text-xl max-w-2xl leading-relaxed">
               Find clear and concise answers to the most frequently asked

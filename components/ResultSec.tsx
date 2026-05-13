@@ -115,7 +115,7 @@ export default function ResultCarousel() {
                 height={24}
                 className="animate-pulse"
               />
-              <span className="text-(--highlight) text-sm font-bold uppercase tracking-[0.3em]">
+              <span className="text-(--highlight) text-lg font-medium uppercase tracking-[0.3em]">
                 Testimonials
               </span>
             </div>
@@ -130,12 +130,12 @@ export default function ResultCarousel() {
             <Link href="/contact">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center bg-[#121417] rounded-full pl-7 pr-2 py-2 group hover:bg-(--highlight) transition-colors duration-300 cursor-pointer"
+                className="flex items-center bg-(--highlight) rounded-full pl-7 pr-2 py-2 group hover:bg-(--highlight) transition-colors duration-300 cursor-pointer"
               >
                 <span className="text-white font-bold text-sm mr-4">
                   Contact Us
                 </span>
-                <span className="w-10 h-10 rounded-full bg-(--highlight) group-hover:bg-white/20 flex items-center justify-center transition-colors">
+                <span className="w-10 h-10 rounded-full bg-white group-hover:bg-white/20 flex items-center justify-center transition-colors">
                   <ArrowIcon />
                 </span>
               </motion.div>
@@ -145,14 +145,14 @@ export default function ResultCarousel() {
               <button
                 onClick={handlePrev}
                 disabled={currentIndex === 0}
-                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center disabled:opacity-20 hover:bg-white/5 transition-all"
+                className="w-12 h-12 rounded-full border bg-white text-black flex items-center justify-center disabled:opacity-20 transition-all"
               >
                 <ArrowIcon rotate />
               </button>
               <button
                 onClick={handleNext}
                 disabled={currentIndex === TESTIMONIALS.length - 1}
-                className="w-12 h-12 rounded-full bg-[#121417] text-white flex items-center justify-center disabled:opacity-20 hover:bg-black transition-all"
+                className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center disabled:opacity-20 hover:scale-0.9 transition-all"
               >
                 <ArrowIcon />
               </button>
@@ -221,7 +221,7 @@ export default function ResultCarousel() {
                       <p className="text-white font-black text-2xl tracking-tighter leading-none mb-1">
                         {t.stat}
                       </p>
-                      <p className="text-white/50 text-[10px] uppercase font-bold tracking-widest">
+                      <p className="text-white text-[10px] uppercase font-bold tracking-widest">
                         {t.statLabel}
                       </p>
                     </div>

@@ -32,17 +32,17 @@ export default function BlogContact() {
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               Have a Project <br /> in Mind?
             </h2>
-            <p className="text-white/50 text-lg leading-relaxed">
+            <p className="text-white text-lg leading-relaxed">
               We don&apos;t just build brands - we architect Aura. Reach out to see how we can transform your digital identity.
             </p>
             
             <div className="mt-8 flex flex-col gap-4">
               <div className="flex flex-col">
-                <span className="text-white/30 text-[10px] font-bold uppercase tracking-widest mb-1">Email us</span>
+                <span className="text-(--highlight) text-[10px] font-bold uppercase tracking-widest mb-1">Email us</span>
                 <span className="text-white font-medium">info@watnidea.com</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-white/30 text-[10px] font-bold uppercase tracking-widest mb-1">Call us</span>
+                <span className="text-(--highlight) text-[10px] font-bold uppercase tracking-widest mb-1">Call us</span>
                 <span className="text-white font-medium">+91 8354811162</span>
               </div>
             </div>

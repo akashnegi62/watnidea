@@ -39,7 +39,7 @@ function FeatureCard({ item, index }: { item: { title: string; icon: any }; inde
         <div className="text-(--highlight) group-hover:scale-110 transition-transform duration-500">
           <Icon size={24} />
         </div>
-        <h3 className="text-white font-bold leading-tight text-lg">
+        <h3 className="text-white font-bold leading-tight text-xl">
           {item.title}
         </h3>
       </div>
@@ -75,9 +75,9 @@ function Counter({ value }: { value: number }) {
  */
 const About = () => {
   const features = [
-    { title: "tailored marketing solutions", icon: Target },
-    { title: "proactive trends tracking", icon: TrendingUp },
-    { title: "affordable packages", icon: Zap },
+    { title: "Tailored Marketing Solutions", icon: Target },
+    { title: "Proactive Trends Tracking", icon: TrendingUp },
+    { title: "Affordable Packages", icon: Zap },
   ];
 
   return (
@@ -120,7 +120,7 @@ const About = () => {
               <span className="text-xl md:text-2xl font-bold text-white leading-none">
                 Creative execution
               </span>
-              <span className="text-xl md:text-2xl font-bold text-white leading-none">
+              <span className="text-xl md:text-2xl font-bold text-(--highlight) leading-none">
                 Digital marketing
               </span>
             </div>

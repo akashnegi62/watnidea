@@ -34,7 +34,7 @@ export default function BlogCard({ post, index }: { post: BlogPost; index: numbe
 
       {/* Content */}
       <div className="p-8 flex flex-col flex-1">
-        <div className="flex items-center gap-2 text-white/40 text-[10px] font-bold uppercase tracking-widest mb-4">
+        <div className="flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-widest mb-4">
           <Calendar size={12} />
           {post.date}
         </div>
@@ -43,7 +43,7 @@ export default function BlogCard({ post, index }: { post: BlogPost; index: numbe
           {post.title}
         </h3>
 
-        <p className="text-white/50 text-sm leading-relaxed mb-8 line-clamp-3">
+        <p className="text-white text-sm leading-relaxed mb-8 line-clamp-3">
           {post.description}
         </p>
 

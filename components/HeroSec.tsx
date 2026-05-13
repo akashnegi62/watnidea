@@ -89,7 +89,7 @@ export default function HeroSimple() {
               </span>
             </h1>
 
-            <p className="text-white/70 text-lg md:text-xl max-w-xl leading-relaxed font-light">
+            <p className="text-white text-lg md:text-xl max-w-xl leading-relaxed font-light">
               {HERO_CONTENT[index].description}
             </p>
 

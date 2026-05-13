@@ -22,13 +22,14 @@ export default function Heading({ name, isService }: HeadingProps) {
         <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-10 leading-[1.1]">
           {name} {isService && "Service"}{" "}
           {!isService && (
-            <span className="text-white/20 block md:inline">
-              watNidea The Identity Lab
+            <span className="text-white block md:inline">
+              <span className="text-(--highlight)">watNidea</span> The Identity
+              Lab
             </span>
           )}
         </h1>
 
-        <div className="flex items-center justify-center gap-4 text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-white/40">
+        <div className="flex items-center justify-center gap-4 text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-white">
           <Link
             href="/"
             className="hover:text-white transition-colors duration-300 flex items-center gap-2"
@@ -50,9 +51,9 @@ export default function Heading({ name, isService }: HeadingProps) {
             <>
               <Link
                 href="/services"
-                className="hover:text-white transition-colors duration-300 flex items-center gap-2"
+                className="text-(--highlight) flex items-center gap-2"
               >
-                Services
+                Our Services
               </Link>
 
               <div className="w-4 h-4 flex items-center justify-center">
@@ -67,7 +68,7 @@ export default function Heading({ name, isService }: HeadingProps) {
             </>
           )}
 
-          <span className="text-white">
+          <span className="text-(--highlight)">
             {name === "About" ? "About us" : name}
           </span>
         </div>

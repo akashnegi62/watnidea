@@ -93,7 +93,7 @@ function ServiceCard({
           className="font-medium leading-[1.1] uppercase"
           style={{
             fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)",
-            color: "#fff",
+            color: "#ffffff",
             whiteSpace: "pre-line",
           }}
           variants={{ hover: { color: "#000" } }}

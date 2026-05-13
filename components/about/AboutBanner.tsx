@@ -87,7 +87,7 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
       />
 
       <div>
-        <p className="text-white/60 text-sm leading-relaxed">{stat.desc}</p>
+        <p className="text-white text-sm leading-relaxed">{stat.desc}</p>
       </div>
     </motion.div>
   );
@@ -208,7 +208,7 @@ export default function BannerSec() {
                 height={20}
               />
             </motion.div>
-            <span className="text-(--highlight) text-lg font-bold uppercase tracking-[0.28em]">
+            <span className="text-(--highlight) text-lg font-medium uppercase tracking-[0.28em]">
               Key Facts
             </span>
           </motion.div>

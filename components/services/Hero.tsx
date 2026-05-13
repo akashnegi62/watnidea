@@ -9,12 +9,12 @@ const Hero = ({ data }: { data: any }) => (
     <div className="grid md:grid-cols-2 gap-16 items-center w-full max-w-7xl mx-auto">
       {/* LEFT CONTENT */}
       <div className="max-w-2xl order-2 md:order-1">
-        <h1 className="text-6xl md:text-5xl font-bold leading-tight mb-8 tracking-tighter">
+        <h1 className="text-6xl md:text-5xl text-(--highlight) font-bold leading-tight mb-8 tracking-tighter">
           {data.titlePrimary}{" "}
-          <span className="text-zinc-500">{data.titleSecondary}</span>
+          <span className="text-white">{data.titleSecondary}</span>
           <br />
           {data.titleThird}{" "}
-          <span className="text-zinc-500">{data.titleFourth}</span>
+          <span className="text-white">{data.titleFourth}</span>
         </h1>
         <p className="text-lg md:text-xl text-zinc-400 max-w-lg mb-12 leading-relaxed">
           {data.description}

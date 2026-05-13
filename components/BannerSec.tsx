@@ -55,7 +55,7 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
       />
 
       {/* index number */}
-      <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/40">
+      <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white">
         0{index + 1}
       </span>
 
@@ -83,11 +83,11 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[0]; index: number }) {
           ease: "easeOut",
         }}
         style={{ originX: 0 }}
-        className="h-[.5px] w-full bg-white/10"
+        className="h-[.5px] w-full bg-white"
       />
 
       <div>
-        <p className="text-white/60 text-sm leading-relaxed">{stat.desc}</p>
+        <p className="text-white text-sm leading-relaxed">{stat.desc}</p>
       </div>
     </motion.div>
   );
@@ -208,7 +208,7 @@ export default function BannerSec() {
                 height={20}
               />
             </motion.div>
-            <span className="text-(--highlight) text-lg font-bold uppercase tracking-[0.28em]">
+            <span className="text-(--highlight) text-lg font-medium uppercase tracking-[0.28em]">
               Key Facts
             </span>
           </motion.div>

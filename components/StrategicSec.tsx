@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                 className="md:w-6 md:h-6"
               />
             </motion.div>
-            <p className="text-white/40 uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-lg font-medium mb-0">
+            <p className="text-(--highlight) uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-lg font-medium mb-0">
               Why choose us
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
         </div>
         <Link
           href="/contact"
-          className="group w-fit flex items-center gap-2 text-white border border-white/20 px-8 py-4 md:px-8 md:py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-xs md:text-sm tracking-widest"
+          className="group w-fit flex items-center gap-2 bg-(--highlight) text-white px-8 py-4 md:px-8 md:py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-xs md:text-sm tracking-widest"
         >
           contact us <ArrowUpRight className="w-4 h-4" />
         </Link>

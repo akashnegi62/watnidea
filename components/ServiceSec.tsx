@@ -81,7 +81,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
           <h2 className="text-white text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-medium tracking-tighter leading-none">
             {service.title}
           </h2>
-          <h3 className="text-white/30 text-2xl sm:text-3xl md:text-5xl xl:text-6xl font-medium tracking-tighter leading-none mt-2 md:mt-4">
+          <h3 className="text-white text-2xl sm:text-3xl md:text-5xl xl:text-6xl font-medium tracking-tighter leading-none mt-2 md:mt-4">
             ({service.subTitle})
           </h3>
         </div>
@@ -89,7 +89,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
         <div className="flex flex-col gap-8 md:gap-10">
           <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 xl:gap-8">
             <div className="flex items-start gap-3 md:gap-4 max-w-xl">
-              <p className="text-white/70 text-base md:text-lg lg:text-xl leading-relaxed">
+              <p className="text-white text-base md:text-lg lg:text-xl leading-relaxed">
                 {service.description}
               </p>
             </div>

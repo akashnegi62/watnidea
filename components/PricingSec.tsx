@@ -153,7 +153,7 @@ function PlanCard({ plan, index, compact = false }: any) {
           >
             {plan.name}
           </h3>
-          <p className="text-white/40 text-sm leading-relaxed">
+          <p className="text-white text-sm leading-relaxed">
             {plan.tagline}
           </p>
         </div>
@@ -165,7 +165,7 @@ function PlanCard({ plan, index, compact = false }: any) {
           >
             {plan.price}
           </span>
-          <span className="text-white/30 text-xs mb-1 uppercase tracking-wider">
+          <span className="text-white text-xs mb-1 uppercase tracking-wider">
             /mo
           </span>
         </div>
@@ -175,7 +175,7 @@ function PlanCard({ plan, index, compact = false }: any) {
             {plan.features.map((feature: string, i: number) => (
               <li
                 key={i}
-                className="flex items-start gap-3 text-sm text-white/60"
+                className="flex items-start gap-3 text-sm text-white"
               >
                 <span className="mt-0.5 shrink-0">
                   <CheckIcon />
@@ -271,7 +271,7 @@ export default function PricingSec() {
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-[3.2rem] font-medium text-white leading-[1.1] tracking-tight">
-                watNidea <span className="text-(--highlight)">AI VIDEO</span> &
+                wat<span className="text-(--highlight)">N</span>idea <span className="text-(--highlight)">AI VIDEO</span> &
                 <span className="text-(--highlight)"> AD LAB</span>
               </h2>
             </div>

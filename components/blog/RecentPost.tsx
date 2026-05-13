@@ -21,7 +21,7 @@ export default function RecentPost({ post }: { post: BlogPost }) {
             <span className="px-4 py-1 rounded-full bg-(--highlight)/20 text-(--highlight) text-xs font-bold uppercase tracking-widest border border-(--highlight)/30">
               Recent Post
             </span>
-            <div className="flex items-center gap-2 text-white/40 text-xs font-medium uppercase tracking-widest">
+            <div className="flex items-center gap-2 text-white text-xs font-medium uppercase tracking-widest">
               <Calendar size={14} />
               {post.date}
             </div>
@@ -31,7 +31,7 @@ export default function RecentPost({ post }: { post: BlogPost }) {
             {post.title}
           </h1>
 
-          <p className="text-white/60 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
+          <p className="text-white text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
             {post.description}
           </p>
 
@@ -47,7 +47,7 @@ export default function RecentPost({ post }: { post: BlogPost }) {
               />
             </Link>
 
-            <div className="flex items-center gap-3 text-white/40">
+            <div className="flex items-center gap-3 text-white">
               <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
                 <User size={18} />
               </div>

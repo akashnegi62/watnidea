@@ -116,7 +116,7 @@ const Testimonials = () => {
                   height={18}
                 />
               </motion.div>
-              <span className="text-(--highlight) text-sm font-bold uppercase tracking-[0.3em]">
+              <span className="text-(--highlight) text-lg font-Testimonials uppercase tracking-[0.3em]">
                 Testimonials
               </span>
             </div>

@@ -121,8 +121,8 @@ export default function StepSec() {
                   How it works
                 </p>
               </div>
-              <h2 className="text-3xl md:text-2xl lg:text-3xl font-medium text-white leading-none tracking-tight mb-6">
-                Step-by-Step guide <br /> to social success
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-none tracking-tight mb-6">
+                Step-by-Step guide <br /> to social <span className="text-(--highlight)">success</span>
               </h2>
               <p className="text-white/50 text-md leading-relaxed max-w-md">
                 We follow a structured system to move your brand from low

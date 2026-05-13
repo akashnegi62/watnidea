@@ -17,12 +17,12 @@ const slides = [
     type: "hero",
     heading: (
       <>
-        <span className="text-white/40">We are not a</span> <br />
+        <span className="text-white">We are not a</span> <br />
         <span className="text-white">&quot;Marketing Agency.&quot;</span>
       </>
     ),
     highlight: 'We are "Identity lab."',
-    accent: "text-[#ba2c27]",
+    accent: "text-(--highlight)",
   },
   {
     id: "02",
@@ -31,7 +31,7 @@ const slides = [
     content: (
       <>
         The world has enough agencies—and most of them play safe. watNidea is an{" "}
-        <span className="text-[#ba2c27]">Identity Lab</span>. We design
+        <span className="text-(--highlight)">Identity Lab</span>. We design
         &quot;The Vibe&quot; that makes brands impossible to ignore. Every
         strategy, every visual, and every campaign is built to trigger one
         reaction: <span className="text-white">&quot;What an idea!&quot;</span>
@@ -46,7 +46,7 @@ const slides = [
     heading: "Aesthetics",
     highlight: "Are Utility",
     subtext: "Eye-catching visuals that elevate your brand.",
-    accent: "text-emerald-400",
+    accent: "text-(--highlight)",
   },
   {
     id: "04",
@@ -54,7 +54,7 @@ const slides = [
     heading: "Data",
     highlight: "Protects the Art",
     subtext: "Creative ideas powered by real data.",
-    accent: "text-blue-500",
+    accent: "text-(--highlight)",
   },
   {
     id: "05",
@@ -62,7 +62,7 @@ const slides = [
     heading: "Built for",
     highlight: "the Future",
     subtext: "Driven by AI and evolving trends.",
-    accent: "text-orange-500",
+    accent: "text-(--highlight)",
   },
 ];
 
@@ -141,7 +141,7 @@ export default function AboutSec() {
                     {slide.eyebrow}
                   </p>
                 </div>
-                <p className="text-[clamp(1.5rem,3vw,2.5rem)] leading-snug font-normal text-white/60 mb-12">
+                <p className="text-[clamp(1.5rem,3vw,2.5rem)] leading-snug font-normal text-white mb-12">
                   {slide.content}
                 </p>
                 <Link href={slide.link || "#"}>
@@ -157,7 +157,7 @@ export default function AboutSec() {
             {slide.type === "feature" && (
               <div className="max-w-7xl flex flex-col items-center">
                 <h2 className="text-[clamp(3.5rem,8.5vw,10.5rem)] font-bold leading-[0.9] tracking-tighter mb-10">
-                  <span className="text-white/20 block mb-2">
+                  <span className="text-white block mb-2">
                     {slide.heading}
                   </span>
                   <span className={`${slide.accent} block`}>

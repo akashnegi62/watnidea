@@ -31,10 +31,10 @@ import {
 export const SERVICES_DATA: any = {
   aura: {
     hero: {
-      titlePrimary: "Identity with",
-      titleSecondary: "Soul.",
-      titleThird: "Strategy with",
-      titleFourth: "Teeth.",
+      titlePrimary: "Identity ", //
+      titleSecondary: "with Soul.",
+      titleThird: "Strategy ", //
+      titleFourth: "with Teeth.",
       description:
         "A logo isn't a brand; a feeling is. We build the 'Aura' that makes your business undeniable in a crowded market.",
       heroImage: "/Img/digital.webp",
@@ -168,9 +168,9 @@ export const SERVICES_DATA: any = {
 
   hype: {
     hero: {
-      titlePrimary: "From the ",
+      titlePrimary: "From the ", //
       titleSecondary: "Scroll",
-      titleThird: "to the ",
+      titleThird: "to the ", //
       titleFourth: "Soul.",
       description:
         "Most brands post content. We create culture. The Hype Engine turns your social presence into a self-sustaining community that keeps your brand relevant 24/7.",
@@ -306,8 +306,8 @@ export const SERVICES_DATA: any = {
 
   kinetic: {
     hero: {
-      titlePrimary: "Visual Dopamine for a 3 - ",
-      titleSecondary: "Second World.", //
+      titlePrimary: "Visual Dopamine ",
+      titleSecondary: "for a 3 - Second World.", //
       titleThird: "",
       titleFourth: "", //
       description:
@@ -444,8 +444,8 @@ export const SERVICES_DATA: any = {
 
   digital: {
     hero: {
-      titlePrimary: "Your Flagship in the",
-      titleSecondary: "Digital Wild.", //
+      titlePrimary: "Your Flagship",
+      titleSecondary: "in the Digital Wild.", //
       titleThird: "",
       titleFourth: "", //
       description:
