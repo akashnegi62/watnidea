@@ -231,7 +231,7 @@ export default function PricingSec() {
                   Pricing
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-medium text-white leading-[1.1] tracking-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-[3.2rem] font-medium text-white leading-[1.1] tracking-tight">
                 Strategic Content Packages &{" "}
                 <span className="text-(--highlight)">
                   Premium Pixel Standard
@@ -270,7 +270,7 @@ export default function PricingSec() {
                   pricing
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-medium text-white leading-[1.1] tracking-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-[3.2rem] font-medium text-white leading-[1.1] tracking-tight">
                 watNidea <span className="text-(--highlight)">AI VIDEO</span> &
                 <span className="text-(--highlight)"> AD LAB</span>
               </h2>

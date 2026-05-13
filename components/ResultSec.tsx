@@ -101,7 +101,7 @@ export default function ResultCarousel() {
   return (
     <section
       ref={outerRef}
-      className="relative w-full bg-[#edf1f3] overflow-hidden py-24 md:py-32"
+      className="relative w-full bg-black overflow-hidden py-24 md:py-32"
     >
       <div className="relative max-w-[1320px] mx-auto px-6 md:px-12 lg:px-16">
         {/* --- HEADER SECTION--- */}
@@ -119,7 +119,7 @@ export default function ResultCarousel() {
                 Testimonials
               </span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold text-[#121417] leading-[1.1] tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-bold text-white leading-[1.1] tracking-tight">
               Real <span className="text-(--highlight)">results</span> from{" "}
               <br /> real brands
             </h2>
@@ -145,7 +145,7 @@ export default function ResultCarousel() {
               <button
                 onClick={handlePrev}
                 disabled={currentIndex === 0}
-                className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center disabled:opacity-20 hover:bg-black/5 transition-all"
+                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center disabled:opacity-20 hover:bg-white/5 transition-all"
               >
                 <ArrowIcon rotate />
               </button>
@@ -218,7 +218,7 @@ export default function ResultCarousel() {
 
                   <div className="mx-4 mb-4 rounded-2xl bg-white/10 border border-white/5 px-6 py-5 flex items-center justify-between">
                     <div>
-                      <p className="text-white font-black text-4xl tracking-tighter leading-none mb-1">
+                      <p className="text-white font-black text-3xl tracking-tighter leading-none mb-1">
                         {t.stat}
                       </p>
                       <p className="text-white/50 text-[10px] uppercase font-bold tracking-widest">
@@ -245,7 +245,7 @@ export default function ResultCarousel() {
             <button
               key={i}
               onClick={() => setCurrentIndex(i)}
-              className={`h-1.5 transition-all duration-500 rounded-full ${currentIndex === i ? "w-12 bg-(--highlight)" : "w-3 bg-black/10"}`}
+              className={`h-1.5 transition-all duration-500 rounded-full ${currentIndex === i ? "w-12 bg-(--highlight)" : "w-3 bg-white/10"}`}
             />
           ))}
         </div>

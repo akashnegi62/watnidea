@@ -51,7 +51,7 @@ function Stat({
       transition={{ duration: 0.5, delay }}
       className="flex flex-col gap-1"
     >
-      <p className="text-3xl md:text-4xl font-black text-(--highlight) leading-none tracking-tight">
+      <p className="text-2xl md:text-3xl font-black text-(--highlight) leading-none tracking-tight">
         {isNumber ? counted : value}
         {suffix}
       </p>
@@ -114,7 +114,7 @@ export default function BookBannerSec() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={leftInView ? { opacity: 1, y: 0 } : {}}
-                  className="text-3xl md:text-5xl font-medium text-white"
+                  className="text-2xl md:text-4xl font-medium text-white"
                 >
                   READY TO EVOLVE INTO{" "}
                   <span className="text-(--highlight)">A BRAND</span> THAT
@@ -166,7 +166,7 @@ export default function BookBannerSec() {
               className="p-8 md:p-14 bg-white/2 flex flex-col justify-center"
             >
               <div className="mb-8">
-                <h3 className="text-white text-2xl md:text-3xl font-black mb-4">
+                <h3 className="text-white text-xl md:text-2xl font-black mb-4">
                   Book Your <span className="text-(--highlight)">Strategy</span>{" "}
                   Call
                 </h3>

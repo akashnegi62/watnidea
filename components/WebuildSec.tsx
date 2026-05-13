@@ -92,7 +92,7 @@ function ServiceCard({
         <motion.h3
           className="font-medium leading-[1.1] uppercase"
           style={{
-            fontSize: "clamp(1.8rem, 4vw, 3rem)",
+            fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)",
             color: "#fff",
             whiteSpace: "pre-line",
           }}
@@ -155,7 +155,7 @@ export default function WeBuildSec() {
             <motion.h2
               className="font-medium uppercase leading-[0.95] tracking-tighter"
               style={{
-                fontSize: "clamp(2.5rem, 8vw, 8.5rem)",
+                fontSize: "clamp(2rem, 7vw, 7rem)",
                 color: "#fff",
               }}
               initial={{ y: "100%" }}

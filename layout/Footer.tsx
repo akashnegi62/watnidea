@@ -141,8 +141,8 @@ export default function Footer() {
           </div>
 
           {/* Copyright & Legal */}
-          <div className="text-sm font-bold uppercase tracking-[0.25em] text-white text-left md:text-right">
-            <p className="mb-2">© 2026 <span className="text-(--highlight)">WatNidea.</span> All rights reserved.</p>
+          <div className="text-sm font-bold tracking-[0.25em] text-white text-left md:text-right">
+            <p className="mb-2">© 2026 <span className="text-(--highlight)">watNidea.</span> All rights reserved.</p>
             <div className="flex gap-4 md:justify-end">
               {LEGAL.map((l) => (
                 <Link
@@ -165,7 +165,7 @@ export default function Footer() {
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             className="w-full text-center"
           >
-            <h2 className="text-[18vw] leading-[0.8] font-black uppercase tracking-[-0.04em] select-none">
+            <h2 className="text-[18vw] leading-[0.8] font-black tracking-[-0.04em] select-none">
               wat<span className="text-(--highlight)">N</span>idea
             </h2>
           </motion.div>

@@ -110,7 +110,7 @@ export default function FAQSec() {
 
             {/* Top Content: Score & Stars */}
             <div className="flex flex-col gap-6 relative z-10">
-              <span className="text-[5.5rem] font-medium leading-none tracking-tighter text-white">
+              <span className="text-[4.5rem] font-medium leading-none tracking-tighter text-white">
                 4.9
               </span>
               <div className="flex items-center gap-1">
@@ -152,7 +152,7 @@ export default function FAQSec() {
                 faqs
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight leading-[1.1] text-white uppercase mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-[2.8rem] font-medium tracking-tight leading-[1.1] text-white uppercase mb-4">
               Answers to your
               <br />
               common questions

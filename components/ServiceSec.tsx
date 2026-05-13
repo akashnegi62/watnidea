@@ -75,13 +75,13 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       <motion.div
         ref={cardRef}
         style={{ scale }}
-        className="bg-black w-full h-auto min-h-[50vh] rounded-4xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col justify-center shadow-2xl border border-white/5 gap-10 md:gap-20"
+        className="bg-[#0e0e0f] w-full h-auto min-h-[50vh] rounded-4xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col justify-center shadow-2xl border border-white/5 gap-10 md:gap-20"
       >
         <div>
-          <h2 className="text-white text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-medium tracking-tighter leading-none">
+          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-medium tracking-tighter leading-none">
             {service.title}
           </h2>
-          <h3 className="text-white/30 text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-medium tracking-tighter leading-none mt-2 md:mt-4">
+          <h3 className="text-white/30 text-2xl sm:text-3xl md:text-5xl xl:text-6xl font-medium tracking-tighter leading-none mt-2 md:mt-4">
             ({service.subTitle})
           </h3>
         </div>
@@ -110,7 +110,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 
 export default function ServiceSec() {
   return (
-    <section className="bg-[#edf1f3] px-4 sm:px-6 pt-20 md:pt-28 min-h-screen">
+    <section className="bg-black px-4 sm:px-6 pt-20 md:pt-28 min-h-screen">
       <div className="px-2 sm:px-6">
         <div className="flex items-center gap-3 mb-4 md:mb-6">
           <motion.div
@@ -129,7 +129,7 @@ export default function ServiceSec() {
             Services
           </p>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-medium text-[#121417] tracking-tight leading-tight lg:leading-none">
+        <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-[4.5rem] font-medium text-white tracking-tight leading-tight lg:leading-none">
           Our <span className="text-[#ba2c27]">Core</span> Services
         </h1>
       </div>

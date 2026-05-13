@@ -52,7 +52,7 @@ export default function CoreServices() {
   return (
     <section
       ref={containerRef}
-      className="relative h-auto md:h-[400vh] bg-[#edf1f3] py-20"
+      className="relative h-auto md:h-[400vh] bg-black py-20"
     >
       <div className="relative md:sticky top-0 h-auto md:min-h-screen w-full flex flex-col justify-between py-8 md:py-12">
         {/* HEADER */}
@@ -74,7 +74,7 @@ export default function CoreServices() {
               What We Do Best
             </p>
           </div>
-          <h2 className="text-4xl md:text-6xl lg:text-[5.5rem] font-medium text-[#121417] tracking-tight leading-[1.1] md:leading-none">
+          <h2 className="text-3xl md:text-5xl lg:text-[4.5rem] font-medium text-white tracking-tight leading-[1.1] md:leading-none">
             An <span className="text-[#ba2c27]">Identity Lab</span> Built for
             Growth.
           </h2>
@@ -83,7 +83,7 @@ export default function CoreServices() {
         {/* IMAGE STAGE */}
         <div className="px-6 md:px-16 flex flex-col w-full mb-8 md:mb-0">
           {/* Progress line - Hidden on mobile */}
-          <div className="hidden md:block relative w-full h-px bg-black/10 mb-6">
+          <div className="hidden md:block relative w-full h-px bg-white/10 mb-6">
             <motion.div
               style={{ left: dotX }}
               className="absolute top-[-5px] w-2.5 h-2.5 bg-[#ba2c27] rounded-full shadow-[0_0_10px_rgba(186,44,39,0.5)]"
@@ -175,8 +175,8 @@ export default function CoreServices() {
         {/* DESCRIPTION + BUTTON */}
         <div className="px-6 md:px-16 flex flex-col md:flex-row items-center md:items-end justify-between gap-6 md:gap-10">
           <div className="max-w-3xl">
-            <p className="text-black text-xl md:text-2xl leading-tight font-medium">
-              <span className="text-black font-black">watNidea</span> combines
+            <p className="text-white text-xl md:text-2xl leading-tight font-medium">
+              <span className="text-white font-black">watNidea</span> combines
               branding, creative execution, and growth systems into one unified
               engine. We don’t operate like a traditional agency—we design
               identities, build digital ecosystems, and scale them with
@@ -184,7 +184,7 @@ export default function CoreServices() {
               From strategy to content, websites to campaigns—every element is
               connected, intentional, and built to perform.
             </p>
-            <p className="text-black/70 text-base md:text-lg mt-3 md:mt-4 max-w-2xl leading-snug">
+            <p className="text-white/70 text-base md:text-lg mt-3 md:mt-4 max-w-2xl leading-snug">
               Whether you need clarity, visibility, or scale, we ensure your
               brand doesn&apos;t just exist— it dominates.
             </p>

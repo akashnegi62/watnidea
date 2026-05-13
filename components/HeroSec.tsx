@@ -82,7 +82,7 @@ export default function HeroSimple() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-7xl lg:text-8xl leading-[1.1] font-medium tracking-tighter">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] font-medium tracking-tighter">
               {HERO_CONTENT[index].title} <br />
               <span className="text-(--highlight)">
                 {HERO_CONTENT[index].highlight}

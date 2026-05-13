@@ -62,7 +62,7 @@ const ImageBlock = ({
       ref={ref}
       className="h-[80vh] w-full flex items-center justify-center py-10"
     >
-      <div className="relative w-full h-full max-w-2xl overflow-hidden rounded-2xl border border-black/5 bg-gray-50">
+      <div className="relative w-full h-full max-w-2xl overflow-hidden rounded-2xl border border-white/5 bg-[#121417]">
         <Image
           src={src}
           alt={alt}
@@ -83,7 +83,7 @@ export default function StepSec() {
   return (
     <section
       id="how-it-works"
-      className="relative min-h-screen w-full bg-[#edf1f3] text-black py-0 lg:pt-10"
+      className="relative min-h-screen w-full bg-black text-white py-0 lg:pt-10"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row px-6 md:px-12 relative py-12 md:py-0">
         {/* Left Side: Scrolling Images (Desktop Only) */}
@@ -121,10 +121,10 @@ export default function StepSec() {
                   How it works
                 </p>
               </div>
-              <h2 className="text-4xl md:text-3xl lg:text-4xl font-medium text-black leading-none tracking-tight mb-6">
+              <h2 className="text-3xl md:text-2xl lg:text-3xl font-medium text-white leading-none tracking-tight mb-6">
                 Step-by-Step guide <br /> to social success
               </h2>
-              <p className="text-gray-500 text-md leading-relaxed max-w-md">
+              <p className="text-white/50 text-md leading-relaxed max-w-md">
                 We follow a structured system to move your brand from low
                 visibility to consistent reach, engagement, and leads. From
                 strategy and content creation to execution and scaling, every
@@ -142,14 +142,14 @@ export default function StepSec() {
                 return (
                   <div
                     key={step.id}
-                    className="flex flex-col border-t border-gray-100 first:border-none pt-6 first:pt-0"
+                    className="flex flex-col border-t border-white/5 first:border-none pt-6 first:pt-0"
                   >
                     {/* Title Button */}
                     <button
                       type="button"
                       onClick={() => setActiveIndex(index)}
-                      className={`text-left text-2xl md:text-4xl font-medium transition-all duration-500 flex items-center justify-between ${
-                        isActive ? "text-black" : "text-gray-500"
+                      className={`text-left text-xl md:text-3xl font-medium transition-all duration-500 flex items-center justify-between ${
+                        isActive ? "text-white" : "text-white/20"
                       }`}
                     >
                       {step.title}
@@ -177,7 +177,7 @@ export default function StepSec() {
                           }}
                           className="overflow-hidden"
                         >
-                          <p className="text-gray-600 text-base leading-relaxed max-w-md">
+                          <p className="text-white/60 text-base leading-relaxed max-w-md">
                             {step.description}
                           </p>
 
