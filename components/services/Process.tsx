@@ -27,7 +27,7 @@ export function ProcessCard({ item, index }: { item: any; index: number }) {
         <div className="text-(--highlight) group-hover:scale-110 transition-transform duration-500">
           {Icon && <Icon size={32} />}
         </div>
-        <span className="text-4xl font-black text-white/20 transition-colors duration-500 group-hover:text-white">
+        <span className="text-4xl font-black text-white transition-colors duration-500 group-hover:text-white">
           {item.num}
         </span>
       </div>
@@ -36,7 +36,7 @@ export function ProcessCard({ item, index }: { item: any; index: number }) {
         <h3 className="text-white font-bold leading-tight text-xl uppercase tracking-tight">
           {item.title}
         </h3>
-        <p className="text-white/60 leading-relaxed text-sm md:text-base">
+        <p className="text-white leading-relaxed text-sm md:text-base">
           {item.desc}
         </p>
       </div>
@@ -72,13 +72,13 @@ export const Process = ({
               height={18}
             />
           </motion.div>
-          <span className="text-xs uppercase tracking-[0.3em] font-bold text-(--highlight)">
+          <span className="text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
             How We Work Together
           </span>
         </div>
         <h2 className="text-5xl font-bold text-white">Step-by-Step Guide to</h2>
         <span className="text-5xl font-bold text-(--highlight)">{title}</span>
-        <p className="text-base text-white/60 mt-4">{description}</p>
+        <p className="text-base text-white mt-4">{description}</p>
       </div>
     </div>
 

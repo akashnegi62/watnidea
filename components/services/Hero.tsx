@@ -16,7 +16,7 @@ const Hero = ({ data }: { data: any }) => (
           {data.titleThird}{" "}
           <span className="text-white">{data.titleFourth}</span>
         </h1>
-        <p className="text-lg md:text-xl text-zinc-400 max-w-lg mb-12 leading-relaxed">
+        <p className="text-lg md:text-xl text-white max-w-lg mb-12 leading-relaxed">
           {data.description}
         </p>
         <button className="group flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-tighter hover:bg-zinc-200 transition-all">

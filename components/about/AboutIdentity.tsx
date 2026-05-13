@@ -40,7 +40,7 @@ export default function AboutIdentity() {
                 the intersection of cultural intuition and algorithmic
                 precision.
               </p>
-              <p className="text-white/60 text-lg md:text-xl leading-relaxed">
+              <p className="text-white text-lg md:text-xl leading-relaxed">
                 We realized that traditional agencies were too slow and
                 freelancers were too scattered, so we built the
                 &quot;Un-Agency.&quot; We are a collective of designers,
@@ -84,7 +84,7 @@ export default function AboutIdentity() {
               <h3 className="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight">
                 Our Mission.
               </h3>
-              <p className="text-white/70 text-lg md:text-xl leading-relaxed">
+              <p className="text-white text-lg md:text-xl leading-relaxed">
                 To transform brands into cultural signals — blending high-end
                 aesthetics with performance-driven systems that convert
                 attention into authority and revenue.
@@ -108,7 +108,7 @@ export default function AboutIdentity() {
               <h3 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">
                 Our Vision.
               </h3>
-              <p className="text-white/70 text-lg md:text-xl leading-relaxed">
+              <p className="text-white text-lg md:text-xl leading-relaxed">
                 To become the global Identity Lab that defines how modern brands
                 are built — where creativity, technology, and culture merge to
                 shape the future of business.

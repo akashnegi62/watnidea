@@ -63,7 +63,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
               <Star fill="currentColor" size={16} />
               <Star fill="currentColor" size={16} />
             </div>
-            <span className="text-xs uppercase tracking-widest text-white/40 font-bold">
+            <span className="text-xs uppercase tracking-widest text-white font-bold">
               Customer Reviews
             </span>
           </div>
@@ -106,7 +106,7 @@ const FAQ = ({ data }: { data?: any[] }) => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <div className="px-6 pb-6 text-white/60 leading-relaxed border-t border-white/5 pt-4 mx-6">
+                    <div className="px-6 pb-6 text-white leading-relaxed border-t border-white/5 pt-4 mx-6">
                       {item.a}
                     </div>
                   </motion.div>

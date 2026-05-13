@@ -45,7 +45,7 @@ export function StatCard({ stat, index }: { stat: any; index: number }) {
       />
 
       {/* index number */}
-      <span className="relative z-10 text-[11px] font-semibold tracking-[0.25em] uppercase text-white/40 group-hover:text-black transition-colors">
+      <span className="relative z-10 text-[11px] font-semibold tracking-[0.25em] uppercase text-white group-hover:text-black transition-colors">
         0{index + 1}
       </span>
 
@@ -78,7 +78,7 @@ export function StatCard({ stat, index }: { stat: any; index: number }) {
 
       <div className="relative z-10 flex flex-col gap-2">
         {stat.desc && (
-          <p className="text-white/40 group-hover:text-black/70 transition-colors text-xs leading-relaxed">
+          <p className="text-white group-hover:text-black transition-colors text-sm leading-relaxed">
             {stat.desc}
           </p>
         )}

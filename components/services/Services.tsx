@@ -72,7 +72,7 @@ export function ServiceCard({
 
         <motion.p
           className="text-base md:text-lg leading-relaxed font-medium"
-          style={{ color: "rgba(255,255,255,0.5)", maxWidth: "30ch" }}
+          style={{ color: "#ffff", maxWidth: "30ch" }}
           variants={{ hover: { color: "#000" } }}
           transition={{ duration: 0.3 }}
         >
@@ -103,7 +103,7 @@ export const Services = ({ data, title }: { data: any[]; title?: string }) => (
               height={18}
             />
           </motion.div>
-          <span className="text-xs uppercase tracking-[0.3em] font-bold text-zinc-600">
+          <span className="text-lg uppercase tracking-[0.3em] font-medium text-(--highlight)">
             SERVICES
           </span>
         </div>

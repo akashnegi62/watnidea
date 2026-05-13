@@ -30,7 +30,7 @@ function FeatureCard({ item, index }: { item: any; index: number }) {
       <span className="absolute top-0 left-0 w-6 h-6 border-t border-l border-(--highlight) rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {/* Index Number */}
-      <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">
+      <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white mb-2">
         0{index + 1}
       </span>
 

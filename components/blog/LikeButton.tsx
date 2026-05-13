@@ -26,7 +26,7 @@ export default function LikeButton({ count }: { count: number }) {
         className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
           isLiked 
           ? "bg-(--highlight) border-(--highlight) text-white" 
-          : "bg-transparent border-white/10 text-white/60 hover:border-white/30"
+          : "bg-transparent border-white/10 text-white hover:border-white/30"
         }`}
       >
         <Heart size={20} fill={isLiked ? "white" : "none"} />
@@ -34,7 +34,7 @@ export default function LikeButton({ count }: { count: number }) {
           {isLiked ? "Liked" : "Like Button"}
         </span>
       </motion.button>
-      <span className="text-white/40 text-sm font-bold">{likes} Likes</span>
+      <span className="text-white text-sm font-bold">{likes} Likes</span>
     </div>
   );
 }

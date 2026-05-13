@@ -34,7 +34,7 @@ export default function BlogGrid() {
                 className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 border ${
                   activeCategory === cat
                     ? "bg-(--highlight) border-(--highlight) text-white"
-                    : "bg-transparent border-white/10 text-white/40 hover:border-white/30"
+                    : "bg-transparent border-white/10 text-white hover:border-white/30"
                 }`}
               >
                 {cat}
@@ -57,7 +57,7 @@ export default function BlogGrid() {
 
         {filteredPosts.length === 0 && (
           <div className="py-20 text-center">
-            <p className="text-white/40 uppercase tracking-widest text-sm">
+            <p className="text-white uppercase tracking-widest text-sm">
               No posts found in this category.
             </p>
           </div>

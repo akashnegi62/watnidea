@@ -82,7 +82,7 @@ function InfoCard({ card, index }: { card: (typeof CARDS)[0]; index: number }) {
       <div className="relative z-10 flex flex-col gap-4">
         <motion.p
           variants={{ hover: { color: "#000" } }}
-          className="text-white/40 uppercase tracking-widest text-xs font-mono"
+          className="text-white uppercase tracking-widest text-xs font-mono"
         >
           {card.tag}
         </motion.p>
@@ -97,7 +97,7 @@ function InfoCard({ card, index }: { card: (typeof CARDS)[0]; index: number }) {
 
         <motion.p
           className="text-sm leading-relaxed"
-          style={{ color: "rgba(255,255,255,0.5)", maxWidth: "25ch" }}
+          style={{ color: "#ffffff", maxWidth: "25ch" }}
           variants={{ hover: { color: "rgba(0,0,0,0.7)" } }}
         >
           {card.hint}

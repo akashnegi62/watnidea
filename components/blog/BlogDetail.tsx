@@ -27,7 +27,7 @@ export default function BlogDetail({ post }: { post: BlogPost }) {
       </motion.div>
 
       {/* Metadata */}
-      <div className="flex flex-wrap items-center gap-6 text-white/40 text-xs font-bold uppercase tracking-widest pb-6 border-b border-white/10">
+      <div className="flex flex-wrap items-center gap-6 text-white text-xs font-bold uppercase tracking-widest pb-6 border-b border-white/10">
         <div className="flex items-center gap-2">
           <Calendar size={14} className="text-(--highlight)" />
           {post.date}

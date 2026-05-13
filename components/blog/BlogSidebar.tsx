@@ -31,7 +31,7 @@ export default function BlogSidebar() {
         />
         <Search
           size={18}
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 group-focus-within:text-(--highlight) transition-colors"
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-white group-focus-within:text-(--highlight) transition-colors"
         />
       </div>
 
