@@ -1,95 +1,74 @@
 "use client";
 
 import { useRef } from "react";
+import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { Fingerprint, Paintbrush, BarChart3, Cpu } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { Paintbrush, BarChart3, Cpu, ArrowUpRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* UTILITY COMPONENT */
-const Badge = ({
-  children,
-  color,
-  rotate = "-rotate-2",
-}: {
-  children: React.ReactNode;
-  color: string;
-  rotate?: string;
-}) => (
-  <span
-    className={`${color} text-black px-2 py-0.5 rounded-sm inline-block ${rotate} font-bold mx-1 uppercase text-sm md:text-base`}
-  >
-    {children}
-  </span>
-);
-
-/* DATA */
 const slides = [
   {
     id: "01",
-    heading: "We are not a",
-    highlight: '"Marketing Agency."',
-    subtext: (
+    type: "hero",
+    heading: (
       <>
-        We are an <Badge color="bg-red-600">Identity Lab</Badge> — crafting
-        brand DNA that thinks, feels, and converts.
+        <span className="text-white/40">We are not a</span> <br />
+        <span className="text-white">&quot;Marketing Agency.&quot;</span>
       </>
     ),
-    icon: <Fingerprint className="w-12 h-12 text-red-600" />,
-    color: "text-[#f5f0e8]",
+    highlight: 'We are "Identity lab."',
+    accent: "text-[#ba2c27]",
   },
   {
     id: "02",
-    heading: "Aesthetics",
-    highlight: "Are Utility",
-    subtext: (
+    type: "description",
+    eyebrow: "ABOUT WATNIDEA",
+    content: (
       <>
-        <Badge color="bg-emerald-400" rotate="rotate-2">
-          Eye-catching visuals
-        </Badge>{" "}
-        that elevate your brand. Beauty is not decoration — it&apos;s strategy.
+        The world has enough agencies—and most of them play safe. watNidea is an{" "}
+        <span className="text-[#ba2c27]">Identity Lab</span>. We design
+        &quot;The Vibe&quot; that makes brands impossible to ignore. Every
+        strategy, every visual, and every campaign is built to trigger one
+        reaction: <span className="text-white">&quot;What an idea!&quot;</span>
       </>
     ),
-    icon: <Paintbrush className="w-12 h-12 text-green-400" />,
-    color: "text-[#f5f0e8]",
+    buttonText: "MORE ABOUT",
+    link: "/about",
   },
   {
     id: "03",
-    heading: "Data",
-    highlight: "Protects the Art",
-    subtext: (
-      <>
-        Creative{" "}
-        <Badge color="bg-blue-500" rotate="-rotate-1">
-          ideas powered by real data.
-        </Badge>{" "}
-        We let numbers protect the soul of your work.
-      </>
-    ),
-    icon: <BarChart3 className="w-12 h-12 text-blue-400" />,
-    color: "text-[#f5f0e8]",
+    type: "feature",
+    heading: "Aesthetics",
+    highlight: "Are Utility",
+    subtext: "Eye-catching visuals that elevate your brand.",
+    accent: "text-emerald-400",
+    icon: <Paintbrush className="w-12 h-12 text-emerald-400" />,
   },
   {
     id: "04",
+    type: "feature",
+    heading: "Data",
+    highlight: "Protects the Art",
+    subtext: "Creative ideas powered by real data.",
+    accent: "text-blue-500",
+    icon: <BarChart3 className="w-12 h-12 text-blue-500" />,
+  },
+  {
+    id: "05",
+    type: "feature",
     heading: "Built for",
     highlight: "the Future",
-    subtext: (
-      <>
-        Driven by{" "}
-        <Badge color="bg-orange-500" rotate="rotate-1">
-          AI and evolving trends.
-        </Badge>{" "}
-        We build brands that lead the future.
-      </>
-    ),
+    subtext: "Driven by AI and evolving trends.",
+    accent: "text-orange-500",
     icon: <Cpu className="w-12 h-12 text-orange-400" />,
-    color: "text-[#f5f0e8]",
   },
 ];
 
-/* COMPONENT */
 export default function AboutSec() {
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -122,36 +101,80 @@ export default function AboutSec() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-black"
+      className="relative h-screen w-full overflow-hidden bg-black text-white"
     >
-      {/* HORIZONTAL TRACK */}
       <div ref={trackRef} className="flex h-full will-change-transform">
         {slides.map((slide) => (
           <div
             key={slide.id}
-            className="relative flex h-full w-screen shrink-0 flex-col items-center justify-center px-6"
+            className="relative flex h-full w-screen shrink-0 flex-col items-center justify-center px-8 md:px-24 text-center"
           >
-            {/* CONTENT WRAPPER */}
-            <div className="flex flex-col items-center max-w-6xl w-full">
-              {/* ICON */}
-              <div className="mb-12 opacity-50 bg-white/5 p-6 rounded-full border border-white/5">
-                {slide.icon}
+            {/* TYPE 1: HERO (Slide 1) */}
+            {slide.type === "hero" && (
+              <div className="max-w-7xl flex flex-col items-center">
+                <h2 className="text-[clamp(2.5rem,7vw,8rem)] font-medium leading-[1.1] tracking-tight">
+                  {slide.heading}
+                  <br />
+                  <span className={slide.accent}>{slide.highlight}</span>
+                </h2>
               </div>
+            )}
 
-              {/* HEADING */}
-              <h2 className="text-[clamp(2.5rem,8vw,7.5rem)] font-black leading-[0.9] tracking-tighter text-center mb-10">
-                <span className="text-white/40">{slide.heading}</span>
-                <br />
-                <span className={slide.color}>{slide.highlight}</span>
-              </h2>
-
-              {/* DESCRIPTION */}
-              <div className="max-w-2xl text-center">
-                <div className="text-white/50 text-lg md:text-xl leading-relaxed font-medium">
-                  {slide.subtext}
+            {/* TYPE 2: DESCRIPTION (Slide 2) */}
+            {slide.type === "description" && (
+              <div className="max-w-4xl flex flex-col items-center">
+                <div className="flex items-center gap-3 mb-10">
+                  <motion.div
+                    animate={{ rotate: [0, 180, 360] }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  >
+                    <Image
+                      src="/Img/point_icon.svg"
+                      alt="Point Icon"
+                      width={24}
+                      height={24}
+                      className="w-5 h-5 md:w-6 md:h-6"
+                    />
+                  </motion.div>
+                  <p className="text-sm md:text-base font-bold tracking-[0.3em] text-white uppercase">
+                    {slide.eyebrow}
+                  </p>
                 </div>
+                <p className="text-[clamp(1.5rem,3vw,2.5rem)] leading-snug font-normal text-white/60 mb-12">
+                  {slide.content}
+                </p>
+                <Link href={slide.link || "#"}>
+                  <button className="group flex items-center gap-3 bg-white text-black px-12 py-5 rounded-full font-bold text-xs tracking-widest hover:bg-[#ba2c27] hover:text-white transition-all duration-300 uppercase">
+                    {slide.buttonText}
+                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </button>
+                </Link>
               </div>
-            </div>
+            )}
+
+            {/* TYPE 3: FEATURES (Slide 3, 4, 5) */}
+            {slide.type === "feature" && (
+              <div className="max-w-7xl flex flex-col items-center">
+                <div className="mb-10 opacity-50 bg-white/5 p-6 rounded-full border border-white/5">
+                  {slide.icon}
+                </div>
+                <h2 className="text-[clamp(3.5rem,8.5vw,10.5rem)] font-bold leading-[0.9] tracking-tighter mb-10">
+                  <span className="text-white/20 block mb-2">
+                    {slide.heading}
+                  </span>
+                  <span className={`${slide.accent} block`}>
+                    {slide.highlight}
+                  </span>
+                </h2>
+                <p className="text-xl md:text-3xl text-white max-w-2xl font-medium leading-relaxed">
+                  {slide.subtext}
+                </p>
+              </div>
+            )}
           </div>
         ))}
       </div>
