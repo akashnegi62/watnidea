@@ -56,6 +56,8 @@ export default function FloatingNav() {
               alt="Logo"
               width={140}
               height={140}
+              priority
+              loading="eager"
               className="object-contain w-28 md:w-40"
             />
           </Link>

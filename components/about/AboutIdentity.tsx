@@ -6,7 +6,7 @@ import { Target, Eye } from "lucide-react";
 
 export default function AboutIdentity() {
   return (
-    <section className="bg-[#f8f8f8] py-24 md:py-32 px-6 md:px-16 overflow-hidden">
+    <section className="bg-[#edf1f3] py-24 md:py-32 px-6 md:px-16 overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         {/* HEADER SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
@@ -42,9 +42,10 @@ export default function AboutIdentity() {
               </p>
               <p className="text-[#121417]/70 text-lg md:text-xl leading-relaxed">
                 We realized that traditional agencies were too slow and
-                freelancers were too scattered, so we built the &quot;Un-Agency.&quot; We
-                are a collective of designers, developers, and growth hackers
-                obsessed with one thing: making your brand the Main Character.
+                freelancers were too scattered, so we built the
+                &quot;Un-Agency.&quot; We are a collective of designers,
+                developers, and growth hackers obsessed with one thing: making
+                your brand the Main Character.
               </p>
             </div>
           </div>
