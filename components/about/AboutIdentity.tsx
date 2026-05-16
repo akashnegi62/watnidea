@@ -58,7 +58,7 @@ export default function AboutIdentity() {
               className="relative w-full aspect-square md:aspect-4/5 rounded-4xl md:rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white"
             >
               <Image
-                src="/Img/identity1.webp"
+                src="/Img/digital.webp"
                 alt="Who We Are"
                 fill
                 className="object-cover"

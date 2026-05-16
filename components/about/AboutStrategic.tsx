@@ -10,28 +10,28 @@ const CHOOSE_DATA = [
     title: "AI-Native Execution",
     tagline:
       "We leverage AI video, AEO, and short-form strategy to stay ahead of modern attention trends.",
-    image: "/Img/strategy1.webp",
+    image: "/Img/feature1.jpg",
   },
   {
     id: "02",
     title: "Direct Collaboration",
     tagline:
       "No layers, no delays — you work directly with the team building your brand.",
-    image: "/Img/strategy2.webp",
+    image: "/Img/feature2.jpg",
   },
   {
     id: "03",
     title: "Aesthetic Excellence",
     tagline:
       "Every visual is crafted to feel premium, ensuring your brand looks high-value and elite.",
-    image: "/Img/strategy3.webp",
+    image: "/Img/feature3.jpg",
   },
   {
     id: "04",
     title: "Data-Driven Creativity",
     tagline:
       "We blend creativity with psychology and analytics to deliver results that perform and convert.",
-    image: "/Img/strategy4.webp",
+    image: "/Img/feature4.jpg",
   },
 ];
 

@@ -87,7 +87,15 @@ export function StatCard({ stat, index }: { stat: any; index: number }) {
   );
 }
 
-const Results = ({ data, title }: { data: any[]; title?: string }) => {
+const Results = ({
+  data,
+  title,
+  image,
+}: {
+  data: any[];
+  title?: string;
+  image?: string;
+}) => {
   const outerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(outerRef, { once: true, margin: "-100px" });
 
@@ -122,7 +130,7 @@ const Results = ({ data, title }: { data: any[]; title?: string }) => {
             className="absolute inset-[-8%] w-[116%] h-[116%]"
           >
             <Image
-              src="/Img/identity1.webp"
+              src={image || "/Img/aura3"}
               alt="Brand Success"
               fill
               className="object-cover object-center"

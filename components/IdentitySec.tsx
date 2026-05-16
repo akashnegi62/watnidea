@@ -8,8 +8,8 @@ import Link from "next/link";
 /* CONSTANTS */
 const IMAGES = [
   "/Img/identity1.webp",
-  "/Img/identity2.webp",
   "/Img/identity3.webp",
+  "/Img/identity2.webp",
   "/Img/identity4.webp",
 ];
 

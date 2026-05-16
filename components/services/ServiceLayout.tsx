@@ -28,7 +28,7 @@ export default function ServiceLayout({ slug }: { slug: string }) {
         title={data.processHeader?.title}
         description={data.processHeader?.description}
       />
-      <Results data={data.stats} title={data.about.title} />
+      <Results data={data.stats} title={data.about.title} image={data.resultsImage || data.about.aboutImage} />
       <WhyChooseUs data={data.whyChooseUs} />
       <Testimonials />
       <FAQ data={data.faq} />

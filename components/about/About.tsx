@@ -90,7 +90,7 @@ const About = () => {
         <div className="flex flex-col gap-10">
           <div className="relative aspect-4/5 rounded-[2.5rem] overflow-hidden border border-black/5 group shadow-2xl">
             <Image
-              src="/Img/aura.jpeg"
+              src="/Img/approach.webp"
               alt="About watNidea"
               fill
               className="object-cover transition-all duration-1000 scale-105 group-hover:scale-100"

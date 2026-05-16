@@ -128,7 +128,7 @@ export default function BannerSec() {
             className="absolute inset-[-8%] w-[116%] h-[116%]"
           >
             <Image
-              src="/Img/identity1.webp"
+              src="/Img/identity4.webp"
               alt="Team collaborating"
               fill
               className="object-cover object-center"

@@ -37,7 +37,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "with Teeth.",
       description:
         "A logo isn't a brand; a feeling is. We build the 'Aura' that makes your business undeniable in a crowded market.",
-      heroImage: "/Img/digital.webp",
+      heroImage: "/Img/aura.jpeg",
     },
     about: {
       label: "AURA ARCHITECTURE",
@@ -46,13 +46,14 @@ export const SERVICES_DATA: any = {
         "In an era of infinite scrolling, your brand needs more than just a name—it needs a presence. We combine market psychology with high-end minimalist design to create a 'Main Character' identity for your business.",
       subtext: "We don’t just make you look good; we make you look essential.",
       bgText: "AURA",
-      aboutImage: "/Img/aura.jpeg",
+      aboutImage: "/Img/aura2",
       aboutFeatures: [
         { title: "Brand Identity Design", icon: LayoutGrid },
         { title: "Positioning & Messaging", icon: Target },
         { title: "Perception Strategy", icon: Eye },
       ],
     },
+    resultsImage: "/Img/aura3",
     included: [
       {
         title: "Visual DNA Design",
@@ -174,7 +175,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Soul.",
       description:
         "Most brands post content. We create culture. The Hype Engine turns your social presence into a self-sustaining community that keeps your brand relevant 24/7.",
-      heroImage: "/Img/growth.webp",
+      heroImage: "/Img/hype.webp",
     },
     about: {
       label: "THE HYPE ENGINE",
@@ -184,13 +185,14 @@ export const SERVICES_DATA: any = {
       subtext:
         "We don't chase trends; we engineer the mechanics that start them.",
       bgText: "HYPE",
-      aboutImage: "/Img/hype.webp",
+      aboutImage: "/Img/hype2.webp",
       aboutFeatures: [
         { title: "Content Strategy", icon: Sparkles },
         { title: "Audience Growth", icon: Rocket },
         { title: "Viral Execution", icon: Zap },
       ],
     },
+    resultsImage: "/Img/hype3.webp",
     included: [
       {
         title: "Trend Harvesting",
@@ -321,13 +323,14 @@ export const SERVICES_DATA: any = {
         "Static content is a ghost. In 2026, if you aren't moving, you're invisible. Kinetic Studio is our high-performance video wing. We specialize in 'Short-Form Mastery'—creating videos that feel like a premium cinematic experience but are optimized for the fast-paced nature of modern platforms. We don't just shoot footage; we edit for retention.",
       subtext: "",
       bgText: "MOVE",
-      aboutImage: "/Img/echo.webp",
+      aboutImage: "/Img/kinetic2.webp",
       aboutFeatures: [
         { title: "Cinematic Content", icon: Monitor },
         { title: "Storytelling Direction", icon: Activity },
         { title: "High-End Editing", icon: Play },
       ],
     },
+    resultsImage: "/Img/kinetic3.webp",
     included: [
       {
         title: "Cinematic Brand Films",
@@ -459,13 +462,14 @@ export const SERVICES_DATA: any = {
         "In 2026, your website is your most powerful employee. The Digital HQ is our approach to web development that balances 'The Vibe' with 'The Velocity.' We don't do clunky templates or slow-loading pages. We build custom, responsive, and ultra-clean digital environments that act as the central nervous system for your brand’s growth. It’s where your Aura Architecture meets high-performance engineering.",
       subtext: "",
       bgText: "CODE",
-      aboutImage: "/Img/growth.webp",
+      aboutImage: "/Img/digital2.webp",
       aboutFeatures: [
         { title: "Website Design", icon: Cpu },
         { title: "Conversion Optimization", icon: Code },
         { title: "Speed & Performance", icon: Globe },
       ],
     },
+    resultsImage: "/Img/digital3.webp",
     included: [
       {
         title: "Custom UI/UX Design",
@@ -588,7 +592,7 @@ export const SERVICES_DATA: any = {
       titleFourth: " Speed.", //
       description:
         "Why spend months and millions on a shoot when you can generate the future in seconds? Synthetic Cinema brings high-fidelity, AI-driven video ads to your brand’s arsenal.",
-      heroImage: "/Img/aura.jpeg",
+      heroImage: "/Img/synthetic.webp",
     },
     about: {
       label: "SYNTHETIC CINEMA",
@@ -597,13 +601,14 @@ export const SERVICES_DATA: any = {
         "The barrier between Big Brands and Startups has officially collapsed. Synthetic Cinema is our specialized AI video production service. We use generative AI, neural rendering, and synthetic voice-overs to create hyper-realistic video ads that would traditionally require a massive crew, location scouting, and months of editing. We give you the power to produce cinematic content at the speed of your ideas.",
       subtext: "",
       bgText: "FILM",
-      aboutImage: "/Img/synthetic.webp",
+      aboutImage: "/Img/synthetic2.webp",
       aboutFeatures: [
         { title: "AI Video Production", icon: Wand2 },
         { title: "Creative Testing", icon: Video },
         { title: "Cost Efficiency", icon: Sparkles },
       ],
     },
+    resultsImage: "/Img/synthetic3.webp",
     included: [
       {
         title: "AI Avatar Synthesis",
@@ -730,13 +735,14 @@ export const SERVICES_DATA: any = {
         "Performance marketing is often treated like a math problem, but we treat it like a science. Growth Alchemy is our framework for turning raw data into profitable growth. We combine aggressive A/B testing with high-end creative assets to find your ready-to-buy audience. Whether it's Meta, or Google , we optimize for the only metric that truly matters: Your Return on Investment (ROI).",
       subtext: "",
       bgText: "SCALE",
-      aboutImage: "/Img/growth.webp",
+      aboutImage: "/Img/growth2.webp",
       aboutFeatures: [
         { title: "Paid Ads Strategy", icon: TrendingUp },
         { title: "Funnel Systems", icon: Zap },
         { title: "Data Optimization", icon: Users },
       ],
     },
+    resultsImage: "/Img/growth3.webp",
     included: [
       {
         title: "Full-Funnel Meta & Google Ads",
@@ -859,7 +865,7 @@ export const SERVICES_DATA: any = {
       titleFourth: "Unforgettable.", //
       description:
         "Don't just show up dominate the space. The Echo System is our holistic digital marketing strategy designed to make your brand omnipresent, resonant, and impossible to ignore.",
-      heroImage: "/Img/growth.webp",
+      heroImage: "/Img/echo.webp",
     },
     about: {
       label: "THE ECHO SYSTEM",
@@ -868,13 +874,14 @@ export const SERVICES_DATA: any = {
         "Isolated marketing is wasted marketing. The Echo System is an omnichannel framework that synchronizes your Aura Architecture, Hype Engine, and Kinetic Studio assets into one seamless machine. We ensure that when a customer sees you on Google Ads, they find you on Google, and they remember you in their inbox. It’s about creating a digital echo that reinforces your value at every turn, turning a single impression into a lifelong obsession.",
       subtext: "",
       bgText: "ECHO",
-      aboutImage: "/Img/echo.webp",
+      aboutImage: "/Img/echo2.webp",
       aboutFeatures: [
         { title: "Search Visibility", icon: Users },
         { title: "Content Systems", icon: Share2 },
         { title: "Omnichannel Presence", icon: Heart },
       ],
     },
+    resultsImage: "/Img/echo3.webp",
     included: [
       {
         title: "Omnichannel Strategy",

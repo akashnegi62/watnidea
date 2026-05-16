@@ -11,28 +11,28 @@ const steps = [
     title: "1. Discover",
     description:
       "We start by learning about your business, your goals, your market, and your audience.",
-    image: "/Img/strategy1.webp", // Replace with your actual image paths
+    image: "/Img/feature1.jpg", // Replace with your actual image paths
   },
   {
     id: "plan",
     title: "2. Plan",
     description:
       "Then we build a smart approach tailored to what you want to achieve — whether it’s brand strategy, marketing plans, content direction, or a full website and campaign roadmap.",
-    image: "/Img/strategy2.webp",
+    image: "/Img/feature2.jpg",
   },
   {
     id: "create",
     title: "3. Create",
     description:
       "Once the direction is set, we move into design, writing, development, video production, and campaign execution. Everything supports your brand properly.",
-    image: "/Img/strategy3.webp",
+    image: "/Img/feature3.jpg",
   },
   {
     id: "launch",
     title: "4. Launch and Improve",
     description:
       "After launch, we check the results and keep refining. SEO, PPC, content, or performance marketing — we focus on steady, ongoing improvement.",
-    image: "/Img/strategy4.webp",
+    image: "/Img/feature4.jpg",
   },
 ];
 
@@ -122,7 +122,8 @@ export default function StepSec() {
                 </p>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-none tracking-tight mb-6">
-                Step-by-Step guide <br /> to social <span className="text-(--highlight)">success</span>
+                Step-by-Step guide <br /> to social{" "}
+                <span className="text-(--highlight)">success</span>
               </h2>
               <p className="text-white text-md leading-relaxed max-w-md">
                 We follow a structured system to move your brand from low
