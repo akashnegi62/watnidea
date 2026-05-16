@@ -46,14 +46,14 @@ export const SERVICES_DATA: any = {
         "In an era of infinite scrolling, your brand needs more than just a name—it needs a presence. We combine market psychology with high-end minimalist design to create a 'Main Character' identity for your business.",
       subtext: "We don’t just make you look good; we make you look essential.",
       bgText: "AURA",
-      aboutImage: "/Img/aura2",
+      aboutImage: "/Img/aura2.jpeg",
       aboutFeatures: [
         { title: "Brand Identity Design", icon: LayoutGrid },
         { title: "Positioning & Messaging", icon: Target },
         { title: "Perception Strategy", icon: Eye },
       ],
     },
-    resultsImage: "/Img/aura3",
+    resultsImage: "/Img/aura3.jpeg",
     included: [
       {
         title: "Visual DNA Design",
