@@ -11,28 +11,28 @@ const steps = [
     title: "1. Discover",
     description:
       "We start by learning about your business, your goals, your market, and your audience.",
-    image: "/Img/feature1.jpg", // Replace with your actual image paths
+    image: "/Img/aura3.jpeg",
   },
   {
     id: "plan",
     title: "2. Plan",
     description:
       "Then we build a smart approach tailored to what you want to achieve — whether it’s brand strategy, marketing plans, content direction, or a full website and campaign roadmap.",
-    image: "/Img/feature2.jpg",
+    image: "/Img/digital2.webp",
   },
   {
     id: "create",
     title: "3. Create",
     description:
       "Once the direction is set, we move into design, writing, development, video production, and campaign execution. Everything supports your brand properly.",
-    image: "/Img/feature3.jpg",
+    image: "/Img/echo.webp",
   },
   {
     id: "launch",
     title: "4. Launch and Improve",
     description:
       "After launch, we check the results and keep refining. SEO, PPC, content, or performance marketing — we focus on steady, ongoing improvement.",
-    image: "/Img/feature4.jpg",
+    image: "/Img/growth3.webp",
   },
 ];
 
@@ -100,8 +100,8 @@ export default function StepSec() {
         </div>
 
         {/* Right Side: Sticky Content & Mobile Accordion */}
-        <div className="w-full md:w-1/2 relative">
-          <div className="md:sticky md:top-0 md:h-screen flex flex-col justify-center pl-0 md:pl-20 py-12 md:py-20">
+        <div className="w-full md:w-1/2">
+          <div className="md:sticky md:top-0 md:min-h-screen flex flex-col justify-center pl-0 md:pl-20 py-12 md:py-20">
             {/* Section Header */}
             <header className="mb-12">
               <div className="flex items-center gap-3 mb-4">

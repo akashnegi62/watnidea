@@ -1,4 +1,3 @@
-import Loader from "@/layout/Loader";
 import HeroPage from "@/components/HeroSec";
 import AboutSec from "@/components/AboutSec";
 import SectionSec from "@/components/ServiceSec";
@@ -15,7 +14,6 @@ import BookBannerSec from "@/components/BookBannerSec";
 function page() {
   return (
     <>
-      {/* <Loader /> */}
       <HeroPage />
       <AboutSec />
       <SectionSec />
