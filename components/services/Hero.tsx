@@ -20,10 +20,15 @@ const Hero = ({ data }: { data: any }) => (
           {data.description}
         </p>
         <div className="flex justify-center lg:justify-start">
-          <button className="group flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-tighter hover:bg-zinc-200 transition-all">
+          <a
+            href="https://calendly.com/watnidea-info/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-tighter hover:bg-zinc-200 transition-all"
+          >
             Get Started
             <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
-          </button>
+          </a>
         </div>
       </div>
 

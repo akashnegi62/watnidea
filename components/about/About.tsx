@@ -4,7 +4,6 @@ import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, useInView, animate } from "framer-motion";
 import { Target, TrendingUp, Zap, ArrowRight } from "lucide-react";
-import Link from "next/link";
 
 /**
  * FeatureCard component for displaying individual about features
@@ -163,15 +162,17 @@ const About = () => {
 
           {/* ACTION BUTTON */}
           <div className="flex justify-end mb-16">
-            <Link
-              href="/about"
-              className="flex items-center gap-4 bg-(--highlight) hover:bg-black text-white pl-8 pr-2 py-2 rounded-full font-bold text-sm uppercase tracking-widest transition-all border-none group/btn shadow-lg"
+            <a
+              href="https://calendly.com/watnidea-info/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 bg-(--highlight) hover:bg-white hover:text-black text-white pl-8 pr-2 py-2 rounded-full font-bold text-sm uppercase tracking-widest transition-all border-none group/btn shadow-lg cursor-pointer"
             >
               Learn More
               <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black group-hover/btn:scale-90 transition-transform duration-300">
                 <ArrowRight size={20} />
               </div>
-            </Link>
+            </a>
           </div>
 
           {/* FEATURE CARDS GRID */}

@@ -93,13 +93,16 @@ export default function HeroSimple() {
               {HERO_CONTENT[index].description}
             </p>
 
-            <motion.button
+            <motion.a
+              href="https://calendly.com/watnidea-info/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#ba2c27] text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest shadow-xl transition-colors hover:bg-white hover:text-black"
+              className="inline-block bg-[#ba2c27] text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest shadow-xl transition-colors hover:bg-white hover:text-black cursor-pointer"
             >
               Get Started
-            </motion.button>
+            </motion.a>
           </motion.div>
         </AnimatePresence>
       </motion.div>

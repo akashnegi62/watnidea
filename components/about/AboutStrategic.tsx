@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
         </div>
         <motion.button
           onClick={() => {
-            window.location.href = "/contact";
+            window.location.href = "https://calendly.com/watnidea-info/30min";
           }}
           className="group w-fit flex items-center gap-2 text-white border border-white/20 px-8 py-4 md:px-8 md:py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-xs md:text-sm tracking-widest"
         >

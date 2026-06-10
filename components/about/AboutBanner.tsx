@@ -119,7 +119,7 @@ export default function BannerSec() {
       ref={outerRef}
       className="relative w-full bg-black overflow-hidden py-24 md:py-32"
     >
-      <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-0 items-stretch">
+      <div className="relative max-w-350 mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-0 items-stretch">
         {/* ══ LEFT — image + badge ══ */}
         <div className="relative overflow-hidden rounded-3xl lg:rounded-none lg:rounded-l-3xl min-h-[440px] lg:min-h-0">
           {/* parallax image wrapper */}

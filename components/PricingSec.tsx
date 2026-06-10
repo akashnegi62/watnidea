@@ -134,7 +134,7 @@ function PlanCard({ plan, index, compact = false }: any) {
       {/* Popular Ribbon */}
       {plan.badge && (
         <div className="absolute top-0 right-0 z-10 w-24 h-24 overflow-hidden pointer-events-none">
-          <div className="absolute top-5 right-[-30px] w-32 rotate-45 bg-(--highlight) text-white text-[9px] font-black tracking-widest text-center py-1 uppercase">
+          <div className="absolute top-5 -right-7.5 w-32 rotate-45 bg-(--highlight) text-white text-[9px] font-black tracking-widest text-center py-1 uppercase">
             {plan.badge}
           </div>
         </div>
@@ -186,10 +186,13 @@ function PlanCard({ plan, index, compact = false }: any) {
           </ul>
         )}
 
-        <motion.button
+        <motion.a
+          href="https://calendly.com/watnidea-info/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full mt-4 flex items-center justify-between bg-white/5 hover:bg-(--highlight) group/btn rounded-full px-6 py-4 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 border border-white/10 hover:border-transparent"
+          className="w-full mt-4 flex items-center justify-between bg-white/5 hover:bg-(--highlight) group/btn rounded-full px-6 py-4 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 border border-white/10 hover:border-transparent cursor-pointer"
         >
           <span>{plan.cta}</span>
           <div className="w-7 h-7 rounded-full bg-(--highlight) group-hover/btn:bg-white/20 flex items-center justify-center transition-colors">
@@ -203,7 +206,7 @@ function PlanCard({ plan, index, compact = false }: any) {
               />
             </svg>
           </div>
-        </motion.button>
+        </motion.a>
       </div>
     </motion.div>
   );
@@ -220,7 +223,7 @@ export default function PricingSec() {
       ref={outerRef}
       className="relative w-full bg-black py-20 md:py-24 lg:py-32 overflow-hidden"
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20">
+      <div className="max-w-350 mx-auto px-6 md:px-10 lg:px-20">
         {/* SECTION 1: Strategic Packages */}
         <div ref={sec1Ref} className="mb-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">

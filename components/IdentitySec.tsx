@@ -3,7 +3,6 @@ import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 
 /* CONSTANTS */
 const IMAGES = [
@@ -86,12 +85,12 @@ export default function CoreServices() {
           <div className="hidden md:block relative w-full h-px bg-white/10 mb-6">
             <motion.div
               style={{ left: dotX }}
-              className="absolute top-[-5px] w-2.5 h-2.5 bg-[#ba2c27] rounded-full shadow-[0_0_10px_rgba(186,44,39,0.5)]"
+              className="absolute -top-1.25 w-2.5 h-2.5 bg-[#ba2c27] rounded-full shadow-[0_0_10px_rgba(186,44,39,0.5)]"
             />
           </div>
 
           {/* Cards Stage */}
-          <div className="relative w-full h-[220px] md:h-[clamp(180px,30vh,350px)]">
+          <div className="relative w-full h-55 md:h-[clamp(180px,30vh,350px)]">
             {/* Desktop Only Cards (1, 2, 3) */}
             <motion.div
               className="hidden md:block absolute top-0 overflow-hidden rounded-2xl"
@@ -190,7 +189,12 @@ export default function CoreServices() {
             </p>
           </div>
 
-          <Link href="/contact" className="w-full md:w-auto">
+          <a
+            href="https://calendly.com/watnidea-info/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full md:w-auto"
+          >
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -199,7 +203,7 @@ export default function CoreServices() {
               Discover more
               <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </motion.div>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

@@ -2,7 +2,6 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 
 //  Animated counter hook (Simplified)
 function useCounter(target: number, inView: boolean) {
@@ -94,7 +93,7 @@ export default function BookBannerSec() {
 
   return (
     <section className="relative w-full bg-black py-16 md:py-32 overflow-hidden">
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6">
+      <div className="relative z-10 max-w-300 mx-auto px-6">
         <div
           className="relative rounded-4xl md:rounded-3xl overflow-hidden border border-white/10 bg-[#0A0A0A]"
           style={{
@@ -188,7 +187,12 @@ export default function BookBannerSec() {
                 </div>
               </div>
 
-              <Link href="/contact" className="block w-full">
+              <a
+                href="https://calendly.com/watnidea-info/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -197,7 +201,7 @@ export default function BookBannerSec() {
                   Start Your Project
                   <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
                 </motion.div>
-              </Link>
+              </a>
 
               <p className="text-white/40 text-[10px] md:text-xs text-center mt-6">
                 Takes only 30 seconds • No commitment

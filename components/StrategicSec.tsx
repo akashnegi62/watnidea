@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 const CHOOSE_DATA = [
   {
@@ -70,12 +69,14 @@ export default function WhyChooseUs() {
             Strategic <span className="text-(--highlight)">Growth</span> Systems
           </h2>
         </div>
-        <Link
-          href="/contact"
-          className="group w-fit flex items-center gap-2 bg-(--highlight) text-white px-8 py-4 md:px-8 md:py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-xs md:text-sm tracking-widest"
+        <a
+          href="https://wa.me/918354811162"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group w-fit flex items-center gap-2 bg-(--highlight) text-white px-8 py-4 md:px-8 md:py-4 rounded-full hover:bg-white hover:text-black transition-all font-medium uppercase text-xs md:text-sm tracking-widest cursor-pointer"
         >
           contact us <ArrowUpRight className="w-4 h-4" />
-        </Link>
+        </a>
       </div>
 
       {/* LIST ITEMS */}

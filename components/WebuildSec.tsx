@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 const services = [
   {
@@ -121,7 +120,7 @@ export default function WeBuildSec() {
 
   return (
     <section className="relative w-full bg-black overflow-hidden px-6 py-20 md:px-12 md:py-28 lg:px-16 lg:py-32">
-      <div className="max-w-[1400px] mx-auto relative z-10">
+      <div className="max-w-350 mx-auto relative z-10">
         {/* ── Heading ── */}
         <div ref={headingRef} className="mb-12 md:mb-16 lg:mb-20">
           <motion.div
@@ -189,7 +188,11 @@ export default function WeBuildSec() {
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <Link href="/contact">
+            <a
+              href="https://wa.me/918354811162"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <motion.div
                 className="inline-flex items-center gap-2 font-bold text-xs md:text-sm tracking-widest uppercase px-8 py-4 rounded-full cursor-pointer"
                 style={{
@@ -202,7 +205,7 @@ export default function WeBuildSec() {
                 Contact us
                 <span className="text-lg">↗</span>
               </motion.div>
-            </Link>
+            </a>
           </motion.div>
         </div>
 

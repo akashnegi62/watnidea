@@ -2,7 +2,6 @@
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const TESTIMONIALS = [
   {
@@ -103,7 +102,7 @@ export default function ResultCarousel() {
       ref={outerRef}
       className="relative w-full bg-black overflow-hidden py-24 md:py-32"
     >
-      <div className="relative max-w-[1320px] mx-auto px-6 md:px-12 lg:px-16">
+      <div className="relative max-w-330 mx-auto px-6 md:px-12 lg:px-16">
         {/* --- HEADER SECTION--- */}
         <div className="flex flex-row justify-between items-end mb-16">
           <div className="max-w-2xl">
@@ -127,7 +126,11 @@ export default function ResultCarousel() {
 
           {/* Grouped buttons */}
           <div className="flex flex-col items-end gap-6 pb-2">
-            <Link href="/contact">
+            <a
+              href="https://wa.me/918354811162"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center bg-(--highlight) rounded-full pl-7 pr-2 py-2 group hover:bg-(--highlight) transition-colors duration-300 cursor-pointer"
@@ -139,7 +142,7 @@ export default function ResultCarousel() {
                   <ArrowIcon />
                 </span>
               </motion.div>
-            </Link>
+            </a>
 
             <div className="flex gap-3">
               <button
